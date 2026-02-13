@@ -1,0 +1,3142 @@
+{
+  "meta": {
+    "version": "2.0",
+    "last_updated": "2026-02-13",
+    "next_font_codepoint": "U+E186"
+  },
+  "families": [
+    "Clusters",
+    "Other sectors",
+    "Disasters, hazards and crises",
+    "Socioeconomic and development",
+    "People",
+    "Activities strategy",
+    "Product type",
+    "Food and non-food items",
+    "Water sanitation and hygiene",
+    "Camp",
+    "Security and incident",
+    "Physical barriers",
+    "Damage",
+    "General infrastructure",
+    "Logistics",
+    "Telecommunications and technology",
+    "UX UI",
+    "Health",
+    "Lockdown"
+  ],
+  "icons": {
+    "Abduction-kidnapping": {
+      "name": "Abduction kidnapping",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E001",
+      "date_added": "2026-02-13"
+    },
+    "About": {
+      "name": "About",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E002",
+      "date_added": "2026-02-13"
+    },
+    "Add": {
+      "name": "Add",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E003",
+      "date_added": "2026-02-13"
+    },
+    "Add-document": {
+      "name": "Add document",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E004",
+      "date_added": "2026-02-13"
+    },
+    "Advocacy": {
+      "name": "Advocacy",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E005",
+      "date_added": "2026-02-13"
+    },
+    "Affected-population": {
+      "name": "Affected population",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E006",
+      "date_added": "2026-02-13"
+    },
+    "Agile": {
+      "name": "Agile",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E007",
+      "date_added": "2026-02-13"
+    },
+    "Agriculture": {
+      "name": "Agriculture",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E008",
+      "date_added": "2026-02-13"
+    },
+    "AI-chat": {
+      "name": "AI chat",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E009",
+      "date_added": "2026-02-13"
+    },
+    "Airport": {
+      "name": "Airport",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E00A",
+      "date_added": "2026-02-13"
+    },
+    "Airport-affected": {
+      "name": "Airport affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E00B",
+      "date_added": "2026-02-13"
+    },
+    "Airport-closed": {
+      "name": "Airport closed",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E00C",
+      "date_added": "2026-02-13"
+    },
+    "Airport-destroyed": {
+      "name": "Airport destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E00D",
+      "date_added": "2026-02-13"
+    },
+    "Airport-military": {
+      "name": "Airport military",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E00E",
+      "date_added": "2026-02-13"
+    },
+    "Airport-not-affected": {
+      "name": "Airport not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E00F",
+      "date_added": "2026-02-13"
+    },
+    "Alert": {
+      "name": "Alert",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E010",
+      "date_added": "2026-02-13"
+    },
+    "Analysis": {
+      "name": "Analysis",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E011",
+      "date_added": "2026-02-13"
+    },
+    "Anticipatory-action": {
+      "name": "Anticipatory action",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E012",
+      "date_added": "2026-02-13"
+    },
+    "API": {
+      "name": "API",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E013",
+      "date_added": "2026-02-13"
+    },
+    "Apps": {
+      "name": "Apps",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E014",
+      "date_added": "2026-02-13"
+    },
+    "Arrest-detention": {
+      "name": "Arrest detention",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E015",
+      "date_added": "2026-02-13"
+    },
+    "Assault": {
+      "name": "Assault",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E016",
+      "date_added": "2026-02-13"
+    },
+    "Assembly-point": {
+      "name": "Assembly point",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E017",
+      "date_added": "2026-02-13"
+    },
+    "Assessment": {
+      "name": "Assessment",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E018",
+      "date_added": "2026-02-13"
+    },
+    "Attack": {
+      "name": "Attack",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E019",
+      "date_added": "2026-02-13"
+    },
+    "Bacteria": {
+      "name": "Bacteria",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E01A",
+      "date_added": "2026-02-13"
+    },
+    "Blanket": {
+      "name": "Blanket",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E01B",
+      "date_added": "2026-02-13"
+    },
+    "Blog": {
+      "name": "Blog",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E01C",
+      "date_added": "2026-02-13"
+    },
+    "Boat": {
+      "name": "Boat",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E01D",
+      "date_added": "2026-02-13"
+    },
+    "Bookmark": {
+      "name": "Bookmark",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E01E",
+      "date_added": "2026-02-13"
+    },
+    "Border-closed": {
+      "name": "Border closed",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E01F",
+      "date_added": "2026-02-13"
+    },
+    "Border-crossing": {
+      "name": "Border crossing",
+      "family": "Physical barriers",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E020",
+      "date_added": "2026-02-13"
+    },
+    "Borehole": {
+      "name": "Borehole",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E021",
+      "date_added": "2026-02-13"
+    },
+    "Bottled-water": {
+      "name": "Bottled water",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E022",
+      "date_added": "2026-02-13"
+    },
+    "Bridge": {
+      "name": "Bridge",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E023",
+      "date_added": "2026-02-13"
+    },
+    "Bridge-affected": {
+      "name": "Bridge affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E024",
+      "date_added": "2026-02-13"
+    },
+    "Bridge-closed": {
+      "name": "Bridge closed",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E025",
+      "date_added": "2026-02-13"
+    },
+    "Bridge-destroyed": {
+      "name": "Bridge destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E026",
+      "date_added": "2026-02-13"
+    },
+    "Bridge-not-affected": {
+      "name": "Bridge not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E027",
+      "date_added": "2026-02-13"
+    },
+    "Bucket": {
+      "name": "Bucket",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E028",
+      "date_added": "2026-02-13"
+    },
+    "Buddhist-temple": {
+      "name": "Buddhist temple",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E029",
+      "date_added": "2026-02-13"
+    },
+    "Building": {
+      "name": "Building",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E02A",
+      "date_added": "2026-02-13"
+    },
+    "Building-closed": {
+      "name": "Building closed",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E02B",
+      "date_added": "2026-02-13"
+    },
+    "Building-facility-affected": {
+      "name": "Building facility affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E02C",
+      "date_added": "2026-02-13"
+    },
+    "Building-facility-destroyed": {
+      "name": "Building facility destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E02D",
+      "date_added": "2026-02-13"
+    },
+    "Building-facility-not-affected": {
+      "name": "Building facility not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E02E",
+      "date_added": "2026-02-13"
+    },
+    "Bus": {
+      "name": "Bus",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E02F",
+      "date_added": "2026-02-13"
+    },
+    "Calendar": {
+      "name": "Calendar",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E030",
+      "date_added": "2026-02-13"
+    },
+    "Camp-coordination-and-camp-management": {
+      "name": "Camp coordination and camp management",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": -2,
+      "font_codepoint": "U+E031",
+      "date_added": "2026-02-13"
+    },
+    "Car": {
+      "name": "Car",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E032",
+      "date_added": "2026-02-13"
+    },
+    "Carjacking": {
+      "name": "Carjacking",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E033",
+      "date_added": "2026-02-13"
+    },
+    "Case-management": {
+      "name": "Case management",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E034",
+      "date_added": "2026-02-13"
+    },
+    "Cash-transfer": {
+      "name": "Cash transfer",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E035",
+      "date_added": "2026-02-13"
+    },
+    "Cell-tower": {
+      "name": "Cell tower",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E036",
+      "date_added": "2026-02-13"
+    },
+    "Chart": {
+      "name": "Chart",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E037",
+      "date_added": "2026-02-13"
+    },
+    "Chat": {
+      "name": "Chat",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E038",
+      "date_added": "2026-02-13"
+    },
+    "Checked-mail": {
+      "name": "Checked mail",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E039",
+      "date_added": "2026-02-13"
+    },
+    "Checkpoint": {
+      "name": "Checkpoint",
+      "family": "Physical barriers",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E03A",
+      "date_added": "2026-02-13"
+    },
+    "Child-care-child-friendly": {
+      "name": "Child care child friendly",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E03B",
+      "date_added": "2026-02-13"
+    },
+    "Child-combatant": {
+      "name": "Child combatant",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E03C",
+      "date_added": "2026-02-13"
+    },
+    "Child-protection": {
+      "name": "Child protection",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E03D",
+      "date_added": "2026-02-13"
+    },
+    "Children": {
+      "name": "Children",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E03E",
+      "date_added": "2026-02-13"
+    },
+    "Church": {
+      "name": "Church",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E03F",
+      "date_added": "2026-02-13"
+    },
+    "Civil-military-coordination": {
+      "name": "Civil military coordination",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E040",
+      "date_added": "2026-02-13"
+    },
+    "Clinic": {
+      "name": "Clinic",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E041",
+      "date_added": "2026-02-13"
+    },
+    "Clothing": {
+      "name": "Clothing",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E042",
+      "date_added": "2026-02-13"
+    },
+    "Cold-wave": {
+      "name": "Cold wave",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E043",
+      "date_added": "2026-02-13"
+    },
+    "Communal-latrine": {
+      "name": "Communal latrine",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E044",
+      "date_added": "2026-02-13"
+    },
+    "Community-building": {
+      "name": "Community building",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E045",
+      "date_added": "2026-02-13"
+    },
+    "Community-engagement": {
+      "name": "Community engagement",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E046",
+      "date_added": "2026-02-13"
+    },
+    "Computer": {
+      "name": "Computer",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E047",
+      "date_added": "2026-02-13"
+    },
+    "Confined": {
+      "name": "Confined",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E048",
+      "date_added": "2026-02-13"
+    },
+    "Conflict": {
+      "name": "Conflict",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E049",
+      "date_added": "2026-02-13"
+    },
+    "Coordinated-assessment": {
+      "name": "Coordinated assessment",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E04A",
+      "date_added": "2026-02-13"
+    },
+    "Coordination": {
+      "name": "Coordination",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E04B",
+      "date_added": "2026-02-13"
+    },
+    "Copy": {
+      "name": "Copy",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E04C",
+      "date_added": "2026-02-13"
+    },
+    "Country": {
+      "name": "Country",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E04D",
+      "date_added": "2026-02-13"
+    },
+    "COVID-19": {
+      "name": "COVID-19",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E04E",
+      "date_added": "2026-02-13"
+    },
+    "CSV-file": {
+      "name": "CSV file",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E04F",
+      "date_added": "2026-02-13"
+    },
+    "Cyclone": {
+      "name": "Cyclone",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E050",
+      "date_added": "2026-02-13"
+    },
+    "Damaged-affected": {
+      "name": "Damaged affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E051",
+      "date_added": "2026-02-13"
+    },
+    "Dangerous-area": {
+      "name": "Dangerous area",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E052",
+      "date_added": "2026-02-13"
+    },
+    "Data": {
+      "name": "Data",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E053",
+      "date_added": "2026-02-13"
+    },
+    "Dead": {
+      "name": "Dead",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E054",
+      "date_added": "2026-02-13"
+    },
+    "Debris-management": {
+      "name": "Debris management",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E055",
+      "date_added": "2026-02-13"
+    },
+    "Delete-account": {
+      "name": "Delete account",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E056",
+      "date_added": "2026-02-13"
+    },
+    "Deployment": {
+      "name": "Deployment",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E057",
+      "date_added": "2026-02-13"
+    },
+    "Destroyed": {
+      "name": "Destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E058",
+      "date_added": "2026-02-13"
+    },
+    "Detergent": {
+      "name": "Detergent",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E059",
+      "date_added": "2026-02-13"
+    },
+    "Diplomatic-mission": {
+      "name": "Diplomatic mission",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E05A",
+      "date_added": "2026-02-13"
+    },
+    "Distribution-site": {
+      "name": "Distribution site",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E05B",
+      "date_added": "2026-02-13"
+    },
+    "Doctor": {
+      "name": "Doctor",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E05C",
+      "date_added": "2026-02-13"
+    },
+    "Document": {
+      "name": "Document",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E05D",
+      "date_added": "2026-02-13"
+    },
+    "DOCX-file": {
+      "name": "DOCX file",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E05E",
+      "date_added": "2026-02-13"
+    },
+    "Down": {
+      "name": "Down",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E05F",
+      "date_added": "2026-02-13"
+    },
+    "Download": {
+      "name": "Download",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E060",
+      "date_added": "2026-02-13"
+    },
+    "Drought": {
+      "name": "Drought",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E061",
+      "date_added": "2026-02-13"
+    },
+    "Drowned": {
+      "name": "Drowned",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E062",
+      "date_added": "2026-02-13"
+    },
+    "E-mail": {
+      "name": "E-mail",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E063",
+      "date_added": "2026-02-13"
+    },
+    "Early-recovery": {
+      "name": "Early recovery",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E064",
+      "date_added": "2026-02-13"
+    },
+    "Earthmound": {
+      "name": "Earthmound",
+      "family": "Physical barriers",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E065",
+      "date_added": "2026-02-13"
+    },
+    "Earthquake": {
+      "name": "Earthquake",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E066",
+      "date_added": "2026-02-13"
+    },
+    "Edit": {
+      "name": "Edit",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E067",
+      "date_added": "2026-02-13"
+    },
+    "Education": {
+      "name": "Education",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E068",
+      "date_added": "2026-02-13"
+    },
+    "Elderly": {
+      "name": "Elderly",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E069",
+      "date_added": "2026-02-13"
+    },
+    "Emergency-telecommunications": {
+      "name": "Emergency telecommunications",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E06A",
+      "date_added": "2026-02-13"
+    },
+    "Environment": {
+      "name": "Environment",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E06B",
+      "date_added": "2026-02-13"
+    },
+    "Epidemic": {
+      "name": "Epidemic",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E06C",
+      "date_added": "2026-02-13"
+    },
+    "Exit-cancel": {
+      "name": "Exit cancel",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E06D",
+      "date_added": "2026-02-13"
+    },
+    "Expand-down": {
+      "name": "Expand down",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E06E",
+      "date_added": "2026-02-13"
+    },
+    "Expand-left": {
+      "name": "Expand left",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E06F",
+      "date_added": "2026-02-13"
+    },
+    "Expand-right": {
+      "name": "Expand right",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E070",
+      "date_added": "2026-02-13"
+    },
+    "Expand-up": {
+      "name": "Expand up",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E071",
+      "date_added": "2026-02-13"
+    },
+    "Famine": {
+      "name": "Famine",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E072",
+      "date_added": "2026-02-13"
+    },
+    "Favourite": {
+      "name": "Favourite",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E073",
+      "date_added": "2026-02-13"
+    },
+    "Fax": {
+      "name": "Fax",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E074",
+      "date_added": "2026-02-13"
+    },
+    "Ferry": {
+      "name": "Ferry",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E075",
+      "date_added": "2026-02-13"
+    },
+    "Film": {
+      "name": "Film",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E076",
+      "date_added": "2026-02-13"
+    },
+    "Filter": {
+      "name": "Filter",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E077",
+      "date_added": "2026-02-13"
+    },
+    "Financing": {
+      "name": "Financing",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E078",
+      "date_added": "2026-02-13"
+    },
+    "Fire": {
+      "name": "Fire",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E079",
+      "date_added": "2026-02-13"
+    },
+    "Fishery": {
+      "name": "Fishery",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E07A",
+      "date_added": "2026-02-13"
+    },
+    "Flash-flood": {
+      "name": "Flash flood",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E07B",
+      "date_added": "2026-02-13"
+    },
+    "Flood": {
+      "name": "Flood",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E07C",
+      "date_added": "2026-02-13"
+    },
+    "Flour": {
+      "name": "Flour",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E07D",
+      "date_added": "2026-02-13"
+    },
+    "Folder": {
+      "name": "Folder",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E07E",
+      "date_added": "2026-02-13"
+    },
+    "Food": {
+      "name": "Food",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E07F",
+      "date_added": "2026-02-13"
+    },
+    "Food-security": {
+      "name": "Food security",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E080",
+      "date_added": "2026-02-13"
+    },
+    "Food-warehouse": {
+      "name": "Food warehouse",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E081",
+      "date_added": "2026-02-13"
+    },
+    "Forced-entry": {
+      "name": "Forced entry",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E082",
+      "date_added": "2026-02-13"
+    },
+    "Forced-recruitment": {
+      "name": "Forced recruitment",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E083",
+      "date_added": "2026-02-13"
+    },
+    "Fund": {
+      "name": "Fund",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E084",
+      "date_added": "2026-02-13"
+    },
+    "Gap-analysis": {
+      "name": "Gap analysis",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E085",
+      "date_added": "2026-02-13"
+    },
+    "Gas-station": {
+      "name": "Gas station",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E086",
+      "date_added": "2026-02-13"
+    },
+    "Gender": {
+      "name": "Gender",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E087",
+      "date_added": "2026-02-13"
+    },
+    "Gender-based-violence": {
+      "name": "Gender based violence",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E088",
+      "date_added": "2026-02-13"
+    },
+    "Go": {
+      "name": "Go",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E089",
+      "date_added": "2026-02-13"
+    },
+    "Government-office": {
+      "name": "Government office",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E08A",
+      "date_added": "2026-02-13"
+    },
+    "Group": {
+      "name": "Group",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E08B",
+      "date_added": "2026-02-13"
+    },
+    "Handwashing": {
+      "name": "Handwashing",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E08C",
+      "date_added": "2026-02-13"
+    },
+    "Harassment-intimidation": {
+      "name": "Harassment intimidation",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E08D",
+      "date_added": "2026-02-13"
+    },
+    "Health": {
+      "name": "Health",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E08E",
+      "date_added": "2026-02-13"
+    },
+    "Health-facility": {
+      "name": "Health facility",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E08F",
+      "date_added": "2026-02-13"
+    },
+    "Health-facility-affected": {
+      "name": "Health facility affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E090",
+      "date_added": "2026-02-13"
+    },
+    "Health-facility-destroyed": {
+      "name": "Health facility destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E091",
+      "date_added": "2026-02-13"
+    },
+    "Health-facility-not-affected": {
+      "name": "Health facility not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E092",
+      "date_added": "2026-02-13"
+    },
+    "Health-post": {
+      "name": "Health post",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E093",
+      "date_added": "2026-02-13"
+    },
+    "Health-worker": {
+      "name": "Health worker",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E094",
+      "date_added": "2026-02-13"
+    },
+    "Heatwave": {
+      "name": "Heatwave",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E095",
+      "date_added": "2026-02-13"
+    },
+    "Heavy-rain": {
+      "name": "Heavy rain",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E096",
+      "date_added": "2026-02-13"
+    },
+    "Helicopter": {
+      "name": "Helicopter",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E097",
+      "date_added": "2026-02-13"
+    },
+    "Helipad": {
+      "name": "Helipad",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E098",
+      "date_added": "2026-02-13"
+    },
+    "Help": {
+      "name": "Help",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E099",
+      "date_added": "2026-02-13"
+    },
+    "Hidden": {
+      "name": "Hidden",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E09A",
+      "date_added": "2026-02-13"
+    },
+    "Hindu-temple": {
+      "name": "Hindu temple",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E09B",
+      "date_added": "2026-02-13"
+    },
+    "Hospital": {
+      "name": "Hospital",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E09C",
+      "date_added": "2026-02-13"
+    },
+    "Hospital-bed": {
+      "name": "Hospital bed",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E09D",
+      "date_added": "2026-02-13"
+    },
+    "Hotel": {
+      "name": "Hotel",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E09E",
+      "date_added": "2026-02-13"
+    },
+    "House": {
+      "name": "House",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E09F",
+      "date_added": "2026-02-13"
+    },
+    "House-affected": {
+      "name": "House affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A0",
+      "date_added": "2026-02-13"
+    },
+    "House-burned": {
+      "name": "House burned",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A1",
+      "date_added": "2026-02-13"
+    },
+    "House-destroyed": {
+      "name": "House destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A2",
+      "date_added": "2026-02-13"
+    },
+    "House-lockdown": {
+      "name": "House lockdown",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A3",
+      "date_added": "2026-02-13"
+    },
+    "House-not-affected": {
+      "name": "House not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A4",
+      "date_added": "2026-02-13"
+    },
+    "Humanitarian-access": {
+      "name": "Humanitarian access",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A5",
+      "date_added": "2026-02-13"
+    },
+    "Humanitarian-programme-cycle": {
+      "name": "Humanitarian programme cycle",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A6",
+      "date_added": "2026-02-13"
+    },
+    "IDP-refugee-camp": {
+      "name": "IDP refugee camp",
+      "family": "Camp",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A7",
+      "date_added": "2026-02-13"
+    },
+    "Indigenous-people": {
+      "name": "Indigenous people",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A8",
+      "date_added": "2026-02-13"
+    },
+    "Infant": {
+      "name": "Infant",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0A9",
+      "date_added": "2026-02-13"
+    },
+    "Infected": {
+      "name": "Infected",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0AA",
+      "date_added": "2026-02-13"
+    },
+    "Infection-control": {
+      "name": "Infection control",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0AB",
+      "date_added": "2026-02-13"
+    },
+    "Information-management": {
+      "name": "Information management",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0AC",
+      "date_added": "2026-02-13"
+    },
+    "Information-technology": {
+      "name": "Information technology",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0AD",
+      "date_added": "2026-02-13"
+    },
+    "Infrastructure": {
+      "name": "Infrastructure",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0AE",
+      "date_added": "2026-02-13"
+    },
+    "Injured": {
+      "name": "Injured",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0AF",
+      "date_added": "2026-02-13"
+    },
+    "Innovation": {
+      "name": "Innovation",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B0",
+      "date_added": "2026-02-13"
+    },
+    "Insect-infestation": {
+      "name": "Insect infestation",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B1",
+      "date_added": "2026-02-13"
+    },
+    "Internally-displaced": {
+      "name": "Internally displaced",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B2",
+      "date_added": "2026-02-13"
+    },
+    "Internet": {
+      "name": "Internet",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B3",
+      "date_added": "2026-02-13"
+    },
+    "Kitchen-set": {
+      "name": "Kitchen set",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B4",
+      "date_added": "2026-02-13"
+    },
+    "Laboratory": {
+      "name": "Laboratory",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B5",
+      "date_added": "2026-02-13"
+    },
+    "Landslide-mudslide": {
+      "name": "Landslide mudslide",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B6",
+      "date_added": "2026-02-13"
+    },
+    "Laptop": {
+      "name": "Laptop",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B7",
+      "date_added": "2026-02-13"
+    },
+    "Latrine-cabin": {
+      "name": "Latrine cabin",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B8",
+      "date_added": "2026-02-13"
+    },
+    "Leadership": {
+      "name": "Leadership",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0B9",
+      "date_added": "2026-02-13"
+    },
+    "Learning": {
+      "name": "Learning",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0BA",
+      "date_added": "2026-02-13"
+    },
+    "Life-saving": {
+      "name": "Life saving",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0BB",
+      "date_added": "2026-02-13"
+    },
+    "Link": {
+      "name": "Link",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0BC",
+      "date_added": "2026-02-13"
+    },
+    "Live-geoservices": {
+      "name": "Live geoservices",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0BD",
+      "date_added": "2026-02-13"
+    },
+    "Livelihood": {
+      "name": "Livelihood",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0BE",
+      "date_added": "2026-02-13"
+    },
+    "Livestock": {
+      "name": "Livestock",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0BF",
+      "date_added": "2026-02-13"
+    },
+    "Location": {
+      "name": "Location",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C0",
+      "date_added": "2026-02-13"
+    },
+    "Location-lockdown": {
+      "name": "Location lockdown",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C1",
+      "date_added": "2026-02-13"
+    },
+    "Locust-infestation": {
+      "name": "Locust infestation",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C2",
+      "date_added": "2026-02-13"
+    },
+    "Logistics": {
+      "name": "Logistics",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C3",
+      "date_added": "2026-02-13"
+    },
+    "Logistics-and-telecommunications": {
+      "name": "Logistics and telecommunications",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C4",
+      "date_added": "2026-02-13"
+    },
+    "Map": {
+      "name": "Map",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C5",
+      "date_added": "2026-02-13"
+    },
+    "Market": {
+      "name": "Market",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C6",
+      "date_added": "2026-02-13"
+    },
+    "Market-closed": {
+      "name": "Market closed",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C7",
+      "date_added": "2026-02-13"
+    },
+    "Mask": {
+      "name": "Mask",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C8",
+      "date_added": "2026-02-13"
+    },
+    "Mattress": {
+      "name": "Mattress",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0C9",
+      "date_added": "2026-02-13"
+    },
+    "Medical-supply": {
+      "name": "Medical supply",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0CA",
+      "date_added": "2026-02-13"
+    },
+    "Medicine": {
+      "name": "Medicine",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0CB",
+      "date_added": "2026-02-13"
+    },
+    "Meeting": {
+      "name": "Meeting",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0CC",
+      "date_added": "2026-02-13"
+    },
+    "Menu": {
+      "name": "Menu",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0CD",
+      "date_added": "2026-02-13"
+    },
+    "Military-gate": {
+      "name": "Military gate",
+      "family": "Physical barriers",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0CE",
+      "date_added": "2026-02-13"
+    },
+    "Mine": {
+      "name": "Mine",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0CF",
+      "date_added": "2026-02-13"
+    },
+    "Missing": {
+      "name": "Missing",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D0",
+      "date_added": "2026-02-13"
+    },
+    "Mobile-clinic": {
+      "name": "Mobile clinic",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D1",
+      "date_added": "2026-02-13"
+    },
+    "Mobile-phone": {
+      "name": "Mobile phone",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D2",
+      "date_added": "2026-02-13"
+    },
+    "Monitor": {
+      "name": "Monitor",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D3",
+      "date_added": "2026-02-13"
+    },
+    "Monitoring": {
+      "name": "Monitoring",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D4",
+      "date_added": "2026-02-13"
+    },
+    "More-options": {
+      "name": "More options",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D5",
+      "date_added": "2026-02-13"
+    },
+    "Mosque": {
+      "name": "Mosque",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D6",
+      "date_added": "2026-02-13"
+    },
+    "Mosquito-net": {
+      "name": "Mosquito net",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D7",
+      "date_added": "2026-02-13"
+    },
+    "Multi-cluster-sector": {
+      "name": "Multi-cluster sector",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D8",
+      "date_added": "2026-02-13"
+    },
+    "Murder": {
+      "name": "Murder",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0D9",
+      "date_added": "2026-02-13"
+    },
+    "National-army": {
+      "name": "National army",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0DA",
+      "date_added": "2026-02-13"
+    },
+    "Needs-assessment": {
+      "name": "Needs assessment",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0DB",
+      "date_added": "2026-02-13"
+    },
+    "Next-item": {
+      "name": "Next item",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0DC",
+      "date_added": "2026-02-13"
+    },
+    "NGO-office": {
+      "name": "NGO office",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0DD",
+      "date_added": "2026-02-13"
+    },
+    "Non-food-items": {
+      "name": "Non food items",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0DE",
+      "date_added": "2026-02-13"
+    },
+    "Non-food-items-2": {
+      "name": "Non food items 2",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0DF",
+      "date_added": "2026-02-13"
+    },
+    "Not-affected": {
+      "name": "Not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E0",
+      "date_added": "2026-02-13"
+    },
+    "Not-infected": {
+      "name": "Not infected",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E1",
+      "date_added": "2026-02-13"
+    },
+    "Not-secured": {
+      "name": "Not secured",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E2",
+      "date_added": "2026-02-13"
+    },
+    "Notification": {
+      "name": "Notification",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E3",
+      "date_added": "2026-02-13"
+    },
+    "Nutrition": {
+      "name": "Nutrition",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E4",
+      "date_added": "2026-02-13"
+    },
+    "Observation-tower": {
+      "name": "Observation tower",
+      "family": "Physical barriers",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E5",
+      "date_added": "2026-02-13"
+    },
+    "Oil": {
+      "name": "Oil",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E6",
+      "date_added": "2026-02-13"
+    },
+    "Oil-facility": {
+      "name": "Oil facility",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E7",
+      "date_added": "2026-02-13"
+    },
+    "Out-of-platform": {
+      "name": "Out of platform",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E8",
+      "date_added": "2026-02-13"
+    },
+    "P-code": {
+      "name": "P-code",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0E9",
+      "date_added": "2026-02-13"
+    },
+    "Partnership": {
+      "name": "Partnership",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0EA",
+      "date_added": "2026-02-13"
+    },
+    "Password": {
+      "name": "Password",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0EB",
+      "date_added": "2026-02-13"
+    },
+    "Pause": {
+      "name": "Pause",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0EC",
+      "date_added": "2026-02-13"
+    },
+    "PDF-file": {
+      "name": "PDF file",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0ED",
+      "date_added": "2026-02-13"
+    },
+    "Peacekeeping-force": {
+      "name": "Peacekeeping force",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0EE",
+      "date_added": "2026-02-13"
+    },
+    "People-affected": {
+      "name": "People affected",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0EF",
+      "date_added": "2026-02-13"
+    },
+    "People-covered": {
+      "name": "People covered",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F0",
+      "date_added": "2026-02-13"
+    },
+    "People-in-need": {
+      "name": "People in need",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F1",
+      "date_added": "2026-02-13"
+    },
+    "People-in-need-2": {
+      "name": "People in need 2",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F2",
+      "date_added": "2026-02-13"
+    },
+    "People-reached": {
+      "name": "People reached",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F3",
+      "date_added": "2026-02-13"
+    },
+    "People-targeted": {
+      "name": "People targeted",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F4",
+      "date_added": "2026-02-13"
+    },
+    "People-targeted-2": {
+      "name": "People targeted 2",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F5",
+      "date_added": "2026-02-13"
+    },
+    "People-with-physical-impairments": {
+      "name": "People with physical impairments",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F6",
+      "date_added": "2026-02-13"
+    },
+    "Permanent-camp": {
+      "name": "Permanent camp",
+      "family": "Camp",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F7",
+      "date_added": "2026-02-13"
+    },
+    "Person-1": {
+      "name": "Person 1",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F8",
+      "date_added": "2026-02-13"
+    },
+    "Person-2": {
+      "name": "Person 2",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0F9",
+      "date_added": "2026-02-13"
+    },
+    "Photo": {
+      "name": "Photo",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0FA",
+      "date_added": "2026-02-13"
+    },
+    "Physical-closure": {
+      "name": "Physical closure",
+      "family": "Physical barriers",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0FB",
+      "date_added": "2026-02-13"
+    },
+    "Physical-distancing": {
+      "name": "Physical distancing",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0FC",
+      "date_added": "2026-02-13"
+    },
+    "Plastic-sheeting": {
+      "name": "Plastic sheeting",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0FD",
+      "date_added": "2026-02-13"
+    },
+    "Police-station": {
+      "name": "Police station",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0FE",
+      "date_added": "2026-02-13"
+    },
+    "Policy": {
+      "name": "Policy",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E0FF",
+      "date_added": "2026-02-13"
+    },
+    "Population-growth": {
+      "name": "Population growth",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E100",
+      "date_added": "2026-02-13"
+    },
+    "Population-return": {
+      "name": "Population return",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E101",
+      "date_added": "2026-02-13"
+    },
+    "Port": {
+      "name": "Port",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E102",
+      "date_added": "2026-02-13"
+    },
+    "Port-affected": {
+      "name": "Port affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E103",
+      "date_added": "2026-02-13"
+    },
+    "Port-closed": {
+      "name": "Port closed",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E104",
+      "date_added": "2026-02-13"
+    },
+    "Port-destroyed": {
+      "name": "Port destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E105",
+      "date_added": "2026-02-13"
+    },
+    "Port-not-affected": {
+      "name": "Port not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E106",
+      "date_added": "2026-02-13"
+    },
+    "Potable-water": {
+      "name": "Potable water",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E107",
+      "date_added": "2026-02-13"
+    },
+    "Potable-water-source": {
+      "name": "Potable water source",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E108",
+      "date_added": "2026-02-13"
+    },
+    "Poverty": {
+      "name": "Poverty",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E109",
+      "date_added": "2026-02-13"
+    },
+    "Power-electricity": {
+      "name": "Power electricity",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E10A",
+      "date_added": "2026-02-13"
+    },
+    "Power-electricity-affected": {
+      "name": "Power electricity affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E10B",
+      "date_added": "2026-02-13"
+    },
+    "Power-electricity-not-affected": {
+      "name": "Power electricity not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E10C",
+      "date_added": "2026-02-13"
+    },
+    "Power-outage": {
+      "name": "Power outage",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E10D",
+      "date_added": "2026-02-13"
+    },
+    "Pregnant": {
+      "name": "Pregnant",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E10E",
+      "date_added": "2026-02-13"
+    },
+    "Preparedness": {
+      "name": "Preparedness",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E10F",
+      "date_added": "2026-02-13"
+    },
+    "Previous-item": {
+      "name": "Previous item",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E110",
+      "date_added": "2026-02-13"
+    },
+    "Print": {
+      "name": "Print",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E111",
+      "date_added": "2026-02-13"
+    },
+    "Protection": {
+      "name": "Protection",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E112",
+      "date_added": "2026-02-13"
+    },
+    "Public-information": {
+      "name": "Public information",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E113",
+      "date_added": "2026-02-13"
+    },
+    "Radio": {
+      "name": "Radio",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E114",
+      "date_added": "2026-02-13"
+    },
+    "Rebel": {
+      "name": "Rebel",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E115",
+      "date_added": "2026-02-13"
+    },
+    "Reconstruction": {
+      "name": "Reconstruction",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E116",
+      "date_added": "2026-02-13"
+    },
+    "Refugee": {
+      "name": "Refugee",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E117",
+      "date_added": "2026-02-13"
+    },
+    "Registration": {
+      "name": "Registration",
+      "family": "Camp",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E118",
+      "date_added": "2026-02-13"
+    },
+    "Relief-goods": {
+      "name": "Relief goods",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E119",
+      "date_added": "2026-02-13"
+    },
+    "Remote-support": {
+      "name": "Remote support",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E11A",
+      "date_added": "2026-02-13"
+    },
+    "Remove": {
+      "name": "Remove",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E11B",
+      "date_added": "2026-02-13"
+    },
+    "Remove-document": {
+      "name": "Remove document",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E11C",
+      "date_added": "2026-02-13"
+    },
+    "Report": {
+      "name": "Report",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E11D",
+      "date_added": "2026-02-13"
+    },
+    "Reporting": {
+      "name": "Reporting",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E11E",
+      "date_added": "2026-02-13"
+    },
+    "Resettlement": {
+      "name": "Resettlement",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E11F",
+      "date_added": "2026-02-13"
+    },
+    "Resilience": {
+      "name": "Resilience",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E120",
+      "date_added": "2026-02-13"
+    },
+    "Respiratory": {
+      "name": "Respiratory",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E121",
+      "date_added": "2026-02-13"
+    },
+    "Response": {
+      "name": "Response",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E122",
+      "date_added": "2026-02-13"
+    },
+    "Return": {
+      "name": "Return",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E123",
+      "date_added": "2026-02-13"
+    },
+    "Rice": {
+      "name": "Rice",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E124",
+      "date_added": "2026-02-13"
+    },
+    "Road": {
+      "name": "Road",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E125",
+      "date_added": "2026-02-13"
+    },
+    "Road-affected": {
+      "name": "Road affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E126",
+      "date_added": "2026-02-13"
+    },
+    "Road-barrier": {
+      "name": "Road barrier",
+      "family": "Physical barriers",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E127",
+      "date_added": "2026-02-13"
+    },
+    "Road-closed": {
+      "name": "Road closed",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E128",
+      "date_added": "2026-02-13"
+    },
+    "Road-destroyed": {
+      "name": "Road destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E129",
+      "date_added": "2026-02-13"
+    },
+    "Road-not-affected": {
+      "name": "Road not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E12A",
+      "date_added": "2026-02-13"
+    },
+    "Roadblock": {
+      "name": "Roadblock",
+      "family": "Physical barriers",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E12B",
+      "date_added": "2026-02-13"
+    },
+    "Robbery": {
+      "name": "Robbery",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E12C",
+      "date_added": "2026-02-13"
+    },
+    "Rule-of-law-and-justice": {
+      "name": "Rule of law and justice",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E12D",
+      "date_added": "2026-02-13"
+    },
+    "Rural": {
+      "name": "Rural",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E12E",
+      "date_added": "2026-02-13"
+    },
+    "Rural-exodus": {
+      "name": "Rural exodus",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E12F",
+      "date_added": "2026-02-13"
+    },
+    "Safety-and-security": {
+      "name": "Safety and security",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E130",
+      "date_added": "2026-02-13"
+    },
+    "Salt": {
+      "name": "Salt",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E131",
+      "date_added": "2026-02-13"
+    },
+    "Sanitation": {
+      "name": "Sanitation",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E132",
+      "date_added": "2026-02-13"
+    },
+    "Sanitizer": {
+      "name": "Sanitizer",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E133",
+      "date_added": "2026-02-13"
+    },
+    "Satellite-dish": {
+      "name": "Satellite dish",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E134",
+      "date_added": "2026-02-13"
+    },
+    "Save": {
+      "name": "Save",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E135",
+      "date_added": "2026-02-13"
+    },
+    "Scale-down-operation": {
+      "name": "Scale down operation",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E136",
+      "date_added": "2026-02-13"
+    },
+    "Scale-up-operation": {
+      "name": "Scale up operation",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E137",
+      "date_added": "2026-02-13"
+    },
+    "School": {
+      "name": "School",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E138",
+      "date_added": "2026-02-13"
+    },
+    "School-affected": {
+      "name": "School affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E139",
+      "date_added": "2026-02-13"
+    },
+    "School-closed": {
+      "name": "School closed",
+      "family": "Lockdown",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E13A",
+      "date_added": "2026-02-13"
+    },
+    "School-destroyed": {
+      "name": "School destroyed",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E13B",
+      "date_added": "2026-02-13"
+    },
+    "School-not-affected": {
+      "name": "School not affected",
+      "family": "Damage",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E13C",
+      "date_added": "2026-02-13"
+    },
+    "Search": {
+      "name": "Search",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E13D",
+      "date_added": "2026-02-13"
+    },
+    "Search-and-rescue": {
+      "name": "Search and rescue",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E13E",
+      "date_added": "2026-02-13"
+    },
+    "Secured": {
+      "name": "Secured",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E13F",
+      "date_added": "2026-02-13"
+    },
+    "Security": {
+      "name": "Security",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E140",
+      "date_added": "2026-02-13"
+    },
+    "See": {
+      "name": "See",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E141",
+      "date_added": "2026-02-13"
+    },
+    "Selected": {
+      "name": "Selected",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E142",
+      "date_added": "2026-02-13"
+    },
+    "Services-and-tools": {
+      "name": "Services and tools",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E143",
+      "date_added": "2026-02-13"
+    },
+    "Settings": {
+      "name": "Settings",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E144",
+      "date_added": "2026-02-13"
+    },
+    "Sex": {
+      "name": "Sex",
+      "family": "People",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E145",
+      "date_added": "2026-02-13"
+    },
+    "Sexual-and-reproductive-health": {
+      "name": "Sexual and reproductive health",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E146",
+      "date_added": "2026-02-13"
+    },
+    "Sexual-violence": {
+      "name": "Sexual violence",
+      "family": "Security and incident",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E147",
+      "date_added": "2026-02-13"
+    },
+    "Share": {
+      "name": "Share",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E148",
+      "date_added": "2026-02-13"
+    },
+    "Shelter": {
+      "name": "Shelter",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E149",
+      "date_added": "2026-02-13"
+    },
+    "Shelter-land-and-site-coordination": {
+      "name": "Shelter, land and site coordination",
+      "family": "Other sectors",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E14A",
+      "date_added": "2026-02-13"
+    },
+    "Ship": {
+      "name": "Ship",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E14B",
+      "date_added": "2026-02-13"
+    },
+    "Shower": {
+      "name": "Shower",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E14C",
+      "date_added": "2026-02-13"
+    },
+    "Smartphone": {
+      "name": "Smartphone",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E14D",
+      "date_added": "2026-02-13"
+    },
+    "Snow-avalanche": {
+      "name": "Snow avalanche",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E14E",
+      "date_added": "2026-02-13"
+    },
+    "Snowfall": {
+      "name": "Snowfall",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E14F",
+      "date_added": "2026-02-13"
+    },
+    "Soap": {
+      "name": "Soap",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E150",
+      "date_added": "2026-02-13"
+    },
+    "Solid-waste": {
+      "name": "Solid waste",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E151",
+      "date_added": "2026-02-13"
+    },
+    "Spontaneous-site": {
+      "name": "Spontaneous site",
+      "family": "Camp",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E152",
+      "date_added": "2026-02-13"
+    },
+    "Spring-water": {
+      "name": "Spring water",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E153",
+      "date_added": "2026-02-13"
+    },
+    "Staff-management": {
+      "name": "Staff management",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E154",
+      "date_added": "2026-02-13"
+    },
+    "Stop": {
+      "name": "Stop",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E155",
+      "date_added": "2026-02-13"
+    },
+    "Storm": {
+      "name": "Storm",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E156",
+      "date_added": "2026-02-13"
+    },
+    "Storm-surge": {
+      "name": "Storm surge",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E157",
+      "date_added": "2026-02-13"
+    },
+    "Stove": {
+      "name": "Stove",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E158",
+      "date_added": "2026-02-13"
+    },
+    "Submersible-pump": {
+      "name": "Submersible pump",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E159",
+      "date_added": "2026-02-13"
+    },
+    "Sugar": {
+      "name": "Sugar",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E15A",
+      "date_added": "2026-02-13"
+    },
+    "Table": {
+      "name": "Table",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E15B",
+      "date_added": "2026-02-13"
+    },
+    "Tarpaulin": {
+      "name": "Tarpaulin",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E15C",
+      "date_added": "2026-02-13"
+    },
+    "Technological-disaster": {
+      "name": "Technological disaster",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E15D",
+      "date_added": "2026-02-13"
+    },
+    "Temporary-camp": {
+      "name": "Temporary camp",
+      "family": "Camp",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E15E",
+      "date_added": "2026-02-13"
+    },
+    "Tent": {
+      "name": "Tent",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E15F",
+      "date_added": "2026-02-13"
+    },
+    "Testing": {
+      "name": "Testing",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E160",
+      "date_added": "2026-02-13"
+    },
+    "Time": {
+      "name": "Time",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E161",
+      "date_added": "2026-02-13"
+    },
+    "Toilet": {
+      "name": "Toilet",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E162",
+      "date_added": "2026-02-13"
+    },
+    "Top-ranking": {
+      "name": "Top ranking",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E163",
+      "date_added": "2026-02-13"
+    },
+    "Tornado": {
+      "name": "Tornado",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E164",
+      "date_added": "2026-02-13"
+    },
+    "Trade-and-market": {
+      "name": "Trade and market",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E165",
+      "date_added": "2026-02-13"
+    },
+    "Train": {
+      "name": "Train",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E166",
+      "date_added": "2026-02-13"
+    },
+    "Training": {
+      "name": "Training",
+      "family": "Activities strategy",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E167",
+      "date_added": "2026-02-13"
+    },
+    "Transition-site": {
+      "name": "Transition site",
+      "family": "Camp",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E168",
+      "date_added": "2026-02-13"
+    },
+    "Trending": {
+      "name": "Trending",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E169",
+      "date_added": "2026-02-13"
+    },
+    "Truck": {
+      "name": "Truck",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E16A",
+      "date_added": "2026-02-13"
+    },
+    "Tsunami": {
+      "name": "Tsunami",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E16B",
+      "date_added": "2026-02-13"
+    },
+    "Tunnel": {
+      "name": "Tunnel",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E16C",
+      "date_added": "2026-02-13"
+    },
+    "UN-compound-office": {
+      "name": "UN compound office",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E16D",
+      "date_added": "2026-02-13"
+    },
+    "UN-vehicle": {
+      "name": "UN vehicle",
+      "family": "Logistics",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E16E",
+      "date_added": "2026-02-13"
+    },
+    "University": {
+      "name": "University",
+      "family": "General infrastructure",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E16F",
+      "date_added": "2026-02-13"
+    },
+    "Up": {
+      "name": "Up",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E170",
+      "date_added": "2026-02-13"
+    },
+    "Upload": {
+      "name": "Upload",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E171",
+      "date_added": "2026-02-13"
+    },
+    "Urban": {
+      "name": "Urban",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E172",
+      "date_added": "2026-02-13"
+    },
+    "Urban-rural": {
+      "name": "Urban rural",
+      "family": "Socioeconomic and development",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E173",
+      "date_added": "2026-02-13"
+    },
+    "User": {
+      "name": "User",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E174",
+      "date_added": "2026-02-13"
+    },
+    "Users": {
+      "name": "Users",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E175",
+      "date_added": "2026-02-13"
+    },
+    "Vaccine": {
+      "name": "Vaccine",
+      "family": "Food and non-food items",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E176",
+      "date_added": "2026-02-13"
+    },
+    "Validate-account": {
+      "name": "Validate account",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E177",
+      "date_added": "2026-02-13"
+    },
+    "Ventilator": {
+      "name": "Ventilator",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E178",
+      "date_added": "2026-02-13"
+    },
+    "Video": {
+      "name": "Video",
+      "family": "Product type",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E179",
+      "date_added": "2026-02-13"
+    },
+    "Violent-wind": {
+      "name": "Violent wind",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E17A",
+      "date_added": "2026-02-13"
+    },
+    "Virus": {
+      "name": "Virus",
+      "family": "Health",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E17B",
+      "date_added": "2026-02-13"
+    },
+    "Volcano": {
+      "name": "Volcano",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E17C",
+      "date_added": "2026-02-13"
+    },
+    "Walkie-talkie": {
+      "name": "Walkie talkie",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E17D",
+      "date_added": "2026-02-13"
+    },
+    "Warning-error": {
+      "name": "Warning error",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E17E",
+      "date_added": "2026-02-13"
+    },
+    "Water-sanitation-and-hygiene": {
+      "name": "Water sanitation and hygiene",
+      "family": "Clusters",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E17F",
+      "date_added": "2026-02-13"
+    },
+    "Water-source": {
+      "name": "Water source",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E180",
+      "date_added": "2026-02-13"
+    },
+    "Water-trucking": {
+      "name": "Water trucking",
+      "family": "Water sanitation and hygiene",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E181",
+      "date_added": "2026-02-13"
+    },
+    "Work-from-home": {
+      "name": "Work from home",
+      "family": "Telecommunications and technology",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E182",
+      "date_added": "2026-02-13"
+    },
+    "Worm-infestation": {
+      "name": "Worm infestation",
+      "family": "Disasters, hazards and crises",
+      "wordmark": true,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E183",
+      "date_added": "2026-02-13"
+    },
+    "XLSX-file": {
+      "name": "XLSX file",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E184",
+      "date_added": "2026-02-13"
+    },
+    "ZIP-compressed": {
+      "name": "ZIP compressed",
+      "family": "UX UI",
+      "wordmark": false,
+      "wordmark_valign": 0,
+      "font_codepoint": "U+E185",
+      "date_added": "2026-02-13"
+    }
+  }
+}
