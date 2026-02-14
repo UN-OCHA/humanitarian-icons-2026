@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OCHA Wordmark Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* OCHA Common Design System Variables */
+      :root {
+        --cd-ocha-blue: #1f69b3;
+        --cd-blue--dark: #144372;
+        --cd-blue--bright: #82b5e9;
+        --cd-white: #fff;
+        --cd-grey--light: #f2f2f2;
+        --cd-grey--mid: #595959;
+        --cd-grey--dark: #4a4a4a;
+        --cd-blue-grey: #e6ecf1;
+        --cd-font--roboto: 'Roboto', helvetica, arial, sans-serif;
+        --cd-max-width: 1220px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: var(--cd-font--roboto);
+        background: var(--cd-blue-grey);
+        min-height: 100vh;
+        padding: 2rem 1rem;
+      }
+
+      .container {
+        max-width: var(--cd-max-width);
+        margin: 0 auto;
+        background: var(--cd-white);
+        border-radius: 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 2.5rem;
+      }
+
+      h1 {
+        color: var(--cd-ocha-blue);
+        margin-bottom: 0.5rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        color: var(--cd-grey--mid);
+        margin-bottom: 2rem;
+        font-weight: 400;
+        font-size: 1.125rem;
+      }
+
+      .controls {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .control-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--cd-blue--dark);
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      input[type="text"] {
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--cd-grey--light);
+        border-radius: 0;
+        font-size: 1rem;
+        font-family: var(--cd-font--roboto);
+        transition: border-color 0.2s ease;
+        background: var(--cd-white);
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        border-color: var(--cd-ocha-blue);
+        box-shadow: none;
+      }
+
+      .search-box {
+        position: relative;
+        margin-bottom: 1rem;
+      }
+
+      .search-box input {
+        width: 100%;
+      }
+
+      .icon-selector {
+        border: 1px solid var(--cd-grey--light);
+        border-radius: 0;
+        padding: 1rem;
+        max-height: 450px;
+        overflow-y: auto;
+        background: var(--cd-white);
+        scrollbar-width: thin;
+        scrollbar-color: var(--cd-ocha-blue) var(--cd-grey--light);
+      }
+
+      .icon-selector::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .icon-selector::-webkit-scrollbar-track {
+        background: var(--cd-grey--light);
+      }
+
+      .icon-selector::-webkit-scrollbar-thumb {
+        background: var(--cd-ocha-blue);
+      }
+
+      .icon-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+        gap: 0.75rem;
+      }
+
+      .icon-item {
+        border: 2px solid var(--cd-grey--light);
+        border-radius: 0;
+        padding: 0.75rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-align: center;
+        background: var(--cd-white);
+      }
+
+      .icon-item:hover {
+        background: var(--cd-blue-grey);
+        border-color: var(--cd-blue--bright);
+      }
+
+      .icon-item.selected {
+        background: var(--cd-ocha-blue);
+        border-color: var(--cd-blue--dark);
+      }
+
+      .icon-item svg {
+        width: 56px;
+        height: 56px;
+        display: block;
+        margin: 0 auto 0.5rem;
+      }
+
+      .icon-item.selected svg path,
+      .icon-item.selected svg circle,
+      .icon-item.selected svg rect,
+      .icon-item.selected svg polygon,
+      .icon-item.selected svg ellipse {
+        fill: white !important;
+      }
+
+      .icon-name {
+        font-size: 0.625rem;
+        color: var(--cd-grey--mid);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 400;
+      }
+
+      .icon-item.selected .icon-name {
+        color: var(--cd-white);
+        font-weight: 500;
+      }
+
+      /* Line layout selector */
+      .line-layout-selector {
+        display: flex;
+        gap: 0;
+        margin-bottom: 0.75rem;
+      }
+
+      .line-layout-btn {
+        flex: 1;
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        font-family: var(--cd-font--roboto);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border: 1px solid var(--cd-grey--light);
+        background: var(--cd-white);
+        color: var(--cd-grey--mid);
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .line-layout-btn:first-child {
+        border-right: none;
+      }
+
+      .line-layout-btn:last-child {
+        border-left: none;
+      }
+
+      .line-layout-btn.active {
+        background: var(--cd-ocha-blue);
+        border-color: var(--cd-ocha-blue);
+        color: var(--cd-white);
+      }
+
+      .line-layout-btn:hover:not(.active) {
+        background: var(--cd-blue-grey);
+        border-color: var(--cd-blue--bright);
+      }
+
+      .text-inputs-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      .text-inputs-container input {
+        padding: 0.75rem 1rem;
+        border: 1px solid var(--cd-grey--light);
+        border-radius: 0;
+        font-size: 1rem;
+        font-family: var(--cd-font--roboto);
+        transition: border-color 0.2s ease;
+        background: var(--cd-white);
+      }
+
+      .text-inputs-container input:focus {
+        outline: none;
+        border-color: var(--cd-ocha-blue);
+        box-shadow: none;
+      }
+
+      .line-hint {
+        font-size: 0.75rem;
+        color: var(--cd-grey--mid);
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0;
+        margin-top: -0.25rem;
+      }
+
+      .preview-section {
+        margin: 2rem 0;
+        padding: 2rem;
+        background: var(--cd-grey--light);
+        border-radius: 0;
+        text-align: center;
+        border: 1px solid var(--cd-grey--light);
+      }
+
+      .preview-section h2 {
+        color: var(--cd-blue--dark);
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      #preview {
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        background: var(--cd-white);
+        border-radius: 0;
+        box-shadow: none;
+        border: 1px solid var(--cd-grey--light);
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      button {
+        padding: 0.75rem 2rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        border: 2px solid transparent;
+        border-radius: 0;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        font-family: var(--cd-font--roboto);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: none;
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .btn-svg {
+        background: var(--cd-ocha-blue);
+        color: var(--cd-white);
+        border-color: var(--cd-ocha-blue);
+      }
+
+      .btn-svg:hover:not(:disabled) {
+        background: var(--cd-blue--dark);
+        border-color: var(--cd-blue--dark);
+      }
+
+      .btn-png {
+        background: var(--cd-grey--dark);
+        color: var(--cd-white);
+        border-color: var(--cd-grey--dark);
+      }
+
+      .btn-png:hover:not(:disabled) {
+        background: var(--cd-grey--mid);
+        border-color: var(--cd-grey--mid);
+      }
+
+      .loading {
+        text-align: center;
+        padding: 2rem;
+        color: var(--cd-grey--mid);
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      .no-results {
+        text-align: center;
+        padding: 3rem;
+        color: var(--cd-grey--mid);
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1.5rem;
+        }
+
+        .controls {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .buttons {
+          flex-direction: column;
+        }
+
+        button {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>UN OCHA Wordmark Generator</h1>
+      <p class="subtitle">Create branded wordmarks using Humanitarian Icons</p>
+
+      <div class="controls">
+        <div class="control-group">
+          <label>1. Select Icon</label>
+          <div class="search-box">
+            <input type="text" id="iconSearch" placeholder="Search icons..." />
+          </div>
+          <div class="icon-selector" id="iconSelector">
+            <div class="loading">Loading icons...</div>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>2. Enter Text</label>
+          <div class="line-layout-selector">
+            <button type="button" class="line-layout-btn active" data-lines="1">1 Line</button>
+            <button type="button" class="line-layout-btn" data-lines="2">2 Lines</button>
+            <button type="button" class="line-layout-btn" data-lines="3">3 Lines</button>
+          </div>
+          <div class="text-inputs-container" id="textInputs">
+            <input
+              type="text"
+              id="line1"
+              placeholder="e.g., Humanitarian Country Team"
+              value=""
+            />
+          </div>
+          <p class="line-hint" id="lineHint"></p>
+        </div>
+      </div>
+
+      <div class="preview-section">
+        <h2>Preview</h2>
+        <div id="preview">
+          <p style="color: #999">
+            Select an icon and enter text to see preview
+          </p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn-svg" id="downloadSVG" disabled>Download SVG</button>
+        <button class="btn-png" id="downloadPNG" disabled>Download PNG</button>
+      </div>
+    </div>
+
+    <script>
+      let icons = [];
+      let selectedIcon = null;
+      let lineCount = 1;
+      const UN_BLUE = "#009edb";
+
+      function normalizeIconName(value) {
+        return (value || "")
+          .toLowerCase()
+          .replace(/&/g, "and")
+          .replace(/[\s\-_,.()\/]+/g, "")
+          .trim();
+      }
+
+      function parseCSV(text) {
+        const rows = [];
+        let row = [];
+        let field = "";
+        let inQuotes = false;
+
+        for (let i = 0; i < text.length; i++) {
+          const char = text[i];
+          const next = text[i + 1];
+
+          if (char === '"') {
+            if (inQuotes && next === '"') {
+              field += '"';
+              i++;
+            } else {
+              inQuotes = !inQuotes;
+            }
+          } else if (char === "," && !inQuotes) {
+            row.push(field);
+            field = "";
+          } else if ((char === "\n" || char === "\r") && !inQuotes) {
+            if (char === "\r" && next === "\n") i++;
+            row.push(field);
+            const trimmed = row.map((v) => v.trim());
+            if (trimmed.some((v) => v.length > 0)) rows.push(trimmed);
+            row = [];
+            field = "";
+          } else {
+            field += char;
+          }
+        }
+
+        if (field.length > 0 || row.length > 0) {
+          row.push(field);
+          const trimmed = row.map((v) => v.trim());
+          if (trimmed.some((v) => v.length > 0)) rows.push(trimmed);
+        }
+
+        return rows;
+      }
+
+      function humanizeIconNameFromPath(path) {
+        const filename = path
+          .split("/")
+          .pop()
+          .replace(/\.svg$/i, "");
+        return filename
+          .replace(/[_-]+/g, " ")
+          .replace(/\s+/g, " ")
+          .trim()
+          .replace(/\b\w/g, (c) => c.toUpperCase());
+      }
+
+      function isIconSvgPath(path) {
+        const lower = path.toLowerCase();
+        return (
+          lower.endsWith(".svg") &&
+          lower.startsWith("svg/") &&
+          !lower.includes("/.")
+        );
+      }
+
+      function repoPathToCdnUrl(path) {
+        const encodedPath = path
+          .split("/")
+          .map((part) => encodeURIComponent(part))
+          .join("/");
+        return `https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/${encodedPath}`;
+      }
+
+      async function loadIconsFromRepo() {
+        const apiCandidates = [
+          "https://api.github.com/repos/UN-OCHA/humanitarian-icons-2026/git/trees/main?recursive=1",
+          "https://api.github.com/repos/UN-OCHA/humanitarian-icons-2026/git/trees/master?recursive=1",
+        ];
+
+        let treeData = null;
+        let lastError = null;
+
+        for (const url of apiCandidates) {
+          try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            treeData = await response.json();
+            if (treeData && Array.isArray(treeData.tree)) break;
+          } catch (err) {
+            lastError = err;
+          }
+        }
+
+        if (!treeData || !Array.isArray(treeData.tree)) {
+          throw lastError || new Error("Could not read repository tree.");
+        }
+
+        const iconMap = new Map();
+        treeData.tree
+          .filter(
+            (item) =>
+              item && item.type === "blob" && isIconSvgPath(item.path || ""),
+          )
+          .forEach((item) => {
+            const name = humanizeIconNameFromPath(item.path);
+            iconMap.set(name, repoPathToCdnUrl(item.path));
+          });
+
+        return iconMap;
+      }
+
+      function parseUrlMappingsFromCSV(csvText) {
+        const iconMap = new Map();
+        const rows = parseCSV(csvText);
+        const header = (rows[0] || []).map((h) => h.toLowerCase());
+        const nameIdx = header.indexOf("name");
+        const variantIdx = header.indexOf("variant");
+        const urlIdx = header.indexOf("url");
+
+        if (nameIdx === -1 || variantIdx === -1 || urlIdx === -1) {
+          throw new Error("URL CSV is missing Name/Variant/URL columns.");
+        }
+
+        rows.slice(1).forEach((r) => {
+          const name = (r[nameIdx] || "").trim();
+          const variant = (r[variantIdx] || "")
+            .trim()
+            .toLowerCase()
+            .replace(/\s+/g, "-");
+          const url = (r[urlIdx] || "").trim();
+          if ((variant === "un-blue" || variant === "unblue") && name && url) {
+            iconMap.set(name, url);
+          }
+        });
+
+        return iconMap;
+      }
+
+      // Load icons from curated JSON file (or fallback to humanitarian-icons repo)
+      async function loadIcons() {
+        try {
+          // Try to load curated icons first
+          try {
+            console.log("Attempting to load curated-icons.json...");
+            const response = await fetch("./curated-icons.json");
+            console.log("Fetch response:", response.status, response.ok);
+            if (response.ok) {
+              const data = await response.json();
+              console.log("Loaded curated data:", {
+                isArray: Array.isArray(data),
+                hasIcons: !!data.icons,
+                iconsCount: data.icons ? data.icons.length : 0,
+                firstIcon: data.icons ? data.icons[0] : null,
+              });
+              // Handle both old array format and new object format with icons array
+              if (Array.isArray(data)) {
+                icons = data;
+              } else if (data.icons && Array.isArray(data.icons)) {
+                icons = data.icons;
+              } else {
+                throw new Error("Invalid curated-icons.json format");
+              }
+              console.log("Final icons array length:", icons.length);
+              renderIcons(icons);
+              return;
+            }
+          } catch (e) {
+            console.log(
+              "No curated-icons.json found, loading from humanitarian-icons repository",
+              e,
+            );
+          }
+
+          const iconMap = new Map();
+          try {
+            const repoMap = await loadIconsFromRepo();
+            repoMap.forEach((url, name) => iconMap.set(name, url));
+          } catch (repoErr) {
+            console.warn(
+              "Repo tree fetch failed; trying URL CSV fallback.",
+              repoErr,
+            );
+            const csvSources = [
+              "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/OCHA_Humanitarian_Icons_URLs.csv",
+              "https://raw.githubusercontent.com/UN-OCHA/humanitarian-icons-2026/main/OCHA_Humanitarian_Icons_URLs.csv",
+            ];
+
+            let loaded = false;
+            for (const url of csvSources) {
+              try {
+                const response = await fetch(url);
+                if (!response.ok) continue;
+                const csvText = await response.text();
+                const csvMap = parseUrlMappingsFromCSV(csvText);
+                csvMap.forEach((iconUrl, name) => iconMap.set(name, iconUrl));
+                loaded = iconMap.size > 0;
+                if (loaded) break;
+              } catch (csvErr) {
+                console.warn("CSV source failed:", url, csvErr);
+              }
+            }
+
+            if (!loaded) {
+              throw new Error(
+                "Could not load icons from the UN-OCHA humanitarian-icons repository.",
+              );
+            }
+          }
+
+          icons = Array.from(iconMap.entries())
+            .map(([name, url]) => ({
+              name,
+              url,
+              verticalAdjustment: 0,
+            }))
+            .sort((a, b) => a.name.localeCompare(b.name));
+
+          renderIcons(icons);
+        } catch (error) {
+          document.getElementById("iconSelector").innerHTML =
+            '<div class="loading" style="color: red;">Error loading icons. Please refresh the page.</div>';
+          console.error("Error loading icons:", error);
+        }
+      }
+
+      function renderIcons(iconsToRender) {
+        const container = document.getElementById("iconSelector");
+
+        // Filter out icons with empty or invalid URLs
+        const validIcons = iconsToRender.filter(
+          (icon) =>
+            icon.url && icon.url.trim() !== "" && icon.url.endsWith(".svg"),
+        );
+
+        if (validIcons.length === 0) {
+          container.innerHTML = '<div class="no-results">No icons found</div>';
+          return;
+        }
+
+        const grid = document.createElement("div");
+        grid.className = "icon-grid";
+
+        validIcons.forEach((icon) => {
+          const item = document.createElement("div");
+          item.className = "icon-item";
+          item.innerHTML = `
+                    <div class="icon-placeholder" data-url="${icon.url}">
+                        <div style="width: 48px; height: 48px; background: #ddd; margin: 0 auto 5px;"></div>
+                    </div>
+                    <div class="icon-name" title="${icon.name}">${icon.name}</div>
+                `;
+
+          item.addEventListener("click", () => selectIcon(icon, item));
+          grid.appendChild(item);
+
+          // Load SVG asynchronously, cleaning CSS classes to prevent conflicts
+          fetch(icon.url)
+            .then((r) => r.text())
+            .then((svgText) => {
+              const placeholder = item.querySelector(".icon-placeholder");
+              // Strip <defs>...</defs> and <style>...</style> blocks
+              let cleaned = svgText.replace(/<defs>[\s\S]*?<\/defs>/gi, '');
+              cleaned = cleaned.replace(/<defs\s[^>]*>[\s\S]*?<\/defs>/gi, '');
+              cleaned = cleaned.replace(/<style[\s\S]*?<\/style>/gi, '');
+              cleaned = cleaned.replace(/<title>[\s\S]*?<\/title>/gi, '');
+              // Remove class attributes and add direct fill
+              cleaned = cleaned.replace(/\s+class="[^"]*"/g, '');
+              // Add fill to shape elements that don't have one
+              const shapes = ['path', 'circle', 'rect', 'polygon', 'ellipse', 'polyline'];
+              shapes.forEach(tag => {
+                const re = new RegExp('<' + tag + '(?![^>]*\\bfill\\s*=)', 'g');
+                cleaned = cleaned.replace(re, '<' + tag + ' fill="#009edb"');
+              });
+              // Remove inline style attributes (which may contain fill via CSS class)
+              cleaned = cleaned.replace(/\s+style="[^"]*"/g, '');
+              placeholder.innerHTML = cleaned;
+            })
+            .catch((err) => console.error("Error loading icon:", err));
+        });
+
+        container.innerHTML = "";
+        container.appendChild(grid);
+      }
+
+      function selectIcon(icon, element) {
+        // Remove previous selection
+        document.querySelectorAll(".icon-item").forEach((item) => {
+          item.classList.remove("selected");
+        });
+
+        // Add selection
+        element.classList.add("selected");
+        selectedIcon = icon;
+
+        updatePreview();
+      }
+
+      function getTextLines() {
+        const lines = [];
+        for (let i = 1; i <= lineCount; i++) {
+          const input = document.getElementById(`line${i}`);
+          if (input) lines.push(input.value.trim());
+        }
+        return lines;
+      }
+
+      function hasText() {
+        return getTextLines().some(line => line.length > 0);
+      }
+
+      async function updatePreview() {
+        const preview = document.getElementById("preview");
+        const downloadSVG = document.getElementById("downloadSVG");
+        const downloadPNG = document.getElementById("downloadPNG");
+
+        if (!selectedIcon || !hasText()) {
+          preview.innerHTML =
+            '<p style="color: #999;">Select an icon and enter text to see preview</p>';
+          downloadSVG.disabled = true;
+          downloadPNG.disabled = true;
+          return;
+        }
+
+        const svg = await generateWordmark();
+        preview.innerHTML = "";
+        preview.appendChild(svg);
+
+        downloadSVG.disabled = false;
+        downloadPNG.disabled = false;
+      }
+
+      async function generateWordmark() {
+        const lines = getTextLines().filter(l => l.length > 0);
+        const numLines = lines.length;
+
+        // Font sizes: 1-line = 36px, 2-line and 3-line = 24px
+        const fontSize = numLines === 1 ? 36 : 24;
+        const lineHeight = fontSize * 1.25; // 125% line height
+        const spacing = 12; // Fixed spacing from icon box to text
+        const iconBoxWidth = 48; // Fixed 48px width for icon box
+        const iconBoxHeight = 48; // Fixed 48px height for icon box (square)
+
+        // Fetch the icon SVG
+        const response = await fetch(selectedIcon.url);
+        const iconSVGText = await response.text();
+
+        // Parse the icon SVG to extract the paths
+        const parser = new DOMParser();
+        const iconDoc = parser.parseFromString(iconSVGText, "image/svg+xml");
+        const iconPaths = iconDoc.querySelectorAll(
+          "path, circle, rect, polygon, polyline, line, ellipse",
+        );
+
+        // Get the actual bounding box of the icon content
+        const tempSvg = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "svg",
+        );
+        tempSvg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        tempSvg.setAttribute("viewBox", "0 0 48 48");
+        tempSvg.setAttribute("width", "48");
+        tempSvg.setAttribute("height", "48");
+        tempSvg.style.position = "absolute";
+        tempSvg.style.visibility = "hidden";
+        document.body.appendChild(tempSvg);
+
+        const tempGroup = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "g",
+        );
+        iconPaths.forEach((path) => {
+          const clonedPath = path.cloneNode(true);
+          clonedPath.setAttribute("fill", "#009edb");
+          tempGroup.appendChild(clonedPath);
+        });
+        tempSvg.appendChild(tempGroup);
+
+        const bbox = tempGroup.getBBox();
+        document.body.removeChild(tempSvg);
+
+        // Measure text metrics for each line
+        const canvas = document.createElement("canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.font = `700 ${fontSize}px Roboto`;
+        const lineWidths = lines.map(line => ctx.measureText(line).width);
+        const maxTextWidth = Math.max(...lineWidths);
+
+        // Cap height (uppercase letter height) is approximately 0.7 of font size
+        const capHeight = fontSize * 0.7;
+
+        // Calculate total text block height
+        // For multi-line: line spacing from first baseline to last baseline + capHeight
+        const textBlockHeight = numLines === 1
+          ? capHeight
+          : (numLines - 1) * lineHeight + capHeight;
+
+        // Scale icon to fit within the icon box (with some padding)
+        const iconMaxWidth = iconBoxWidth * 0.9;
+        const iconMaxHeight = iconBoxHeight * 0.9;
+        const iconScale = Math.min(
+          iconMaxWidth / bbox.width,
+          iconMaxHeight / bbox.height,
+        );
+        const scaledIconWidth = bbox.width * iconScale;
+        const scaledIconHeight = bbox.height * iconScale;
+
+        // Get vertical adjustment from curated data (if available)
+        const boxAdjustment = selectedIcon.verticalAdjustment || 0;
+
+        // Calculate total height — for multi-line, text block may exceed icon box
+        const totalHeight = Math.max(iconBoxHeight, textBlockHeight + 8);
+
+        // Determine icon vertical centering:
+        // 1-line: icon centered with text (same as before)
+        // 2-line: icon centered between lines 1 and 2
+        // 3-line: icon centered between lines 1 and 2
+        let iconCenterY;
+        let textStartY; // Y position of first line baseline
+
+        if (numLines === 1) {
+          // Single line: everything centered at totalHeight/2
+          iconCenterY = totalHeight / 2;
+          textStartY = (totalHeight + capHeight) / 2;
+        } else {
+          // Multi-line: center the text block vertically in the total height
+          // Text block starts from first baseline, ends at last baseline + capHeight ascent
+          textStartY = (totalHeight - textBlockHeight) / 2 + capHeight;
+
+          if (numLines === 2) {
+            // Icon centered between line 1 and line 2 baselines
+            const line1Baseline = textStartY;
+            const line2Baseline = textStartY + lineHeight;
+            iconCenterY = (line1Baseline + line2Baseline - capHeight) / 2 + capHeight / 2;
+          } else {
+            // 3 lines: icon centered between line 1 and line 2 baselines
+            const line1Baseline = textStartY;
+            const line2Baseline = textStartY + lineHeight;
+            iconCenterY = (line1Baseline + line2Baseline - capHeight) / 2 + capHeight / 2;
+          }
+        }
+
+        // Position text X
+        const textX = iconBoxWidth + spacing;
+
+        // Calculate total width
+        const totalWidth = textX + maxTextWidth;
+
+        // Right-align icon within the icon box, vertically centered at iconCenterY
+        const iconX = iconBoxWidth - scaledIconWidth - bbox.x * iconScale;
+        const iconY =
+          iconCenterY - scaledIconHeight / 2 -
+          bbox.y * iconScale -
+          boxAdjustment;
+
+        // Create the combined SVG
+        const svg = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "svg",
+        );
+        svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+        svg.setAttribute("viewBox", `0 0 ${totalWidth} ${totalHeight}`);
+        svg.setAttribute("width", totalWidth);
+        svg.setAttribute("height", totalHeight);
+
+        // Add icon group with scaling and positioning
+        const iconGroup = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "g",
+        );
+        iconGroup.setAttribute(
+          "transform",
+          `translate(${iconX}, ${iconY}) scale(${iconScale})`,
+        );
+
+        iconPaths.forEach((path) => {
+          const clonedPath = path.cloneNode(true);
+          clonedPath.setAttribute("fill", UN_BLUE);
+          clonedPath.removeAttribute("class");
+          iconGroup.appendChild(clonedPath);
+        });
+
+        svg.appendChild(iconGroup);
+
+        // Add text lines
+        lines.forEach((line, index) => {
+          const textElement = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "text",
+          );
+          textElement.setAttribute("x", textX);
+          textElement.setAttribute("y", textStartY + index * lineHeight);
+          textElement.setAttribute("font-family", "Roboto");
+          textElement.setAttribute("font-weight", "700");
+          textElement.setAttribute("font-size", fontSize);
+          textElement.setAttribute("fill", "#000000");
+          textElement.textContent = line;
+          svg.appendChild(textElement);
+        });
+
+        return svg;
+      }
+
+      function getDownloadFilename() {
+        const lines = getTextLines().filter(l => l.length > 0);
+        return sanitizeFilename(lines.join("-"));
+      }
+
+      function downloadSVG() {
+        generateWordmark().then((svg) => {
+          const svgData = new XMLSerializer().serializeToString(svg);
+          const blob = new Blob([svgData], { type: "image/svg+xml" });
+          const url = URL.createObjectURL(blob);
+
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = `${getDownloadFilename()}-wordmark.svg`;
+          a.click();
+
+          URL.revokeObjectURL(url);
+        });
+      }
+
+      function downloadPNG() {
+        generateWordmark().then((svg) => {
+          const svgData = new XMLSerializer().serializeToString(svg);
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+
+          const img = new Image();
+          const blob = new Blob([svgData], { type: "image/svg+xml" });
+          const url = URL.createObjectURL(blob);
+
+          img.onload = function () {
+            // Set canvas size to 2x for better quality
+            canvas.width = img.width * 2;
+            canvas.height = img.height * 2;
+            ctx.scale(2, 2);
+            ctx.drawImage(img, 0, 0);
+
+            canvas.toBlob(function (pngBlob) {
+              const pngUrl = URL.createObjectURL(pngBlob);
+              const a = document.createElement("a");
+              a.href = pngUrl;
+              a.download = `${getDownloadFilename()}-wordmark.png`;
+              a.click();
+
+              URL.revokeObjectURL(url);
+              URL.revokeObjectURL(pngUrl);
+            });
+          };
+
+          img.src = url;
+        });
+      }
+
+      function sanitizeFilename(text) {
+        return text
+          .replace(/[^a-z0-9]/gi, "-")
+          .toLowerCase()
+          .replace(/-+/g, "-")
+          .replace(/^-|-$/g, "")
+          .substring(0, 50);
+      }
+
+      // --- Line layout management ---
+      function setLineCount(count) {
+        lineCount = count;
+
+        // Update active button
+        document.querySelectorAll(".line-layout-btn").forEach(btn => {
+          btn.classList.toggle("active", parseInt(btn.dataset.lines) === count);
+        });
+
+        // Rebuild text inputs
+        const container = document.getElementById("textInputs");
+        const hint = document.getElementById("lineHint");
+
+        // Save existing values
+        const existingValues = [];
+        for (let i = 1; i <= 3; i++) {
+          const input = document.getElementById(`line${i}`);
+          if (input) existingValues.push(input.value);
+        }
+
+        // Build new inputs
+        const placeholders = [
+          ["e.g., Humanitarian Country Team Mozambique"],
+          ["e.g., Humanitarian Country Team", "e.g., Mozambique"],
+          ["e.g., Humanitarian", "e.g., Country Team", "e.g., Mozambique"],
+        ];
+
+        const labels = [
+          [],
+          ["Line 1", "Line 2"],
+          ["Line 1", "Line 2", "Line 3"],
+        ];
+
+        let html = "";
+        for (let i = 0; i < count; i++) {
+          const value = existingValues[i] || "";
+          const placeholder = placeholders[count - 1][i] || "";
+          html += `<input type="text" id="line${i + 1}" placeholder="${placeholder}" value="${value}" />`;
+        }
+        container.innerHTML = html;
+
+        // Hints
+        if (count === 1) {
+          hint.textContent = "";
+        } else if (count === 2) {
+          hint.textContent = "Smaller text. Icon centered between both lines.";
+        } else {
+          hint.textContent = "Same size as 2 lines. Icon centered between lines 1 and 2.";
+        }
+
+        // Bind input events
+        for (let i = 1; i <= count; i++) {
+          document.getElementById(`line${i}`).addEventListener("input", updatePreview);
+        }
+
+        updatePreview();
+      }
+
+      // Event listeners
+      document.querySelectorAll(".line-layout-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          setLineCount(parseInt(btn.dataset.lines));
+        });
+      });
+
+      document.getElementById("line1").addEventListener("input", updatePreview);
+
+      document
+        .getElementById("downloadSVG")
+        .addEventListener("click", downloadSVG);
+      document
+        .getElementById("downloadPNG")
+        .addEventListener("click", downloadPNG);
+
+      // Search functionality
+      document.getElementById("iconSearch").addEventListener("input", (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        const filtered = icons.filter((icon) =>
+          icon.name.toLowerCase().includes(searchTerm),
+        );
+        renderIcons(filtered);
+      });
+
+      // Initialize
+      loadIcons();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,2240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCHA Humanitarian Icons — Font Reference</title>
+<style>
+@font-face {
+  font-family: "OCHA Humanitarian Icons";
+  src: url("ocha-humanitarian-icons.woff2") format("woff2"),
+       url("ocha-humanitarian-icons.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: #f5f6fa;
+  color: #2d3436;
+  line-height: 1.5;
+  padding: 2rem;
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.25rem;
+}
+
+.header .subtitle {
+  font-size: 0.95rem;
+  color: #636e72;
+  margin-bottom: 1.5rem;
+}
+
+.search-box {
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.75rem;
+  font-size: 1rem;
+  border: 2px solid #dfe6e9;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #009edb;
+}
+
+.search-box::before {
+  content: "\2315";
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #b2bec3;
+  pointer-events: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.family-section {
+  margin-bottom: 2.5rem;
+}
+
+.family-header {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #fff;
+  background: #009edb;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.75rem;
+}
+
+.icon-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: box-shadow 0.15s, transform 0.15s;
+  cursor: default;
+}
+
+.icon-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.icon-card.hidden {
+  display: none;
+}
+
+.icon-char {
+  font-family: "OCHA Humanitarian Icons";
+  font-size: 2.5rem;
+  line-height: 1;
+  color: #009edb;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  user-select: all;
+  -webkit-user-select: all;
+}
+
+.icon-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #2d3436;
+  margin-bottom: 0.2rem;
+  word-break: break-word;
+}
+
+.icon-code {
+  font-size: 0.7rem;
+  color: #b2bec3;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", monospace;
+}
+
+.no-results {
+  display: none;
+  text-align: center;
+  padding: 3rem;
+  color: #636e72;
+  font-size: 1.1rem;
+}
+
+.family-section.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  color: #b2bec3;
+  font-size: 0.8rem;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>OCHA Humanitarian Icons</h1>
+  <p class="subtitle">389 icons &middot; Font version 2.0 &middot; United Nations OCHA</p>
+</div>
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Filter icons by name..." autocomplete="off" />
+</div>
+
+<div class="container" id="iconContainer">
+    <div class="family-section">
+      <h2 class="family-header">Clusters</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="camp coordination and camp management" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Camp coordination and camp management</div>
+        <div class="icon-code">U+E031</div>
+      </div>
+      <div class="icon-card" data-name="early recovery" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Early recovery</div>
+        <div class="icon-code">U+E064</div>
+      </div>
+      <div class="icon-card" data-name="education" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Education</div>
+        <div class="icon-code">U+E068</div>
+      </div>
+      <div class="icon-card" data-name="emergency telecommunications" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Emergency telecommunications</div>
+        <div class="icon-code">U+E06A</div>
+      </div>
+      <div class="icon-card" data-name="food security" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Food security</div>
+        <div class="icon-code">U+E080</div>
+      </div>
+      <div class="icon-card" data-name="health" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Health</div>
+        <div class="icon-code">U+E08E</div>
+      </div>
+      <div class="icon-card" data-name="logistics" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Logistics</div>
+        <div class="icon-code">U+E0C3</div>
+      </div>
+      <div class="icon-card" data-name="nutrition" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Nutrition</div>
+        <div class="icon-code">U+E0E4</div>
+      </div>
+      <div class="icon-card" data-name="protection" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Protection</div>
+        <div class="icon-code">U+E112</div>
+      </div>
+      <div class="icon-card" data-name="shelter" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Shelter</div>
+        <div class="icon-code">U+E149</div>
+      </div>
+      <div class="icon-card" data-name="water sanitation and hygiene" data-family="clusters">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Water sanitation and hygiene</div>
+        <div class="icon-code">U+E17F</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Other sectors</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="agriculture" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Agriculture</div>
+        <div class="icon-code">U+E008</div>
+      </div>
+      <div class="icon-card" data-name="child care child friendly" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Child care child friendly</div>
+        <div class="icon-code">U+E03B</div>
+      </div>
+      <div class="icon-card" data-name="child protection" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Child protection</div>
+        <div class="icon-code">U+E03D</div>
+      </div>
+      <div class="icon-card" data-name="coordination" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Coordination</div>
+        <div class="icon-code">U+E04B</div>
+      </div>
+      <div class="icon-card" data-name="environment" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Environment</div>
+        <div class="icon-code">U+E06B</div>
+      </div>
+      <div class="icon-card" data-name="fishery" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Fishery</div>
+        <div class="icon-code">U+E07A</div>
+      </div>
+      <div class="icon-card" data-name="logistics and telecommunications" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Logistics and telecommunications</div>
+        <div class="icon-code">U+E0C4</div>
+      </div>
+      <div class="icon-card" data-name="multi-cluster sector" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Multi-cluster sector</div>
+        <div class="icon-code">U+E0D8</div>
+      </div>
+      <div class="icon-card" data-name="rule of law and justice" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Rule of law and justice</div>
+        <div class="icon-code">U+E12D</div>
+      </div>
+      <div class="icon-card" data-name="safety and security" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Safety and security</div>
+        <div class="icon-code">U+E130</div>
+      </div>
+      <div class="icon-card" data-name="shelter, land and site coordination" data-family="other sectors">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Shelter, land and site coordination</div>
+        <div class="icon-code">U+E14A</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Disasters, hazards and crises</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="anticipatory action" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Anticipatory action</div>
+        <div class="icon-code">U+E012</div>
+      </div>
+      <div class="icon-card" data-name="cold wave" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Cold wave</div>
+        <div class="icon-code">U+E043</div>
+      </div>
+      <div class="icon-card" data-name="conflict" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Conflict</div>
+        <div class="icon-code">U+E049</div>
+      </div>
+      <div class="icon-card" data-name="cyclone" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Cyclone</div>
+        <div class="icon-code">U+E050</div>
+      </div>
+      <div class="icon-card" data-name="drought" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Drought</div>
+        <div class="icon-code">U+E061</div>
+      </div>
+      <div class="icon-card" data-name="earthquake" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Earthquake</div>
+        <div class="icon-code">U+E066</div>
+      </div>
+      <div class="icon-card" data-name="epidemic" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Epidemic</div>
+        <div class="icon-code">U+E06C</div>
+      </div>
+      <div class="icon-card" data-name="famine" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Famine</div>
+        <div class="icon-code">U+E072</div>
+      </div>
+      <div class="icon-card" data-name="fire" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Fire</div>
+        <div class="icon-code">U+E079</div>
+      </div>
+      <div class="icon-card" data-name="flash flood" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Flash flood</div>
+        <div class="icon-code">U+E07B</div>
+      </div>
+      <div class="icon-card" data-name="flood" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Flood</div>
+        <div class="icon-code">U+E07C</div>
+      </div>
+      <div class="icon-card" data-name="heatwave" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Heatwave</div>
+        <div class="icon-code">U+E095</div>
+      </div>
+      <div class="icon-card" data-name="heavy rain" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Heavy rain</div>
+        <div class="icon-code">U+E096</div>
+      </div>
+      <div class="icon-card" data-name="humanitarian access" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Humanitarian access</div>
+        <div class="icon-code">U+E0A5</div>
+      </div>
+      <div class="icon-card" data-name="insect infestation" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Insect infestation</div>
+        <div class="icon-code">U+E0B1</div>
+      </div>
+      <div class="icon-card" data-name="internally displaced" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Internally displaced</div>
+        <div class="icon-code">U+E0B2</div>
+      </div>
+      <div class="icon-card" data-name="landslide mudslide" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Landslide mudslide</div>
+        <div class="icon-code">U+E0B6</div>
+      </div>
+      <div class="icon-card" data-name="locust infestation" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Locust infestation</div>
+        <div class="icon-code">U+E0C2</div>
+      </div>
+      <div class="icon-card" data-name="population return" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Population return</div>
+        <div class="icon-code">U+E101</div>
+      </div>
+      <div class="icon-card" data-name="poverty" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Poverty</div>
+        <div class="icon-code">U+E109</div>
+      </div>
+      <div class="icon-card" data-name="refugee" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Refugee</div>
+        <div class="icon-code">U+E117</div>
+      </div>
+      <div class="icon-card" data-name="resilience" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Resilience</div>
+        <div class="icon-code">U+E120</div>
+      </div>
+      <div class="icon-card" data-name="snow avalanche" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Snow avalanche</div>
+        <div class="icon-code">U+E14E</div>
+      </div>
+      <div class="icon-card" data-name="snowfall" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Snowfall</div>
+        <div class="icon-code">U+E14F</div>
+      </div>
+      <div class="icon-card" data-name="storm" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Storm</div>
+        <div class="icon-code">U+E156</div>
+      </div>
+      <div class="icon-card" data-name="storm surge" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Storm surge</div>
+        <div class="icon-code">U+E157</div>
+      </div>
+      <div class="icon-card" data-name="technological disaster" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Technological disaster</div>
+        <div class="icon-code">U+E15D</div>
+      </div>
+      <div class="icon-card" data-name="tornado" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Tornado</div>
+        <div class="icon-code">U+E164</div>
+      </div>
+      <div class="icon-card" data-name="tsunami" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Tsunami</div>
+        <div class="icon-code">U+E16B</div>
+      </div>
+      <div class="icon-card" data-name="violent wind" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Violent wind</div>
+        <div class="icon-code">U+E17A</div>
+      </div>
+      <div class="icon-card" data-name="volcano" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Volcano</div>
+        <div class="icon-code">U+E17C</div>
+      </div>
+      <div class="icon-card" data-name="worm infestation" data-family="disasters, hazards and crises">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Worm infestation</div>
+        <div class="icon-code">U+E183</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Socioeconomic and development</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="debris management" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Debris management</div>
+        <div class="icon-code">U+E055</div>
+      </div>
+      <div class="icon-card" data-name="livelihood" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Livelihood</div>
+        <div class="icon-code">U+E0BE</div>
+      </div>
+      <div class="icon-card" data-name="livestock" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Livestock</div>
+        <div class="icon-code">U+E0BF</div>
+      </div>
+      <div class="icon-card" data-name="population growth" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Population growth</div>
+        <div class="icon-code">U+E100</div>
+      </div>
+      <div class="icon-card" data-name="reconstruction" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Reconstruction</div>
+        <div class="icon-code">U+E116</div>
+      </div>
+      <div class="icon-card" data-name="rural" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Rural</div>
+        <div class="icon-code">U+E12E</div>
+      </div>
+      <div class="icon-card" data-name="rural exodus" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Rural exodus</div>
+        <div class="icon-code">U+E12F</div>
+      </div>
+      <div class="icon-card" data-name="trade and market" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Trade and market</div>
+        <div class="icon-code">U+E165</div>
+      </div>
+      <div class="icon-card" data-name="urban" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Urban</div>
+        <div class="icon-code">U+E172</div>
+      </div>
+      <div class="icon-card" data-name="urban rural" data-family="socioeconomic and development">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Urban rural</div>
+        <div class="icon-code">U+E173</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">People</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="affected population" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Affected population</div>
+        <div class="icon-code">U+E006</div>
+      </div>
+      <div class="icon-card" data-name="child combatant" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Child combatant</div>
+        <div class="icon-code">U+E03C</div>
+      </div>
+      <div class="icon-card" data-name="children" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Children</div>
+        <div class="icon-code">U+E03E</div>
+      </div>
+      <div class="icon-card" data-name="dead" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Dead</div>
+        <div class="icon-code">U+E054</div>
+      </div>
+      <div class="icon-card" data-name="drowned" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Drowned</div>
+        <div class="icon-code">U+E062</div>
+      </div>
+      <div class="icon-card" data-name="elderly" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Elderly</div>
+        <div class="icon-code">U+E069</div>
+      </div>
+      <div class="icon-card" data-name="gender" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Gender</div>
+        <div class="icon-code">U+E087</div>
+      </div>
+      <div class="icon-card" data-name="indigenous people" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Indigenous people</div>
+        <div class="icon-code">U+E0A8</div>
+      </div>
+      <div class="icon-card" data-name="infant" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Infant</div>
+        <div class="icon-code">U+E0A9</div>
+      </div>
+      <div class="icon-card" data-name="injured" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Injured</div>
+        <div class="icon-code">U+E0AF</div>
+      </div>
+      <div class="icon-card" data-name="missing" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Missing</div>
+        <div class="icon-code">U+E0D0</div>
+      </div>
+      <div class="icon-card" data-name="national army" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">National army</div>
+        <div class="icon-code">U+E0DA</div>
+      </div>
+      <div class="icon-card" data-name="peacekeeping force" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Peacekeeping force</div>
+        <div class="icon-code">U+E0EE</div>
+      </div>
+      <div class="icon-card" data-name="people affected" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">People affected</div>
+        <div class="icon-code">U+E0EF</div>
+      </div>
+      <div class="icon-card" data-name="people covered" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">People covered</div>
+        <div class="icon-code">U+E0F0</div>
+      </div>
+      <div class="icon-card" data-name="people in need" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">People in need</div>
+        <div class="icon-code">U+E0F1</div>
+      </div>
+      <div class="icon-card" data-name="people in need 2" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">People in need 2</div>
+        <div class="icon-code">U+E0F2</div>
+      </div>
+      <div class="icon-card" data-name="people reached" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">People reached</div>
+        <div class="icon-code">U+E0F3</div>
+      </div>
+      <div class="icon-card" data-name="people targeted" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">People targeted</div>
+        <div class="icon-code">U+E0F4</div>
+      </div>
+      <div class="icon-card" data-name="people targeted 2" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">People targeted 2</div>
+        <div class="icon-code">U+E0F5</div>
+      </div>
+      <div class="icon-card" data-name="people with physical impairments" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">People with physical impairments</div>
+        <div class="icon-code">U+E0F6</div>
+      </div>
+      <div class="icon-card" data-name="person 1" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Person 1</div>
+        <div class="icon-code">U+E0F8</div>
+      </div>
+      <div class="icon-card" data-name="person 2" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Person 2</div>
+        <div class="icon-code">U+E0F9</div>
+      </div>
+      <div class="icon-card" data-name="pregnant" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Pregnant</div>
+        <div class="icon-code">U+E10E</div>
+      </div>
+      <div class="icon-card" data-name="rebel" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Rebel</div>
+        <div class="icon-code">U+E115</div>
+      </div>
+      <div class="icon-card" data-name="resettlement" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Resettlement</div>
+        <div class="icon-code">U+E11F</div>
+      </div>
+      <div class="icon-card" data-name="sex" data-family="people">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Sex</div>
+        <div class="icon-code">U+E145</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Activities strategy</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="advocacy" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Advocacy</div>
+        <div class="icon-code">U+E005</div>
+      </div>
+      <div class="icon-card" data-name="agile" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Agile</div>
+        <div class="icon-code">U+E007</div>
+      </div>
+      <div class="icon-card" data-name="analysis" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Analysis</div>
+        <div class="icon-code">U+E011</div>
+      </div>
+      <div class="icon-card" data-name="assessment" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Assessment</div>
+        <div class="icon-code">U+E018</div>
+      </div>
+      <div class="icon-card" data-name="cash transfer" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Cash transfer</div>
+        <div class="icon-code">U+E035</div>
+      </div>
+      <div class="icon-card" data-name="civil military coordination" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Civil military coordination</div>
+        <div class="icon-code">U+E040</div>
+      </div>
+      <div class="icon-card" data-name="community engagement" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Community engagement</div>
+        <div class="icon-code">U+E046</div>
+      </div>
+      <div class="icon-card" data-name="coordinated assessment" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Coordinated assessment</div>
+        <div class="icon-code">U+E04A</div>
+      </div>
+      <div class="icon-card" data-name="deployment" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Deployment</div>
+        <div class="icon-code">U+E057</div>
+      </div>
+      <div class="icon-card" data-name="financing" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Financing</div>
+        <div class="icon-code">U+E078</div>
+      </div>
+      <div class="icon-card" data-name="fund" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Fund</div>
+        <div class="icon-code">U+E084</div>
+      </div>
+      <div class="icon-card" data-name="gap analysis" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Gap analysis</div>
+        <div class="icon-code">U+E085</div>
+      </div>
+      <div class="icon-card" data-name="humanitarian programme cycle" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Humanitarian programme cycle</div>
+        <div class="icon-code">U+E0A6</div>
+      </div>
+      <div class="icon-card" data-name="information management" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Information management</div>
+        <div class="icon-code">U+E0AC</div>
+      </div>
+      <div class="icon-card" data-name="information technology" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Information technology</div>
+        <div class="icon-code">U+E0AD</div>
+      </div>
+      <div class="icon-card" data-name="innovation" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Innovation</div>
+        <div class="icon-code">U+E0B0</div>
+      </div>
+      <div class="icon-card" data-name="leadership" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Leadership</div>
+        <div class="icon-code">U+E0B9</div>
+      </div>
+      <div class="icon-card" data-name="learning" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Learning</div>
+        <div class="icon-code">U+E0BA</div>
+      </div>
+      <div class="icon-card" data-name="meeting" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Meeting</div>
+        <div class="icon-code">U+E0CC</div>
+      </div>
+      <div class="icon-card" data-name="monitoring" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Monitoring</div>
+        <div class="icon-code">U+E0D4</div>
+      </div>
+      <div class="icon-card" data-name="needs assessment" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Needs assessment</div>
+        <div class="icon-code">U+E0DB</div>
+      </div>
+      <div class="icon-card" data-name="partnership" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Partnership</div>
+        <div class="icon-code">U+E0EA</div>
+      </div>
+      <div class="icon-card" data-name="policy" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Policy</div>
+        <div class="icon-code">U+E0FF</div>
+      </div>
+      <div class="icon-card" data-name="preparedness" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Preparedness</div>
+        <div class="icon-code">U+E10F</div>
+      </div>
+      <div class="icon-card" data-name="public information" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Public information</div>
+        <div class="icon-code">U+E113</div>
+      </div>
+      <div class="icon-card" data-name="reporting" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Reporting</div>
+        <div class="icon-code">U+E11E</div>
+      </div>
+      <div class="icon-card" data-name="response" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Response</div>
+        <div class="icon-code">U+E122</div>
+      </div>
+      <div class="icon-card" data-name="scale down operation" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Scale down operation</div>
+        <div class="icon-code">U+E136</div>
+      </div>
+      <div class="icon-card" data-name="scale up operation" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Scale up operation</div>
+        <div class="icon-code">U+E137</div>
+      </div>
+      <div class="icon-card" data-name="search and rescue" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Search and rescue</div>
+        <div class="icon-code">U+E13E</div>
+      </div>
+      <div class="icon-card" data-name="services and tools" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Services and tools</div>
+        <div class="icon-code">U+E143</div>
+      </div>
+      <div class="icon-card" data-name="sexual and reproductive health" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Sexual and reproductive health</div>
+        <div class="icon-code">U+E146</div>
+      </div>
+      <div class="icon-card" data-name="staff management" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Staff management</div>
+        <div class="icon-code">U+E154</div>
+      </div>
+      <div class="icon-card" data-name="top ranking" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Top ranking</div>
+        <div class="icon-code">U+E163</div>
+      </div>
+      <div class="icon-card" data-name="training" data-family="activities strategy">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Training</div>
+        <div class="icon-code">U+E167</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Product type</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="api" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">API</div>
+        <div class="icon-code">U+E013</div>
+      </div>
+      <div class="icon-card" data-name="calendar" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Calendar</div>
+        <div class="icon-code">U+E030</div>
+      </div>
+      <div class="icon-card" data-name="chart" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Chart</div>
+        <div class="icon-code">U+E037</div>
+      </div>
+      <div class="icon-card" data-name="data" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Data</div>
+        <div class="icon-code">U+E053</div>
+      </div>
+      <div class="icon-card" data-name="document" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Document</div>
+        <div class="icon-code">U+E05D</div>
+      </div>
+      <div class="icon-card" data-name="film" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Film</div>
+        <div class="icon-code">U+E076</div>
+      </div>
+      <div class="icon-card" data-name="live geoservices" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Live geoservices</div>
+        <div class="icon-code">U+E0BD</div>
+      </div>
+      <div class="icon-card" data-name="location" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Location</div>
+        <div class="icon-code">U+E0C0</div>
+      </div>
+      <div class="icon-card" data-name="map" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Map</div>
+        <div class="icon-code">U+E0C5</div>
+      </div>
+      <div class="icon-card" data-name="p-code" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">P-code</div>
+        <div class="icon-code">U+E0E9</div>
+      </div>
+      <div class="icon-card" data-name="photo" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Photo</div>
+        <div class="icon-code">U+E0FA</div>
+      </div>
+      <div class="icon-card" data-name="report" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Report</div>
+        <div class="icon-code">U+E11D</div>
+      </div>
+      <div class="icon-card" data-name="table" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Table</div>
+        <div class="icon-code">U+E15B</div>
+      </div>
+      <div class="icon-card" data-name="video" data-family="product type">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Video</div>
+        <div class="icon-code">U+E179</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Food and non-food items</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="blanket" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Blanket</div>
+        <div class="icon-code">U+E01B</div>
+      </div>
+      <div class="icon-card" data-name="bottled water" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bottled water</div>
+        <div class="icon-code">U+E022</div>
+      </div>
+      <div class="icon-card" data-name="bucket" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bucket</div>
+        <div class="icon-code">U+E028</div>
+      </div>
+      <div class="icon-card" data-name="clothing" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Clothing</div>
+        <div class="icon-code">U+E042</div>
+      </div>
+      <div class="icon-card" data-name="detergent" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Detergent</div>
+        <div class="icon-code">U+E059</div>
+      </div>
+      <div class="icon-card" data-name="flour" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Flour</div>
+        <div class="icon-code">U+E07D</div>
+      </div>
+      <div class="icon-card" data-name="food" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Food</div>
+        <div class="icon-code">U+E07F</div>
+      </div>
+      <div class="icon-card" data-name="kitchen set" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Kitchen set</div>
+        <div class="icon-code">U+E0B4</div>
+      </div>
+      <div class="icon-card" data-name="mattress" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Mattress</div>
+        <div class="icon-code">U+E0C9</div>
+      </div>
+      <div class="icon-card" data-name="medical supply" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Medical supply</div>
+        <div class="icon-code">U+E0CA</div>
+      </div>
+      <div class="icon-card" data-name="medicine" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Medicine</div>
+        <div class="icon-code">U+E0CB</div>
+      </div>
+      <div class="icon-card" data-name="mosquito net" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Mosquito net</div>
+        <div class="icon-code">U+E0D7</div>
+      </div>
+      <div class="icon-card" data-name="non food items" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Non food items</div>
+        <div class="icon-code">U+E0DE</div>
+      </div>
+      <div class="icon-card" data-name="non food items 2" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Non food items 2</div>
+        <div class="icon-code">U+E0DF</div>
+      </div>
+      <div class="icon-card" data-name="oil" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Oil</div>
+        <div class="icon-code">U+E0E6</div>
+      </div>
+      <div class="icon-card" data-name="plastic sheeting" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Plastic sheeting</div>
+        <div class="icon-code">U+E0FD</div>
+      </div>
+      <div class="icon-card" data-name="relief goods" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Relief goods</div>
+        <div class="icon-code">U+E119</div>
+      </div>
+      <div class="icon-card" data-name="rice" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Rice</div>
+        <div class="icon-code">U+E124</div>
+      </div>
+      <div class="icon-card" data-name="salt" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Salt</div>
+        <div class="icon-code">U+E131</div>
+      </div>
+      <div class="icon-card" data-name="soap" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Soap</div>
+        <div class="icon-code">U+E150</div>
+      </div>
+      <div class="icon-card" data-name="stove" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Stove</div>
+        <div class="icon-code">U+E158</div>
+      </div>
+      <div class="icon-card" data-name="sugar" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Sugar</div>
+        <div class="icon-code">U+E15A</div>
+      </div>
+      <div class="icon-card" data-name="tarpaulin" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Tarpaulin</div>
+        <div class="icon-code">U+E15C</div>
+      </div>
+      <div class="icon-card" data-name="tent" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Tent</div>
+        <div class="icon-code">U+E15F</div>
+      </div>
+      <div class="icon-card" data-name="vaccine" data-family="food and non-food items">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Vaccine</div>
+        <div class="icon-code">U+E176</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Water sanitation and hygiene</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="borehole" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Borehole</div>
+        <div class="icon-code">U+E021</div>
+      </div>
+      <div class="icon-card" data-name="communal latrine" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Communal latrine</div>
+        <div class="icon-code">U+E044</div>
+      </div>
+      <div class="icon-card" data-name="latrine cabin" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Latrine cabin</div>
+        <div class="icon-code">U+E0B8</div>
+      </div>
+      <div class="icon-card" data-name="potable water" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Potable water</div>
+        <div class="icon-code">U+E107</div>
+      </div>
+      <div class="icon-card" data-name="potable water source" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Potable water source</div>
+        <div class="icon-code">U+E108</div>
+      </div>
+      <div class="icon-card" data-name="sanitation" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Sanitation</div>
+        <div class="icon-code">U+E132</div>
+      </div>
+      <div class="icon-card" data-name="shower" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Shower</div>
+        <div class="icon-code">U+E14C</div>
+      </div>
+      <div class="icon-card" data-name="solid waste" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Solid waste</div>
+        <div class="icon-code">U+E151</div>
+      </div>
+      <div class="icon-card" data-name="spring water" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Spring water</div>
+        <div class="icon-code">U+E153</div>
+      </div>
+      <div class="icon-card" data-name="submersible pump" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Submersible pump</div>
+        <div class="icon-code">U+E159</div>
+      </div>
+      <div class="icon-card" data-name="toilet" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Toilet</div>
+        <div class="icon-code">U+E162</div>
+      </div>
+      <div class="icon-card" data-name="water source" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Water source</div>
+        <div class="icon-code">U+E180</div>
+      </div>
+      <div class="icon-card" data-name="water trucking" data-family="water sanitation and hygiene">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Water trucking</div>
+        <div class="icon-code">U+E181</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Camp</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="idp refugee camp" data-family="camp">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">IDP refugee camp</div>
+        <div class="icon-code">U+E0A7</div>
+      </div>
+      <div class="icon-card" data-name="permanent camp" data-family="camp">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Permanent camp</div>
+        <div class="icon-code">U+E0F7</div>
+      </div>
+      <div class="icon-card" data-name="registration" data-family="camp">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Registration</div>
+        <div class="icon-code">U+E118</div>
+      </div>
+      <div class="icon-card" data-name="spontaneous site" data-family="camp">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Spontaneous site</div>
+        <div class="icon-code">U+E152</div>
+      </div>
+      <div class="icon-card" data-name="temporary camp" data-family="camp">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Temporary camp</div>
+        <div class="icon-code">U+E15E</div>
+      </div>
+      <div class="icon-card" data-name="transition site" data-family="camp">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Transition site</div>
+        <div class="icon-code">U+E168</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Security and incident</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="abduction kidnapping" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Abduction kidnapping</div>
+        <div class="icon-code">U+E001</div>
+      </div>
+      <div class="icon-card" data-name="arrest detention" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Arrest detention</div>
+        <div class="icon-code">U+E015</div>
+      </div>
+      <div class="icon-card" data-name="assault" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Assault</div>
+        <div class="icon-code">U+E016</div>
+      </div>
+      <div class="icon-card" data-name="attack" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Attack</div>
+        <div class="icon-code">U+E019</div>
+      </div>
+      <div class="icon-card" data-name="carjacking" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Carjacking</div>
+        <div class="icon-code">U+E033</div>
+      </div>
+      <div class="icon-card" data-name="confined" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Confined</div>
+        <div class="icon-code">U+E048</div>
+      </div>
+      <div class="icon-card" data-name="dangerous area" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Dangerous area</div>
+        <div class="icon-code">U+E052</div>
+      </div>
+      <div class="icon-card" data-name="forced entry" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Forced entry</div>
+        <div class="icon-code">U+E082</div>
+      </div>
+      <div class="icon-card" data-name="forced recruitment" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Forced recruitment</div>
+        <div class="icon-code">U+E083</div>
+      </div>
+      <div class="icon-card" data-name="gender based violence" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Gender based violence</div>
+        <div class="icon-code">U+E088</div>
+      </div>
+      <div class="icon-card" data-name="harassment intimidation" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Harassment intimidation</div>
+        <div class="icon-code">U+E08D</div>
+      </div>
+      <div class="icon-card" data-name="house burned" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">House burned</div>
+        <div class="icon-code">U+E0A1</div>
+      </div>
+      <div class="icon-card" data-name="mine" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Mine</div>
+        <div class="icon-code">U+E0CF</div>
+      </div>
+      <div class="icon-card" data-name="murder" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Murder</div>
+        <div class="icon-code">U+E0D9</div>
+      </div>
+      <div class="icon-card" data-name="robbery" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Robbery</div>
+        <div class="icon-code">U+E12C</div>
+      </div>
+      <div class="icon-card" data-name="sexual violence" data-family="security and incident">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Sexual violence</div>
+        <div class="icon-code">U+E147</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Physical barriers</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="border crossing" data-family="physical barriers">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Border crossing</div>
+        <div class="icon-code">U+E020</div>
+      </div>
+      <div class="icon-card" data-name="checkpoint" data-family="physical barriers">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Checkpoint</div>
+        <div class="icon-code">U+E03A</div>
+      </div>
+      <div class="icon-card" data-name="earthmound" data-family="physical barriers">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Earthmound</div>
+        <div class="icon-code">U+E065</div>
+      </div>
+      <div class="icon-card" data-name="military gate" data-family="physical barriers">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Military gate</div>
+        <div class="icon-code">U+E0CE</div>
+      </div>
+      <div class="icon-card" data-name="observation tower" data-family="physical barriers">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Observation tower</div>
+        <div class="icon-code">U+E0E5</div>
+      </div>
+      <div class="icon-card" data-name="physical closure" data-family="physical barriers">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Physical closure</div>
+        <div class="icon-code">U+E0FB</div>
+      </div>
+      <div class="icon-card" data-name="road barrier" data-family="physical barriers">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Road barrier</div>
+        <div class="icon-code">U+E127</div>
+      </div>
+      <div class="icon-card" data-name="roadblock" data-family="physical barriers">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Roadblock</div>
+        <div class="icon-code">U+E12B</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Damage</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="airport affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Airport affected</div>
+        <div class="icon-code">U+E00B</div>
+      </div>
+      <div class="icon-card" data-name="airport destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Airport destroyed</div>
+        <div class="icon-code">U+E00D</div>
+      </div>
+      <div class="icon-card" data-name="airport not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Airport not affected</div>
+        <div class="icon-code">U+E00F</div>
+      </div>
+      <div class="icon-card" data-name="bridge affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bridge affected</div>
+        <div class="icon-code">U+E024</div>
+      </div>
+      <div class="icon-card" data-name="bridge destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bridge destroyed</div>
+        <div class="icon-code">U+E026</div>
+      </div>
+      <div class="icon-card" data-name="bridge not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bridge not affected</div>
+        <div class="icon-code">U+E027</div>
+      </div>
+      <div class="icon-card" data-name="building facility affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Building facility affected</div>
+        <div class="icon-code">U+E02C</div>
+      </div>
+      <div class="icon-card" data-name="building facility destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Building facility destroyed</div>
+        <div class="icon-code">U+E02D</div>
+      </div>
+      <div class="icon-card" data-name="building facility not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Building facility not affected</div>
+        <div class="icon-code">U+E02E</div>
+      </div>
+      <div class="icon-card" data-name="damaged affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Damaged affected</div>
+        <div class="icon-code">U+E051</div>
+      </div>
+      <div class="icon-card" data-name="destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Destroyed</div>
+        <div class="icon-code">U+E058</div>
+      </div>
+      <div class="icon-card" data-name="health facility affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Health facility affected</div>
+        <div class="icon-code">U+E090</div>
+      </div>
+      <div class="icon-card" data-name="health facility destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Health facility destroyed</div>
+        <div class="icon-code">U+E091</div>
+      </div>
+      <div class="icon-card" data-name="health facility not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Health facility not affected</div>
+        <div class="icon-code">U+E092</div>
+      </div>
+      <div class="icon-card" data-name="house affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">House affected</div>
+        <div class="icon-code">U+E0A0</div>
+      </div>
+      <div class="icon-card" data-name="house destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">House destroyed</div>
+        <div class="icon-code">U+E0A2</div>
+      </div>
+      <div class="icon-card" data-name="house not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">House not affected</div>
+        <div class="icon-code">U+E0A4</div>
+      </div>
+      <div class="icon-card" data-name="not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Not affected</div>
+        <div class="icon-code">U+E0E0</div>
+      </div>
+      <div class="icon-card" data-name="port affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Port affected</div>
+        <div class="icon-code">U+E103</div>
+      </div>
+      <div class="icon-card" data-name="port destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Port destroyed</div>
+        <div class="icon-code">U+E105</div>
+      </div>
+      <div class="icon-card" data-name="port not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Port not affected</div>
+        <div class="icon-code">U+E106</div>
+      </div>
+      <div class="icon-card" data-name="power electricity affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Power electricity affected</div>
+        <div class="icon-code">U+E10B</div>
+      </div>
+      <div class="icon-card" data-name="power electricity not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Power electricity not affected</div>
+        <div class="icon-code">U+E10C</div>
+      </div>
+      <div class="icon-card" data-name="power outage" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Power outage</div>
+        <div class="icon-code">U+E10D</div>
+      </div>
+      <div class="icon-card" data-name="road affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Road affected</div>
+        <div class="icon-code">U+E126</div>
+      </div>
+      <div class="icon-card" data-name="road destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Road destroyed</div>
+        <div class="icon-code">U+E129</div>
+      </div>
+      <div class="icon-card" data-name="road not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Road not affected</div>
+        <div class="icon-code">U+E12A</div>
+      </div>
+      <div class="icon-card" data-name="school affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">School affected</div>
+        <div class="icon-code">U+E139</div>
+      </div>
+      <div class="icon-card" data-name="school destroyed" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">School destroyed</div>
+        <div class="icon-code">U+E13B</div>
+      </div>
+      <div class="icon-card" data-name="school not affected" data-family="damage">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">School not affected</div>
+        <div class="icon-code">U+E13C</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">General infrastructure</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="assembly point" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Assembly point</div>
+        <div class="icon-code">U+E017</div>
+      </div>
+      <div class="icon-card" data-name="buddhist temple" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Buddhist temple</div>
+        <div class="icon-code">U+E029</div>
+      </div>
+      <div class="icon-card" data-name="building" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Building</div>
+        <div class="icon-code">U+E02A</div>
+      </div>
+      <div class="icon-card" data-name="church" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Church</div>
+        <div class="icon-code">U+E03F</div>
+      </div>
+      <div class="icon-card" data-name="clinic" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Clinic</div>
+        <div class="icon-code">U+E041</div>
+      </div>
+      <div class="icon-card" data-name="community building" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Community building</div>
+        <div class="icon-code">U+E045</div>
+      </div>
+      <div class="icon-card" data-name="country" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Country</div>
+        <div class="icon-code">U+E04D</div>
+      </div>
+      <div class="icon-card" data-name="diplomatic mission" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Diplomatic mission</div>
+        <div class="icon-code">U+E05A</div>
+      </div>
+      <div class="icon-card" data-name="distribution site" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Distribution site</div>
+        <div class="icon-code">U+E05B</div>
+      </div>
+      <div class="icon-card" data-name="food warehouse" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Food warehouse</div>
+        <div class="icon-code">U+E081</div>
+      </div>
+      <div class="icon-card" data-name="government office" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Government office</div>
+        <div class="icon-code">U+E08A</div>
+      </div>
+      <div class="icon-card" data-name="health facility" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Health facility</div>
+        <div class="icon-code">U+E08F</div>
+      </div>
+      <div class="icon-card" data-name="health post" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Health post</div>
+        <div class="icon-code">U+E093</div>
+      </div>
+      <div class="icon-card" data-name="hindu temple" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Hindu temple</div>
+        <div class="icon-code">U+E09B</div>
+      </div>
+      <div class="icon-card" data-name="hospital" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Hospital</div>
+        <div class="icon-code">U+E09C</div>
+      </div>
+      <div class="icon-card" data-name="hotel" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Hotel</div>
+        <div class="icon-code">U+E09E</div>
+      </div>
+      <div class="icon-card" data-name="house" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">House</div>
+        <div class="icon-code">U+E09F</div>
+      </div>
+      <div class="icon-card" data-name="infrastructure" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Infrastructure</div>
+        <div class="icon-code">U+E0AE</div>
+      </div>
+      <div class="icon-card" data-name="mobile clinic" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Mobile clinic</div>
+        <div class="icon-code">U+E0D1</div>
+      </div>
+      <div class="icon-card" data-name="mosque" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Mosque</div>
+        <div class="icon-code">U+E0D6</div>
+      </div>
+      <div class="icon-card" data-name="ngo office" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">NGO office</div>
+        <div class="icon-code">U+E0DD</div>
+      </div>
+      <div class="icon-card" data-name="oil facility" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Oil facility</div>
+        <div class="icon-code">U+E0E7</div>
+      </div>
+      <div class="icon-card" data-name="police station" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Police station</div>
+        <div class="icon-code">U+E0FE</div>
+      </div>
+      <div class="icon-card" data-name="power electricity" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Power electricity</div>
+        <div class="icon-code">U+E10A</div>
+      </div>
+      <div class="icon-card" data-name="school" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">School</div>
+        <div class="icon-code">U+E138</div>
+      </div>
+      <div class="icon-card" data-name="un compound office" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">UN compound office</div>
+        <div class="icon-code">U+E16D</div>
+      </div>
+      <div class="icon-card" data-name="university" data-family="general infrastructure">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">University</div>
+        <div class="icon-code">U+E16F</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Logistics</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="airport" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Airport</div>
+        <div class="icon-code">U+E00A</div>
+      </div>
+      <div class="icon-card" data-name="airport military" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Airport military</div>
+        <div class="icon-code">U+E00E</div>
+      </div>
+      <div class="icon-card" data-name="boat" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Boat</div>
+        <div class="icon-code">U+E01D</div>
+      </div>
+      <div class="icon-card" data-name="bridge" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bridge</div>
+        <div class="icon-code">U+E023</div>
+      </div>
+      <div class="icon-card" data-name="bus" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bus</div>
+        <div class="icon-code">U+E02F</div>
+      </div>
+      <div class="icon-card" data-name="car" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Car</div>
+        <div class="icon-code">U+E032</div>
+      </div>
+      <div class="icon-card" data-name="ferry" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Ferry</div>
+        <div class="icon-code">U+E075</div>
+      </div>
+      <div class="icon-card" data-name="gas station" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Gas station</div>
+        <div class="icon-code">U+E086</div>
+      </div>
+      <div class="icon-card" data-name="helicopter" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Helicopter</div>
+        <div class="icon-code">U+E097</div>
+      </div>
+      <div class="icon-card" data-name="helipad" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Helipad</div>
+        <div class="icon-code">U+E098</div>
+      </div>
+      <div class="icon-card" data-name="port" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Port</div>
+        <div class="icon-code">U+E102</div>
+      </div>
+      <div class="icon-card" data-name="road" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Road</div>
+        <div class="icon-code">U+E125</div>
+      </div>
+      <div class="icon-card" data-name="ship" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Ship</div>
+        <div class="icon-code">U+E14B</div>
+      </div>
+      <div class="icon-card" data-name="train" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Train</div>
+        <div class="icon-code">U+E166</div>
+      </div>
+      <div class="icon-card" data-name="truck" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Truck</div>
+        <div class="icon-code">U+E16A</div>
+      </div>
+      <div class="icon-card" data-name="tunnel" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Tunnel</div>
+        <div class="icon-code">U+E16C</div>
+      </div>
+      <div class="icon-card" data-name="un vehicle" data-family="logistics">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">UN vehicle</div>
+        <div class="icon-code">U+E16E</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Telecommunications and technology</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="cell tower" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Cell tower</div>
+        <div class="icon-code">U+E036</div>
+      </div>
+      <div class="icon-card" data-name="computer" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Computer</div>
+        <div class="icon-code">U+E047</div>
+      </div>
+      <div class="icon-card" data-name="e-mail" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">E-mail</div>
+        <div class="icon-code">U+E063</div>
+      </div>
+      <div class="icon-card" data-name="fax" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Fax</div>
+        <div class="icon-code">U+E074</div>
+      </div>
+      <div class="icon-card" data-name="internet" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Internet</div>
+        <div class="icon-code">U+E0B3</div>
+      </div>
+      <div class="icon-card" data-name="laptop" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Laptop</div>
+        <div class="icon-code">U+E0B7</div>
+      </div>
+      <div class="icon-card" data-name="mobile phone" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Mobile phone</div>
+        <div class="icon-code">U+E0D2</div>
+      </div>
+      <div class="icon-card" data-name="monitor" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Monitor</div>
+        <div class="icon-code">U+E0D3</div>
+      </div>
+      <div class="icon-card" data-name="radio" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Radio</div>
+        <div class="icon-code">U+E114</div>
+      </div>
+      <div class="icon-card" data-name="remote support" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Remote support</div>
+        <div class="icon-code">U+E11A</div>
+      </div>
+      <div class="icon-card" data-name="satellite dish" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Satellite dish</div>
+        <div class="icon-code">U+E134</div>
+      </div>
+      <div class="icon-card" data-name="smartphone" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Smartphone</div>
+        <div class="icon-code">U+E14D</div>
+      </div>
+      <div class="icon-card" data-name="walkie talkie" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Walkie talkie</div>
+        <div class="icon-code">U+E17D</div>
+      </div>
+      <div class="icon-card" data-name="work from home" data-family="telecommunications and technology">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Work from home</div>
+        <div class="icon-code">U+E182</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">UX UI</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="about" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">About</div>
+        <div class="icon-code">U+E002</div>
+      </div>
+      <div class="icon-card" data-name="add" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Add</div>
+        <div class="icon-code">U+E003</div>
+      </div>
+      <div class="icon-card" data-name="add document" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Add document</div>
+        <div class="icon-code">U+E004</div>
+      </div>
+      <div class="icon-card" data-name="ai chat" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">AI chat</div>
+        <div class="icon-code">U+E009</div>
+      </div>
+      <div class="icon-card" data-name="alert" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Alert</div>
+        <div class="icon-code">U+E010</div>
+      </div>
+      <div class="icon-card" data-name="apps" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Apps</div>
+        <div class="icon-code">U+E014</div>
+      </div>
+      <div class="icon-card" data-name="blog" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Blog</div>
+        <div class="icon-code">U+E01C</div>
+      </div>
+      <div class="icon-card" data-name="bookmark" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bookmark</div>
+        <div class="icon-code">U+E01E</div>
+      </div>
+      <div class="icon-card" data-name="chat" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Chat</div>
+        <div class="icon-code">U+E038</div>
+      </div>
+      <div class="icon-card" data-name="checked mail" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Checked mail</div>
+        <div class="icon-code">U+E039</div>
+      </div>
+      <div class="icon-card" data-name="copy" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Copy</div>
+        <div class="icon-code">U+E04C</div>
+      </div>
+      <div class="icon-card" data-name="csv file" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">CSV file</div>
+        <div class="icon-code">U+E04F</div>
+      </div>
+      <div class="icon-card" data-name="delete account" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Delete account</div>
+        <div class="icon-code">U+E056</div>
+      </div>
+      <div class="icon-card" data-name="docx file" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">DOCX file</div>
+        <div class="icon-code">U+E05E</div>
+      </div>
+      <div class="icon-card" data-name="down" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Down</div>
+        <div class="icon-code">U+E05F</div>
+      </div>
+      <div class="icon-card" data-name="download" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Download</div>
+        <div class="icon-code">U+E060</div>
+      </div>
+      <div class="icon-card" data-name="edit" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Edit</div>
+        <div class="icon-code">U+E067</div>
+      </div>
+      <div class="icon-card" data-name="exit cancel" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Exit cancel</div>
+        <div class="icon-code">U+E06D</div>
+      </div>
+      <div class="icon-card" data-name="expand down" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Expand down</div>
+        <div class="icon-code">U+E06E</div>
+      </div>
+      <div class="icon-card" data-name="expand left" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Expand left</div>
+        <div class="icon-code">U+E06F</div>
+      </div>
+      <div class="icon-card" data-name="expand right" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Expand right</div>
+        <div class="icon-code">U+E070</div>
+      </div>
+      <div class="icon-card" data-name="expand up" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Expand up</div>
+        <div class="icon-code">U+E071</div>
+      </div>
+      <div class="icon-card" data-name="favourite" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Favourite</div>
+        <div class="icon-code">U+E073</div>
+      </div>
+      <div class="icon-card" data-name="filter" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Filter</div>
+        <div class="icon-code">U+E077</div>
+      </div>
+      <div class="icon-card" data-name="folder" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Folder</div>
+        <div class="icon-code">U+E07E</div>
+      </div>
+      <div class="icon-card" data-name="go" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Go</div>
+        <div class="icon-code">U+E089</div>
+      </div>
+      <div class="icon-card" data-name="group" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Group</div>
+        <div class="icon-code">U+E08B</div>
+      </div>
+      <div class="icon-card" data-name="help" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Help</div>
+        <div class="icon-code">U+E099</div>
+      </div>
+      <div class="icon-card" data-name="hidden" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Hidden</div>
+        <div class="icon-code">U+E09A</div>
+      </div>
+      <div class="icon-card" data-name="link" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Link</div>
+        <div class="icon-code">U+E0BC</div>
+      </div>
+      <div class="icon-card" data-name="menu" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Menu</div>
+        <div class="icon-code">U+E0CD</div>
+      </div>
+      <div class="icon-card" data-name="more options" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">More options</div>
+        <div class="icon-code">U+E0D5</div>
+      </div>
+      <div class="icon-card" data-name="next item" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Next item</div>
+        <div class="icon-code">U+E0DC</div>
+      </div>
+      <div class="icon-card" data-name="not secured" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Not secured</div>
+        <div class="icon-code">U+E0E2</div>
+      </div>
+      <div class="icon-card" data-name="notification" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Notification</div>
+        <div class="icon-code">U+E0E3</div>
+      </div>
+      <div class="icon-card" data-name="out of platform" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Out of platform</div>
+        <div class="icon-code">U+E0E8</div>
+      </div>
+      <div class="icon-card" data-name="password" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Password</div>
+        <div class="icon-code">U+E0EB</div>
+      </div>
+      <div class="icon-card" data-name="pause" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Pause</div>
+        <div class="icon-code">U+E0EC</div>
+      </div>
+      <div class="icon-card" data-name="pdf file" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">PDF file</div>
+        <div class="icon-code">U+E0ED</div>
+      </div>
+      <div class="icon-card" data-name="previous item" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Previous item</div>
+        <div class="icon-code">U+E110</div>
+      </div>
+      <div class="icon-card" data-name="print" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Print</div>
+        <div class="icon-code">U+E111</div>
+      </div>
+      <div class="icon-card" data-name="remove" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Remove</div>
+        <div class="icon-code">U+E11B</div>
+      </div>
+      <div class="icon-card" data-name="remove document" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Remove document</div>
+        <div class="icon-code">U+E11C</div>
+      </div>
+      <div class="icon-card" data-name="return" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Return</div>
+        <div class="icon-code">U+E123</div>
+      </div>
+      <div class="icon-card" data-name="save" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Save</div>
+        <div class="icon-code">U+E135</div>
+      </div>
+      <div class="icon-card" data-name="search" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Search</div>
+        <div class="icon-code">U+E13D</div>
+      </div>
+      <div class="icon-card" data-name="secured" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Secured</div>
+        <div class="icon-code">U+E13F</div>
+      </div>
+      <div class="icon-card" data-name="security" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Security</div>
+        <div class="icon-code">U+E140</div>
+      </div>
+      <div class="icon-card" data-name="see" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">See</div>
+        <div class="icon-code">U+E141</div>
+      </div>
+      <div class="icon-card" data-name="selected" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Selected</div>
+        <div class="icon-code">U+E142</div>
+      </div>
+      <div class="icon-card" data-name="settings" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Settings</div>
+        <div class="icon-code">U+E144</div>
+      </div>
+      <div class="icon-card" data-name="share" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Share</div>
+        <div class="icon-code">U+E148</div>
+      </div>
+      <div class="icon-card" data-name="stop" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Stop</div>
+        <div class="icon-code">U+E155</div>
+      </div>
+      <div class="icon-card" data-name="time" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Time</div>
+        <div class="icon-code">U+E161</div>
+      </div>
+      <div class="icon-card" data-name="trending" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Trending</div>
+        <div class="icon-code">U+E169</div>
+      </div>
+      <div class="icon-card" data-name="up" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Up</div>
+        <div class="icon-code">U+E170</div>
+      </div>
+      <div class="icon-card" data-name="upload" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Upload</div>
+        <div class="icon-code">U+E171</div>
+      </div>
+      <div class="icon-card" data-name="user" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">User</div>
+        <div class="icon-code">U+E174</div>
+      </div>
+      <div class="icon-card" data-name="users" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Users</div>
+        <div class="icon-code">U+E175</div>
+      </div>
+      <div class="icon-card" data-name="validate account" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Validate account</div>
+        <div class="icon-code">U+E177</div>
+      </div>
+      <div class="icon-card" data-name="warning error" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Warning error</div>
+        <div class="icon-code">U+E17E</div>
+      </div>
+      <div class="icon-card" data-name="xlsx file" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">XLSX file</div>
+        <div class="icon-code">U+E184</div>
+      </div>
+      <div class="icon-card" data-name="zip compressed" data-family="ux ui">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">ZIP compressed</div>
+        <div class="icon-code">U+E185</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Health</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="bacteria" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bacteria</div>
+        <div class="icon-code">U+E01A</div>
+      </div>
+      <div class="icon-card" data-name="case management" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Case management</div>
+        <div class="icon-code">U+E034</div>
+      </div>
+      <div class="icon-card" data-name="covid-19" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">COVID-19</div>
+        <div class="icon-code">U+E04E</div>
+      </div>
+      <div class="icon-card" data-name="doctor" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Doctor</div>
+        <div class="icon-code">U+E05C</div>
+      </div>
+      <div class="icon-card" data-name="handwashing" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Handwashing</div>
+        <div class="icon-code">U+E08C</div>
+      </div>
+      <div class="icon-card" data-name="health worker" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Health worker</div>
+        <div class="icon-code">U+E094</div>
+      </div>
+      <div class="icon-card" data-name="hospital bed" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Hospital bed</div>
+        <div class="icon-code">U+E09D</div>
+      </div>
+      <div class="icon-card" data-name="infected" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Infected</div>
+        <div class="icon-code">U+E0AA</div>
+      </div>
+      <div class="icon-card" data-name="infection control" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Infection control</div>
+        <div class="icon-code">U+E0AB</div>
+      </div>
+      <div class="icon-card" data-name="laboratory" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Laboratory</div>
+        <div class="icon-code">U+E0B5</div>
+      </div>
+      <div class="icon-card" data-name="life saving" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Life saving</div>
+        <div class="icon-code">U+E0BB</div>
+      </div>
+      <div class="icon-card" data-name="market" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Market</div>
+        <div class="icon-code">U+E0C6</div>
+      </div>
+      <div class="icon-card" data-name="mask" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Mask</div>
+        <div class="icon-code">U+E0C8</div>
+      </div>
+      <div class="icon-card" data-name="not infected" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Not infected</div>
+        <div class="icon-code">U+E0E1</div>
+      </div>
+      <div class="icon-card" data-name="physical distancing" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Physical distancing</div>
+        <div class="icon-code">U+E0FC</div>
+      </div>
+      <div class="icon-card" data-name="respiratory" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Respiratory</div>
+        <div class="icon-code">U+E121</div>
+      </div>
+      <div class="icon-card" data-name="sanitizer" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Sanitizer</div>
+        <div class="icon-code">U+E133</div>
+      </div>
+      <div class="icon-card" data-name="testing" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Testing</div>
+        <div class="icon-code">U+E160</div>
+      </div>
+      <div class="icon-card" data-name="ventilator" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Ventilator</div>
+        <div class="icon-code">U+E178</div>
+      </div>
+      <div class="icon-card" data-name="virus" data-family="health">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Virus</div>
+        <div class="icon-code">U+E17B</div>
+      </div>
+      </div>
+    </div>    <div class="family-section">
+      <h2 class="family-header">Lockdown</h2>
+      <div class="icon-grid">
+      <div class="icon-card" data-name="airport closed" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Airport closed</div>
+        <div class="icon-code">U+E00C</div>
+      </div>
+      <div class="icon-card" data-name="border closed" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Border closed</div>
+        <div class="icon-code">U+E01F</div>
+      </div>
+      <div class="icon-card" data-name="bridge closed" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Bridge closed</div>
+        <div class="icon-code">U+E025</div>
+      </div>
+      <div class="icon-card" data-name="building closed" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Building closed</div>
+        <div class="icon-code">U+E02B</div>
+      </div>
+      <div class="icon-card" data-name="house lockdown" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">House lockdown</div>
+        <div class="icon-code">U+E0A3</div>
+      </div>
+      <div class="icon-card" data-name="location lockdown" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Location lockdown</div>
+        <div class="icon-code">U+E0C1</div>
+      </div>
+      <div class="icon-card" data-name="market closed" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Market closed</div>
+        <div class="icon-code">U+E0C7</div>
+      </div>
+      <div class="icon-card" data-name="port closed" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Port closed</div>
+        <div class="icon-code">U+E104</div>
+      </div>
+      <div class="icon-card" data-name="road closed" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">Road closed</div>
+        <div class="icon-code">U+E128</div>
+      </div>
+      <div class="icon-card" data-name="school closed" data-family="lockdown">
+        <div class="icon-char" title="Click to copy"></div>
+        <div class="icon-name">School closed</div>
+        <div class="icon-code">U+E13A</div>
+      </div>
+      </div>
+    </div>
+</div>
+
+<div class="no-results" id="noResults">No icons match your search.</div>
+
+<footer>
+  OCHA Humanitarian Icons &mdash; Copyright (c) United Nations OCHA
+</footer>
+
+<script>
+(function() {
+  const input = document.getElementById('searchInput');
+  const container = document.getElementById('iconContainer');
+  const noResults = document.getElementById('noResults');
+  const cards = container.querySelectorAll('.icon-card');
+  const sections = container.querySelectorAll('.family-section');
+
+  input.addEventListener('input', function() {
+    const q = this.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const name = card.getAttribute('data-name') || '';
+      const show = !q || name.includes(q);
+      card.classList.toggle('hidden', !show);
+      if (show) visibleCount++;
+    });
+
+    // Hide empty family sections
+    sections.forEach(sec => {
+      const visibleCards = sec.querySelectorAll('.icon-card:not(.hidden)');
+      sec.classList.toggle('hidden', visibleCards.length === 0);
+    });
+
+    noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+  });
+})();
+</script>
+
+</body>
+</html>

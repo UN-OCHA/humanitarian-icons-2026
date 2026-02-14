@@ -1,0 +1,1852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCHA Icon Curator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cd-ocha-blue: #1f69b3;
+            --cd-blue--dark: #144372;
+            --cd-blue--bright: #82b5e9;
+            --cd-white: #fff;
+            --cd-grey--light: #f2f2f2;
+            --cd-grey--mid: #595959;
+            --cd-grey--dark: #4a4a4a;
+            --cd-blue-grey: #e6ecf1;
+            --cd-font--roboto: 'Roboto', helvetica, arial, sans-serif;
+            --cd-max-width: 1400px;
+            --cd-red: #cd3a1f;
+            --cd-green: #418fde;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--cd-font--roboto);
+            background: var(--cd-blue-grey);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: var(--cd-max-width);
+            margin: 0 auto;
+            background: var(--cd-white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+        }
+
+        /* Header */
+        .app-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .app-header-left h1 {
+            color: var(--cd-ocha-blue);
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 0.25rem;
+        }
+
+        .app-header-left .subtitle {
+            color: var(--cd-grey--mid);
+            font-weight: 400;
+            font-size: 1rem;
+        }
+
+        .app-header-right {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .version-badge {
+            background: var(--cd-blue-grey);
+            color: var(--cd-blue--dark);
+            padding: 0.35rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Buttons */
+        button {
+            padding: 0.6rem 1.25rem;
+            font-size: 0.8125rem;
+            font-weight: 700;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-family: var(--cd-font--roboto);
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--cd-ocha-blue);
+            color: var(--cd-white);
+            border-color: var(--cd-ocha-blue);
+        }
+
+        .btn-primary:hover {
+            background: var(--cd-blue--dark);
+            border-color: var(--cd-blue--dark);
+        }
+
+        .btn-secondary {
+            background: var(--cd-white);
+            color: var(--cd-ocha-blue);
+            border-color: var(--cd-ocha-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--cd-blue-grey);
+        }
+
+        .btn-danger {
+            background: var(--cd-white);
+            color: var(--cd-red);
+            border-color: var(--cd-red);
+        }
+
+        .btn-danger:hover {
+            background: var(--cd-red);
+            color: var(--cd-white);
+        }
+
+        .btn-small {
+            padding: 0.35rem 0.75rem;
+            font-size: 0.6875rem;
+        }
+
+        button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: flex;
+            gap: 2rem;
+            background: var(--cd-grey--light);
+            padding: 0.875rem 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--cd-ocha-blue);
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.875rem;
+            color: var(--cd-grey--dark);
+        }
+
+        .stat-value {
+            font-weight: 700;
+            color: var(--cd-ocha-blue);
+            font-size: 1.125rem;
+        }
+
+        .stat-label {
+            font-weight: 400;
+        }
+
+        /* Toolbar */
+        .toolbar {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--cd-grey--light);
+        }
+
+        .toolbar-group {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .toolbar-separator {
+            width: 1px;
+            height: 28px;
+            background: var(--cd-grey--light);
+            margin: 0 0.25rem;
+        }
+
+        .toolbar-spacer {
+            flex: 1;
+        }
+
+        /* Search */
+        .search-input {
+            padding: 0.6rem 1rem;
+            border: 1px solid var(--cd-grey--light);
+            font-size: 0.875rem;
+            font-family: var(--cd-font--roboto);
+            width: 280px;
+            transition: border-color 0.15s ease;
+            background: var(--cd-white);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--cd-ocha-blue);
+        }
+
+        .search-input::placeholder {
+            color: #aaa;
+        }
+
+        /* Sort select */
+        .sort-select {
+            padding: 0.6rem 0.75rem;
+            border: 1px solid var(--cd-grey--light);
+            font-size: 0.875rem;
+            font-family: var(--cd-font--roboto);
+            background: var(--cd-white);
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--cd-blue--dark);
+        }
+
+        .sort-select:focus {
+            outline: none;
+            border-color: var(--cd-ocha-blue);
+        }
+
+        /* Change tracking banner */
+        .changes-banner {
+            display: none;
+            background: #fef3cd;
+            border: 1px solid #ffc107;
+            border-left: 4px solid #ffc107;
+            padding: 0.625rem 1.25rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+            color: #856404;
+            font-weight: 500;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .changes-banner.visible {
+            display: flex;
+        }
+
+        /* Family sections */
+        .family-section {
+            margin-bottom: 1rem;
+            border: 1px solid var(--cd-grey--light);
+            overflow: hidden;
+        }
+
+        .family-header {
+            background: var(--cd-ocha-blue);
+            color: var(--cd-white);
+            padding: 0.75rem 1.25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            transition: background 0.15s ease;
+        }
+
+        .family-header:hover {
+            background: var(--cd-blue--dark);
+        }
+
+        .family-header-left {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .family-collapse-icon {
+            font-size: 0.625rem;
+            transition: transform 0.2s ease;
+            width: 16px;
+            text-align: center;
+        }
+
+        .family-section.collapsed .family-collapse-icon {
+            transform: rotate(-90deg);
+        }
+
+        .family-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .family-count {
+            background: rgba(255,255,255,0.2);
+            padding: 0.15rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .family-wordmark-count {
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.8;
+        }
+
+        .family-body {
+            padding: 1.25rem;
+            background: var(--cd-white);
+        }
+
+        .family-section.collapsed .family-body {
+            display: none;
+        }
+
+        /* Icon grid */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 0.75rem;
+        }
+
+        /* Icon card */
+        .icon-card {
+            border: 1px solid var(--cd-grey--light);
+            padding: 0.875rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.625rem;
+            transition: border-color 0.15s ease;
+            position: relative;
+        }
+
+        .icon-card:hover {
+            border-color: var(--cd-blue--bright);
+        }
+
+        .icon-card.has-changes {
+            border-left: 3px solid #ffc107;
+        }
+
+        .icon-card-top {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+
+        .icon-preview {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--cd-grey--light);
+            border: 1px solid var(--cd-grey--light);
+            overflow: hidden;
+        }
+
+        .icon-preview svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .icon-preview .preview-error {
+            font-size: 0.5625rem;
+            color: #aaa;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .icon-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .icon-key {
+            font-size: 0.6875rem;
+            color: var(--cd-grey--mid);
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            line-height: 1.3;
+        }
+
+        .icon-codepoint {
+            font-size: 0.6875rem;
+            color: var(--cd-grey--mid);
+            font-family: 'Courier New', monospace;
+        }
+
+        .icon-date {
+            font-size: 0.625rem;
+            color: #aaa;
+        }
+
+        .wordmark-badge {
+            display: inline-block;
+            background: var(--cd-ocha-blue);
+            color: var(--cd-white);
+            font-size: 0.5625rem;
+            font-weight: 700;
+            padding: 0.1rem 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            vertical-align: middle;
+            margin-left: 0.35rem;
+        }
+
+        /* Editable fields */
+        .icon-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .field-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .field-label {
+            font-size: 0.6875rem;
+            font-weight: 700;
+            color: var(--cd-grey--mid);
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            width: 52px;
+            flex-shrink: 0;
+        }
+
+        .field-input {
+            flex: 1;
+            padding: 0.35rem 0.5rem;
+            border: 1px solid var(--cd-grey--light);
+            font-size: 0.8125rem;
+            font-family: var(--cd-font--roboto);
+            min-width: 0;
+            transition: border-color 0.15s ease;
+        }
+
+        .field-input:focus {
+            outline: none;
+            border-color: var(--cd-ocha-blue);
+        }
+
+        .field-select {
+            flex: 1;
+            padding: 0.35rem 0.5rem;
+            border: 1px solid var(--cd-grey--light);
+            font-size: 0.8125rem;
+            font-family: var(--cd-font--roboto);
+            background: var(--cd-white);
+            cursor: pointer;
+            min-width: 0;
+            transition: border-color 0.15s ease;
+        }
+
+        .field-select:focus {
+            outline: none;
+            border-color: var(--cd-ocha-blue);
+        }
+
+        .field-number {
+            width: 60px;
+            flex: 0 0 60px;
+            padding: 0.35rem 0.5rem;
+            border: 1px solid var(--cd-grey--light);
+            font-size: 0.8125rem;
+            font-family: var(--cd-font--roboto);
+            text-align: center;
+            transition: border-color 0.15s ease;
+        }
+
+        .field-number:focus {
+            outline: none;
+            border-color: var(--cd-ocha-blue);
+        }
+
+        .field-checkbox-wrap {
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .field-checkbox-wrap input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            accent-color: var(--cd-ocha-blue);
+        }
+
+        .field-checkbox-wrap span {
+            font-size: 0.75rem;
+            color: var(--cd-grey--dark);
+        }
+
+        /* Add icon modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.visible {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--cd-white);
+            width: 520px;
+            max-width: 95vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .modal-header {
+            background: var(--cd-ocha-blue);
+            color: var(--cd-white);
+            padding: 1rem 1.5rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--cd-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: 0;
+            font-weight: 400;
+        }
+
+        .modal-close:hover {
+            opacity: 0.8;
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+        }
+
+        .modal-field {
+            margin-bottom: 1.25rem;
+        }
+
+        .modal-field label {
+            display: block;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: var(--cd-blue--dark);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.375rem;
+        }
+
+        .modal-field input[type="text"],
+        .modal-field select {
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid var(--cd-grey--light);
+            font-size: 0.875rem;
+            font-family: var(--cd-font--roboto);
+        }
+
+        .modal-field input[type="text"]:focus,
+        .modal-field select:focus {
+            outline: none;
+            border-color: var(--cd-ocha-blue);
+        }
+
+        .modal-field .field-hint {
+            font-size: 0.6875rem;
+            color: #999;
+            margin-top: 0.25rem;
+        }
+
+        .modal-field .field-error {
+            font-size: 0.6875rem;
+            color: var(--cd-red);
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .modal-field .checkbox-line {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .modal-field .checkbox-line input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--cd-ocha-blue);
+        }
+
+        .modal-field .checkbox-line span {
+            font-size: 0.875rem;
+            color: var(--cd-grey--dark);
+        }
+
+        .modal-field .inline-fields {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        .modal-field .inline-fields > div {
+            flex: 1;
+        }
+
+        .modal-field input[type="number"] {
+            width: 100%;
+            padding: 0.6rem 0.75rem;
+            border: 1px solid var(--cd-grey--light);
+            font-size: 0.875rem;
+            font-family: var(--cd-font--roboto);
+            text-align: center;
+        }
+
+        .modal-field input[type="number"]:focus {
+            outline: none;
+            border-color: var(--cd-ocha-blue);
+        }
+
+        .modal-preview {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            background: var(--cd-grey--light);
+            margin-bottom: 1.25rem;
+            min-height: 64px;
+        }
+
+        .modal-preview .preview-svg {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-preview .preview-svg svg {
+            width: 44px;
+            height: 44px;
+        }
+
+        .modal-preview .preview-info {
+            font-size: 0.8125rem;
+            color: var(--cd-grey--mid);
+        }
+
+        .modal-footer {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--cd-grey--light);
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+        }
+
+        /* Notification toast */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--cd-blue--dark);
+            color: var(--cd-white);
+            padding: 0.875rem 1.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            z-index: 2000;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            transform: translateY(120%);
+            transition: transform 0.25s ease;
+            max-width: 400px;
+        }
+
+        .toast.visible {
+            transform: translateY(0);
+        }
+
+        .toast.success {
+            border-left: 4px solid #28a745;
+        }
+
+        .toast.error {
+            border-left: 4px solid var(--cd-red);
+        }
+
+        /* File picker fallback */
+        .file-picker-fallback {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .file-picker-fallback p {
+            color: var(--cd-grey--mid);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .file-picker-fallback .hint {
+            font-size: 0.8125rem;
+            color: #aaa;
+            margin-top: 1rem;
+        }
+
+        /* Loading state */
+        .loading-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--cd-grey--mid);
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            border: 3px solid var(--cd-grey--light);
+            border-top: 3px solid var(--cd-ocha-blue);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Empty state for search */
+        .empty-state {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--cd-grey--mid);
+            font-size: 0.9375rem;
+        }
+
+        /* Delete confirmation */
+        .delete-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: none;
+            border: none;
+            color: #ccc;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 0.15rem 0.35rem;
+            text-transform: none;
+            letter-spacing: 0;
+            line-height: 1;
+            transition: color 0.15s ease;
+        }
+
+        .delete-btn:hover {
+            color: var(--cd-red);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.25rem;
+            }
+
+            .app-header {
+                flex-direction: column;
+            }
+
+            .app-header-left h1 {
+                font-size: 1.5rem;
+            }
+
+            .toolbar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .toolbar-separator {
+                display: none;
+            }
+
+            .toolbar-spacer {
+                display: none;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            .icon-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .icon-card-top {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .field-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .field-label {
+                width: auto;
+            }
+
+            .field-input,
+            .field-select {
+                width: 100%;
+            }
+        }
+
+        /* Print-friendly */
+        @media print {
+            body { background: white; padding: 0; }
+            .container { box-shadow: none; }
+            .toolbar, .changes-banner, .app-header-right, .delete-btn { display: none !important; }
+            .family-section.collapsed .family-body { display: block !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="app-header">
+        <div class="app-header-left">
+            <h1>OCHA Icon Curator</h1>
+            <div class="subtitle">Manage the humanitarian icon library metadata</div>
+        </div>
+        <div class="app-header-right">
+            <span class="version-badge" id="versionBadge"></span>
+            <span class="version-badge" id="lastUpdatedBadge"></span>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-bar" id="statsBar">
+        <div class="stat-item">
+            <span class="stat-value" id="statTotal">0</span>
+            <span class="stat-label">icons</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value" id="statWordmark">0</span>
+            <span class="stat-label">wordmark-approved</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value" id="statFamilies">0</span>
+            <span class="stat-label">families</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-value" id="statNextCodepoint">--</span>
+            <span class="stat-label">next codepoint</span>
+        </div>
+    </div>
+
+    <!-- Change tracking -->
+    <div class="changes-banner" id="changesBanner">
+        <span id="changesText">You have unsaved changes.</span>
+        <div>
+            <button class="btn-primary btn-small" onclick="doExport()">Export Now</button>
+            <button class="btn-secondary btn-small" onclick="discardChanges()">Discard</button>
+        </div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search by name, key, or family..." oninput="handleSearch()">
+        <div class="toolbar-separator"></div>
+        <div class="toolbar-group">
+            <label style="font-size:0.75rem;color:var(--cd-grey--mid);margin:0;text-transform:uppercase;letter-spacing:0.3px">Sort:</label>
+            <select class="sort-select" id="sortSelect" onchange="handleSort()">
+                <option value="family">By Family</option>
+                <option value="alpha">Alphabetical (Name)</option>
+                <option value="key">Alphabetical (Key)</option>
+                <option value="codepoint">By Codepoint</option>
+                <option value="date">By Date Added</option>
+            </select>
+        </div>
+        <div class="toolbar-separator"></div>
+        <div class="toolbar-group">
+            <button class="btn-secondary btn-small" id="expandCollapseBtn" onclick="toggleExpandAll()">Collapse All</button>
+        </div>
+        <div class="toolbar-spacer"></div>
+        <div class="toolbar-group">
+            <button class="btn-secondary" onclick="openAddModal()">+ Add Icon</button>
+            <button class="btn-primary" onclick="doExport()">Export metadata.json</button>
+        </div>
+    </div>
+
+    <!-- Main content area -->
+    <div id="mainContent">
+        <div class="loading-state">
+            <div class="loading-spinner"></div>
+            <div>Loading metadata.json...</div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Icon Modal -->
+<div class="modal-overlay" id="addModal">
+    <div class="modal">
+        <div class="modal-header">
+            <span>Add New Icon</span>
+            <button class="modal-close" onclick="closeAddModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="modal-preview" id="addPreview">
+                <div class="preview-svg" id="addPreviewSvg"></div>
+                <div class="preview-info">Enter an SVG filename to preview</div>
+            </div>
+
+            <div class="modal-field">
+                <label for="addKey">SVG Filename (without .svg)</label>
+                <input type="text" id="addKey" placeholder="e.g. My-new-icon" oninput="onAddKeyInput()">
+                <div class="field-hint">This becomes the icon key. Must match an SVG file in ../svg/</div>
+                <div class="field-error" id="addKeyError"></div>
+            </div>
+
+            <div class="modal-field">
+                <label for="addName">Display Name</label>
+                <input type="text" id="addName" placeholder="e.g. My new icon">
+            </div>
+
+            <div class="modal-field">
+                <label for="addFamily">Family</label>
+                <select id="addFamily"></select>
+            </div>
+
+            <div class="modal-field">
+                <div class="inline-fields">
+                    <div>
+                        <div class="checkbox-line">
+                            <input type="checkbox" id="addWordmark">
+                            <span>Wordmark approved</span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="addValign">Wordmark V-Align</label>
+                        <input type="number" id="addValign" value="0" min="-50" max="50" step="1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-field">
+                <label>Auto-assigned Codepoint</label>
+                <div style="font-family:'Courier New',monospace;font-size:0.9375rem;color:var(--cd-ocha-blue);font-weight:700" id="addCodepointDisplay">--</div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-secondary" onclick="closeAddModal()">Cancel</button>
+            <button class="btn-primary" id="addConfirmBtn" onclick="confirmAddIcon()">Add Icon</button>
+        </div>
+    </div>
+</div>
+
+<!-- Delete confirmation modal -->
+<div class="modal-overlay" id="deleteModal">
+    <div class="modal" style="width:400px">
+        <div class="modal-header" style="background:var(--cd-red)">
+            <span>Remove Icon</span>
+            <button class="modal-close" onclick="closeDeleteModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p style="margin-bottom:1rem">Are you sure you want to remove <strong id="deleteIconName"></strong> from the metadata?</p>
+            <p style="font-size:0.8125rem;color:var(--cd-grey--mid)">This will not delete the SVG file. The icon can be re-added later.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn-secondary" onclick="closeDeleteModal()">Cancel</button>
+            <button class="btn-danger" id="deleteConfirmBtn" onclick="confirmDeleteIcon()">Remove</button>
+        </div>
+    </div>
+</div>
+
+<!-- File picker fallback (hidden input) -->
+<input type="file" id="filePicker" accept=".json,application/json" style="display:none" onchange="handleFilePick(event)">
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+(function() {
+    'use strict';
+
+    // =========================================================================
+    // State
+    // =========================================================================
+
+    let metadata = null;       // The full metadata object
+    let originalJSON = '';     // Snapshot for change detection
+    let svgCache = {};         // key -> cleaned SVG HTML
+    let svgLoadQueue = [];     // queue for lazy-loading SVGs
+    let svgLoadActive = 0;
+    const SVG_CONCURRENCY = 6;
+    let pendingDeleteKey = null;
+    let allExpanded = true;
+
+    // =========================================================================
+    // SVG cleaning (matches word mark generator)
+    // =========================================================================
+
+    function cleanSVG(svgText) {
+        let cleaned = svgText.replace(/<defs>[\s\S]*?<\/defs>/gi, '');
+        cleaned = cleaned.replace(/<defs\s[^>]*>[\s\S]*?<\/defs>/gi, '');
+        cleaned = cleaned.replace(/<style[\s\S]*?<\/style>/gi, '');
+        cleaned = cleaned.replace(/<title>[\s\S]*?<\/title>/gi, '');
+        cleaned = cleaned.replace(/\s+class="[^"]*"/g, '');
+        const shapes = ['path', 'circle', 'rect', 'polygon', 'ellipse', 'polyline'];
+        shapes.forEach(function(tag) {
+            const re = new RegExp('<' + tag + '(?![^>]*\\bfill\\s*=)', 'g');
+            cleaned = cleaned.replace(re, '<' + tag + ' fill="#009edb"');
+        });
+        cleaned = cleaned.replace(/\s+style="[^"]*"/g, '');
+        return cleaned;
+    }
+
+    // =========================================================================
+    // SVG lazy loader with concurrency control
+    // =========================================================================
+
+    function enqueueSVGLoad(key, element) {
+        if (svgCache[key]) {
+            element.innerHTML = svgCache[key];
+            return;
+        }
+        svgLoadQueue.push({ key: key, element: element });
+        drainSVGQueue();
+    }
+
+    function drainSVGQueue() {
+        while (svgLoadActive < SVG_CONCURRENCY && svgLoadQueue.length > 0) {
+            var item = svgLoadQueue.shift();
+            svgLoadActive++;
+            loadSVG(item.key, item.element);
+        }
+    }
+
+    function loadSVG(key, element) {
+        fetch('../svg/' + encodeURIComponent(key) + '.svg')
+            .then(function(r) {
+                if (!r.ok) throw new Error(r.status);
+                return r.text();
+            })
+            .then(function(text) {
+                var cleaned = cleanSVG(text);
+                svgCache[key] = cleaned;
+                element.innerHTML = cleaned;
+            })
+            .catch(function() {
+                element.innerHTML = '<span class="preview-error">No SVG</span>';
+            })
+            .finally(function() {
+                svgLoadActive--;
+                drainSVGQueue();
+            });
+    }
+
+    // =========================================================================
+    // Initialization
+    // =========================================================================
+
+    window.addEventListener('DOMContentLoaded', function() {
+        loadMetadata();
+    });
+
+    // Warn before leaving with unsaved changes
+    window.addEventListener('beforeunload', function(e) {
+        if (hasChanges()) {
+            e.preventDefault();
+            e.returnValue = '';
+        }
+    });
+
+    function loadMetadata() {
+        fetch('../metadata.json')
+            .then(function(r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.text();
+            })
+            .then(function(text) {
+                metadata = JSON.parse(text);
+                originalJSON = JSON.stringify(metadata);
+                onMetadataLoaded();
+            })
+            .catch(function(err) {
+                console.warn('Could not fetch ../metadata.json:', err);
+                showFilePicker();
+            });
+    }
+
+    function showFilePicker() {
+        var main = document.getElementById('mainContent');
+        main.innerHTML =
+            '<div class="file-picker-fallback">' +
+            '<p>Could not load <strong>metadata.json</strong> automatically.</p>' +
+            '<p>This usually means the file is not being served via HTTP.<br>Try running <code>python -m http.server</code> from the repo root.</p>' +
+            '<button class="btn-primary" onclick="document.getElementById(\'filePicker\').click()">Select metadata.json</button>' +
+            '<div class="hint">Or drag &amp; drop the file onto this page.</div>' +
+            '</div>';
+    }
+
+    window.handleFilePick = function(e) {
+        var file = e.target.files[0];
+        if (!file) return;
+        var reader = new FileReader();
+        reader.onload = function(ev) {
+            try {
+                metadata = JSON.parse(ev.target.result);
+                originalJSON = JSON.stringify(metadata);
+                onMetadataLoaded();
+            } catch (err) {
+                showToast('Invalid JSON file: ' + err.message, 'error');
+            }
+        };
+        reader.readAsText(file);
+    };
+
+    // Drag-and-drop support
+    document.addEventListener('dragover', function(e) { e.preventDefault(); });
+    document.addEventListener('drop', function(e) {
+        e.preventDefault();
+        var file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+        if (file && file.name.endsWith('.json')) {
+            var reader = new FileReader();
+            reader.onload = function(ev) {
+                try {
+                    metadata = JSON.parse(ev.target.result);
+                    originalJSON = JSON.stringify(metadata);
+                    onMetadataLoaded();
+                } catch (err) {
+                    showToast('Invalid JSON file: ' + err.message, 'error');
+                }
+            };
+            reader.readAsText(file);
+        }
+    });
+
+    function onMetadataLoaded() {
+        updateHeaderBadges();
+        updateStats();
+        populateAddFamilyDropdown();
+        render();
+        showToast('Loaded ' + Object.keys(metadata.icons).length + ' icons', 'success');
+    }
+
+    // =========================================================================
+    // Header & Stats
+    // =========================================================================
+
+    function updateHeaderBadges() {
+        document.getElementById('versionBadge').textContent = 'v' + (metadata.meta.version || '?');
+        document.getElementById('lastUpdatedBadge').textContent = 'Updated: ' + (metadata.meta.last_updated || '?');
+    }
+
+    function updateStats() {
+        var icons = metadata.icons;
+        var keys = Object.keys(icons);
+        var total = keys.length;
+        var wordmarkCount = keys.filter(function(k) { return icons[k].wordmark; }).length;
+        var familySet = new Set(keys.map(function(k) { return icons[k].family; }));
+
+        document.getElementById('statTotal').textContent = total;
+        document.getElementById('statWordmark').textContent = wordmarkCount;
+        document.getElementById('statFamilies').textContent = metadata.families.length;
+        document.getElementById('statNextCodepoint').textContent = metadata.meta.next_font_codepoint || '--';
+    }
+
+    // =========================================================================
+    // Change tracking
+    // =========================================================================
+
+    function hasChanges() {
+        if (!metadata) return false;
+        return JSON.stringify(metadata) !== originalJSON;
+    }
+
+    function updateChangesBanner() {
+        var banner = document.getElementById('changesBanner');
+        if (hasChanges()) {
+            banner.classList.add('visible');
+        } else {
+            banner.classList.remove('visible');
+        }
+    }
+
+    function markChanged() {
+        updateChangesBanner();
+        updateStats();
+    }
+
+    window.discardChanges = function() {
+        if (!confirm('Discard all unsaved changes and revert to the last loaded state?')) return;
+        metadata = JSON.parse(originalJSON);
+        svgCache = {};
+        svgLoadQueue = [];
+        onMetadataLoaded();
+    };
+
+    // =========================================================================
+    // Rendering
+    // =========================================================================
+
+    function getFilteredIcons() {
+        var query = (document.getElementById('searchInput').value || '').toLowerCase().trim();
+        var icons = metadata.icons;
+        var keys = Object.keys(icons);
+
+        if (query) {
+            keys = keys.filter(function(k) {
+                var icon = icons[k];
+                return k.toLowerCase().indexOf(query) !== -1 ||
+                       icon.name.toLowerCase().indexOf(query) !== -1 ||
+                       icon.family.toLowerCase().indexOf(query) !== -1;
+            });
+        }
+
+        return keys;
+    }
+
+    function getSortedGrouped(keys) {
+        var sortMode = document.getElementById('sortSelect').value;
+        var icons = metadata.icons;
+
+        if (sortMode === 'family') {
+            // Group by family, families in metadata.families order
+            var groups = {};
+            metadata.families.forEach(function(f) { groups[f] = []; });
+
+            keys.forEach(function(k) {
+                var family = icons[k].family;
+                if (!groups[family]) groups[family] = [];
+                groups[family].push(k);
+            });
+
+            // Sort icons within each family alphabetically by name
+            Object.keys(groups).forEach(function(f) {
+                groups[f].sort(function(a, b) {
+                    return icons[a].name.localeCompare(icons[b].name);
+                });
+            });
+
+            // Build ordered result
+            var result = [];
+            metadata.families.forEach(function(f) {
+                if (groups[f] && groups[f].length > 0) {
+                    result.push({ family: f, keys: groups[f] });
+                }
+            });
+
+            // Any families not in metadata.families
+            Object.keys(groups).forEach(function(f) {
+                if (metadata.families.indexOf(f) === -1 && groups[f].length > 0) {
+                    result.push({ family: f, keys: groups[f] });
+                }
+            });
+
+            return result;
+        }
+
+        // Flat sort modes
+        var sorted = keys.slice();
+
+        if (sortMode === 'alpha') {
+            sorted.sort(function(a, b) {
+                return icons[a].name.localeCompare(icons[b].name);
+            });
+        } else if (sortMode === 'key') {
+            sorted.sort(function(a, b) {
+                return a.localeCompare(b);
+            });
+        } else if (sortMode === 'codepoint') {
+            sorted.sort(function(a, b) {
+                return (icons[a].font_codepoint || '').localeCompare(icons[b].font_codepoint || '');
+            });
+        } else if (sortMode === 'date') {
+            sorted.sort(function(a, b) {
+                return (icons[b].date_added || '').localeCompare(icons[a].date_added || '');
+            });
+        }
+
+        return [{ family: 'All Icons', keys: sorted }];
+    }
+
+    function render() {
+        var main = document.getElementById('mainContent');
+        var keys = getFilteredIcons();
+
+        if (keys.length === 0 && Object.keys(metadata.icons).length > 0) {
+            main.innerHTML = '<div class="empty-state">No icons match your search.</div>';
+            return;
+        }
+
+        if (keys.length === 0) {
+            main.innerHTML = '<div class="empty-state">No icons in metadata. Add one to get started.</div>';
+            return;
+        }
+
+        var groups = getSortedGrouped(keys);
+        var html = '';
+
+        groups.forEach(function(group) {
+            var familyId = 'family-' + group.family.replace(/[^a-zA-Z0-9]/g, '_');
+            var wmCount = group.keys.filter(function(k) { return metadata.icons[k].wordmark; }).length;
+            var collapsedClass = allExpanded ? '' : ' collapsed';
+
+            html += '<div class="family-section' + collapsedClass + '" id="' + familyId + '">';
+            html += '<div class="family-header" onclick="toggleFamily(\'' + familyId + '\')">';
+            html += '<div class="family-header-left">';
+            html += '<span class="family-collapse-icon">&#9660;</span>';
+            html += '<span class="family-name">' + escapeHTML(group.family) + '</span>';
+            html += '<span class="family-count">' + group.keys.length + '</span>';
+            if (wmCount > 0) {
+                html += '<span class="family-wordmark-count">' + wmCount + ' wordmark</span>';
+            }
+            html += '</div>';
+            html += '</div>';  // family-header
+
+            html += '<div class="family-body">';
+            html += '<div class="icon-grid">';
+
+            group.keys.forEach(function(key) {
+                html += renderIconCard(key);
+            });
+
+            html += '</div>';  // icon-grid
+            html += '</div>';  // family-body
+            html += '</div>';  // family-section
+        });
+
+        main.innerHTML = html;
+
+        // Load SVG previews
+        var previews = main.querySelectorAll('.icon-preview[data-key]');
+        previews.forEach(function(el) {
+            enqueueSVGLoad(el.getAttribute('data-key'), el);
+        });
+    }
+
+    function renderIconCard(key) {
+        var icon = metadata.icons[key];
+        var familyOptions = metadata.families.map(function(f) {
+            var sel = f === icon.family ? ' selected' : '';
+            return '<option value="' + escapeHTML(f) + '"' + sel + '>' + escapeHTML(f) + '</option>';
+        }).join('');
+
+        var wordmarkChecked = icon.wordmark ? ' checked' : '';
+        var valignDisplay = icon.wordmark ? '' : ' style="display:none"';
+        var badge = icon.wordmark ? '<span class="wordmark-badge">WM</span>' : '';
+
+        var html = '';
+        html += '<div class="icon-card" data-key="' + escapeHTML(key) + '">';
+        html += '<button class="delete-btn" onclick="openDeleteModal(\'' + escapeJS(key) + '\')" title="Remove icon">&times;</button>';
+
+        // Top row: preview + info
+        html += '<div class="icon-card-top">';
+        html += '<div class="icon-preview" data-key="' + escapeHTML(key) + '"></div>';
+        html += '<div class="icon-info">';
+        html += '<div class="icon-key">' + escapeHTML(key) + badge + '</div>';
+        html += '<div class="icon-codepoint">' + escapeHTML(icon.font_codepoint || '') + '</div>';
+        html += '<div class="icon-date">' + escapeHTML(icon.date_added || '') + '</div>';
+        html += '</div>';
+        html += '</div>';
+
+        // Fields
+        html += '<div class="icon-fields">';
+
+        // Name
+        html += '<div class="field-row">';
+        html += '<span class="field-label">Name</span>';
+        html += '<input type="text" class="field-input" value="' + escapeAttr(icon.name) + '" onchange="updateField(\'' + escapeJS(key) + '\',\'name\',this.value)">';
+        html += '</div>';
+
+        // Family
+        html += '<div class="field-row">';
+        html += '<span class="field-label">Family</span>';
+        html += '<select class="field-select" onchange="updateField(\'' + escapeJS(key) + '\',\'family\',this.value)">';
+        html += familyOptions;
+        html += '</select>';
+        html += '</div>';
+
+        // Wordmark + valign
+        html += '<div class="field-row">';
+        html += '<span class="field-label">WMark</span>';
+        html += '<div class="field-checkbox-wrap">';
+        html += '<input type="checkbox"' + wordmarkChecked + ' onchange="toggleWordmark(\'' + escapeJS(key) + '\',this.checked)">';
+        html += '<span>Approved</span>';
+        html += '</div>';
+        html += '<span class="valign-wrap" data-valign-key="' + escapeHTML(key) + '"' + valignDisplay + '>';
+        html += '<input type="number" class="field-number" value="' + (icon.wordmark_valign || 0) + '" min="-50" max="50" step="1" onchange="updateField(\'' + escapeJS(key) + '\',\'wordmark_valign\',parseInt(this.value)||0)" title="Vertical alignment offset">';
+        html += '</span>';
+        html += '</div>';
+
+        html += '</div>';  // icon-fields
+        html += '</div>';  // icon-card
+
+        return html;
+    }
+
+    // =========================================================================
+    // Icon editing
+    // =========================================================================
+
+    window.updateField = function(key, field, value) {
+        if (!metadata.icons[key]) return;
+        metadata.icons[key][field] = value;
+        markChanged();
+
+        // If family changed, re-render to regroup
+        if (field === 'family') {
+            render();
+        }
+    };
+
+    window.toggleWordmark = function(key, checked) {
+        if (!metadata.icons[key]) return;
+        metadata.icons[key].wordmark = checked;
+        markChanged();
+
+        // Show/hide valign input
+        var wrap = document.querySelector('[data-valign-key="' + key + '"]');
+        if (wrap) {
+            wrap.style.display = checked ? '' : 'none';
+        }
+
+        // Update badge in card
+        var card = document.querySelector('.icon-card[data-key="' + key + '"]');
+        if (card) {
+            var keyEl = card.querySelector('.icon-key');
+            if (keyEl) {
+                // Remove existing badge
+                var existingBadge = keyEl.querySelector('.wordmark-badge');
+                if (existingBadge) existingBadge.remove();
+                // Add if needed
+                if (checked) {
+                    keyEl.insertAdjacentHTML('beforeend', '<span class="wordmark-badge">WM</span>');
+                }
+            }
+        }
+
+        updateStats();
+    };
+
+    // =========================================================================
+    // Add icon
+    // =========================================================================
+
+    function populateAddFamilyDropdown() {
+        var select = document.getElementById('addFamily');
+        select.innerHTML = '';
+        metadata.families.forEach(function(f) {
+            var opt = document.createElement('option');
+            opt.value = f;
+            opt.textContent = f;
+            select.appendChild(opt);
+        });
+    }
+
+    window.openAddModal = function() {
+        document.getElementById('addKey').value = '';
+        document.getElementById('addName').value = '';
+        document.getElementById('addWordmark').checked = false;
+        document.getElementById('addValign').value = '0';
+        document.getElementById('addKeyError').style.display = 'none';
+        document.getElementById('addPreviewSvg').innerHTML = '';
+        document.getElementById('addCodepointDisplay').textContent = metadata.meta.next_font_codepoint || '--';
+
+        populateAddFamilyDropdown();
+        document.getElementById('addModal').classList.add('visible');
+        setTimeout(function() { document.getElementById('addKey').focus(); }, 100);
+    };
+
+    window.closeAddModal = function() {
+        document.getElementById('addModal').classList.remove('visible');
+    };
+
+    window.onAddKeyInput = function() {
+        var key = document.getElementById('addKey').value.trim();
+        var errorEl = document.getElementById('addKeyError');
+        var previewEl = document.getElementById('addPreviewSvg');
+        var nameEl = document.getElementById('addName');
+
+        errorEl.style.display = 'none';
+
+        if (!key) {
+            previewEl.innerHTML = '';
+            return;
+        }
+
+        // Check for duplicate
+        if (metadata.icons[key]) {
+            errorEl.textContent = 'An icon with this key already exists.';
+            errorEl.style.display = 'block';
+        }
+
+        // Auto-fill display name from key
+        if (!nameEl.value || nameEl.dataset.autoFilled === 'true') {
+            nameEl.value = key.replace(/[-_]+/g, ' ');
+            nameEl.dataset.autoFilled = 'true';
+        }
+
+        // Load SVG preview
+        if (svgCache[key]) {
+            previewEl.innerHTML = svgCache[key];
+        } else {
+            previewEl.innerHTML = '<span class="preview-error">Loading...</span>';
+            fetch('../svg/' + encodeURIComponent(key) + '.svg')
+                .then(function(r) {
+                    if (!r.ok) throw new Error();
+                    return r.text();
+                })
+                .then(function(text) {
+                    var cleaned = cleanSVG(text);
+                    svgCache[key] = cleaned;
+                    if (document.getElementById('addKey').value.trim() === key) {
+                        previewEl.innerHTML = cleaned;
+                    }
+                })
+                .catch(function() {
+                    if (document.getElementById('addKey').value.trim() === key) {
+                        previewEl.innerHTML = '<span class="preview-error">SVG not found</span>';
+                    }
+                });
+        }
+    };
+
+    // Clear auto-fill flag when user manually types in name
+    document.getElementById('addName').addEventListener('input', function() {
+        this.dataset.autoFilled = 'false';
+    });
+
+    window.confirmAddIcon = function() {
+        var key = document.getElementById('addKey').value.trim();
+        var name = document.getElementById('addName').value.trim();
+        var family = document.getElementById('addFamily').value;
+        var wordmark = document.getElementById('addWordmark').checked;
+        var valign = parseInt(document.getElementById('addValign').value) || 0;
+        var errorEl = document.getElementById('addKeyError');
+
+        if (!key) {
+            errorEl.textContent = 'Please enter an SVG filename.';
+            errorEl.style.display = 'block';
+            return;
+        }
+
+        if (metadata.icons[key]) {
+            errorEl.textContent = 'An icon with this key already exists.';
+            errorEl.style.display = 'block';
+            return;
+        }
+
+        if (!name) {
+            name = key.replace(/[-_]+/g, ' ');
+        }
+
+        // Get today's date
+        var today = new Date();
+        var dateStr = today.getFullYear() + '-' +
+                      String(today.getMonth() + 1).padStart(2, '0') + '-' +
+                      String(today.getDate()).padStart(2, '0');
+
+        // Assign codepoint
+        var codepoint = metadata.meta.next_font_codepoint;
+
+        // Increment next_font_codepoint
+        var cpNum = parseInt(codepoint.replace('U+', ''), 16);
+        cpNum++;
+        metadata.meta.next_font_codepoint = 'U+' + cpNum.toString(16).toUpperCase().padStart(4, '0');
+
+        // Add icon
+        metadata.icons[key] = {
+            name: name,
+            family: family,
+            wordmark: wordmark,
+            wordmark_valign: valign,
+            font_codepoint: codepoint,
+            date_added: dateStr
+        };
+
+        closeAddModal();
+        markChanged();
+        render();
+        updateStats();
+        showToast('Added "' + name + '" (' + codepoint + ')', 'success');
+
+        // Scroll to the new icon
+        setTimeout(function() {
+            var card = document.querySelector('.icon-card[data-key="' + key + '"]');
+            if (card) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                card.style.outline = '3px solid var(--cd-ocha-blue)';
+                setTimeout(function() { card.style.outline = ''; }, 2000);
+            }
+        }, 100);
+    };
+
+    // =========================================================================
+    // Delete icon
+    // =========================================================================
+
+    window.openDeleteModal = function(key) {
+        pendingDeleteKey = key;
+        var icon = metadata.icons[key];
+        document.getElementById('deleteIconName').textContent = (icon ? icon.name : key) + ' (' + key + ')';
+        document.getElementById('deleteModal').classList.add('visible');
+    };
+
+    window.closeDeleteModal = function() {
+        pendingDeleteKey = null;
+        document.getElementById('deleteModal').classList.remove('visible');
+    };
+
+    window.confirmDeleteIcon = function() {
+        if (!pendingDeleteKey || !metadata.icons[pendingDeleteKey]) {
+            closeDeleteModal();
+            return;
+        }
+        var name = metadata.icons[pendingDeleteKey].name;
+        delete metadata.icons[pendingDeleteKey];
+        closeDeleteModal();
+        markChanged();
+        render();
+        updateStats();
+        showToast('Removed "' + name + '"', 'success');
+    };
+
+    // =========================================================================
+    // Search & Sort
+    // =========================================================================
+
+    window.handleSearch = function() {
+        render();
+    };
+
+    window.handleSort = function() {
+        render();
+    };
+
+    // =========================================================================
+    // Expand/Collapse
+    // =========================================================================
+
+    window.toggleFamily = function(familyId) {
+        var section = document.getElementById(familyId);
+        if (section) {
+            section.classList.toggle('collapsed');
+        }
+    };
+
+    window.toggleExpandAll = function() {
+        var sections = document.querySelectorAll('.family-section');
+        var btn = document.getElementById('expandCollapseBtn');
+        if (allExpanded) {
+            sections.forEach(function(s) { s.classList.add('collapsed'); });
+            btn.textContent = 'Expand All';
+            allExpanded = false;
+        } else {
+            sections.forEach(function(s) { s.classList.remove('collapsed'); });
+            btn.textContent = 'Collapse All';
+            allExpanded = true;
+        }
+    };
+
+    // =========================================================================
+    // Export
+    // =========================================================================
+
+    window.doExport = function() {
+        if (!metadata) return;
+
+        // Update last_updated
+        var today = new Date();
+        var dateStr = today.getFullYear() + '-' +
+                      String(today.getMonth() + 1).padStart(2, '0') + '-' +
+                      String(today.getDate()).padStart(2, '0');
+        metadata.meta.last_updated = dateStr;
+
+        // Build a clean ordered output:
+        // - meta first
+        // - families
+        // - icons sorted alphabetically by key
+        var orderedIcons = {};
+        var sortedKeys = Object.keys(metadata.icons).sort(function(a, b) {
+            return a.localeCompare(b);
+        });
+        sortedKeys.forEach(function(k) {
+            orderedIcons[k] = metadata.icons[k];
+        });
+
+        var output = {
+            meta: metadata.meta,
+            families: metadata.families,
+            icons: orderedIcons
+        };
+
+        var json = JSON.stringify(output, null, 2);
+
+        // Try File System Access API first
+        if ('showSaveFilePicker' in window) {
+            window.showSaveFilePicker({
+                suggestedName: 'metadata.json',
+                types: [{
+                    description: 'JSON Files',
+                    accept: { 'application/json': ['.json'] }
+                }]
+            })
+            .then(function(handle) {
+                return handle.createWritable().then(function(writable) {
+                    return writable.write(json).then(function() {
+                        return writable.close();
+                    });
+                });
+            })
+            .then(function() {
+                originalJSON = JSON.stringify(metadata);
+                updateChangesBanner();
+                updateHeaderBadges();
+                showToast('Saved metadata.json (' + sortedKeys.length + ' icons)', 'success');
+            })
+            .catch(function(err) {
+                if (err.name === 'AbortError') return;
+                // Fallback to download
+                downloadJSON(json, sortedKeys.length);
+            });
+        } else {
+            downloadJSON(json, sortedKeys.length);
+        }
+    };
+
+    function downloadJSON(json, count) {
+        var blob = new Blob([json], { type: 'application/json' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'metadata.json';
+        a.click();
+        URL.revokeObjectURL(url);
+
+        originalJSON = JSON.stringify(metadata);
+        updateChangesBanner();
+        updateHeaderBadges();
+        showToast('Downloaded metadata.json (' + count + ' icons)', 'success');
+    }
+
+    // =========================================================================
+    // Toast notifications
+    // =========================================================================
+
+    var toastTimer = null;
+
+    function showToast(message, type) {
+        var el = document.getElementById('toast');
+        el.textContent = message;
+        el.className = 'toast ' + (type || 'success');
+        // Force reflow
+        el.offsetHeight;
+        el.classList.add('visible');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function() {
+            el.classList.remove('visible');
+        }, 3000);
+    }
+
+    // =========================================================================
+    // Utility
+    // =========================================================================
+
+    function escapeHTML(str) {
+        var div = document.createElement('div');
+        div.textContent = str || '';
+        return div.innerHTML;
+    }
+
+    function escapeAttr(str) {
+        return (str || '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function escapeJS(str) {
+        return (str || '').replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', function(e) {
+        // Escape closes modals
+        if (e.key === 'Escape') {
+            closeAddModal();
+            closeDeleteModal();
+        }
+        // Ctrl/Cmd + S to export
+        if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+            e.preventDefault();
+            doExport();
+        }
+        // Ctrl/Cmd + F to focus search (when not in input)
+        if ((e.ctrlKey || e.metaKey) && e.key === 'f' && document.activeElement.tagName !== 'INPUT') {
+            e.preventDefault();
+            document.getElementById('searchInput').focus();
+        }
+    });
+
+    // Close modals on overlay click
+    document.getElementById('addModal').addEventListener('click', function(e) {
+        if (e.target === this) closeAddModal();
+    });
+    document.getElementById('deleteModal').addEventListener('click', function(e) {
+        if (e.target === this) closeDeleteModal();
+    });
+
+})();
+</script>
+
+</body>
+</html>

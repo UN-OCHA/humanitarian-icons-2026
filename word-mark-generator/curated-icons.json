@@ -1,0 +1,748 @@
+{
+  "categories": [
+    {
+      "name": "Clusters",
+      "icons": [
+        "Camp coordination and camp management",
+        "Early recovery",
+        "Education",
+        "Emergency telecommunications",
+        "Food security",
+        "Health",
+        "Logistics",
+        "Nutrition",
+        "Protection",
+        "Shelter",
+        "Water sanitation and hygiene"
+      ]
+    },
+    {
+      "name": "Other sectors",
+      "icons": [
+        "Agriculture",
+        "Child care child friendly",
+        "Child protection",
+        "Coordination",
+        "Environment",
+        "Fishery",
+        "Logistics and telecommunications",
+        "Multi-cluster sector",
+        "Rule of law and justice",
+        "Safety and security",
+        "Shelter, land and site coordination"
+      ]
+    },
+    {
+      "name": "Disasters, hazards and crises",
+      "icons": [
+        "Anticipatory action",
+        "Cold wave",
+        "Conflict",
+        "Cyclone",
+        "Drought",
+        "Earthquake",
+        "Epidemic",
+        "Famine",
+        "Fire",
+        "Flash flood",
+        "Flood",
+        "Heatwave",
+        "Heavy rain",
+        "Humanitarian access",
+        "Insect infestation",
+        "Internally displaced",
+        "Landslide mudslide",
+        "Locust infestation",
+        "Population return",
+        "Poverty",
+        "Refugee",
+        "Resilience",
+        "Snow avalanche",
+        "Snowfall",
+        "Storm",
+        "Storm surge",
+        "Technological disaster",
+        "Tornado",
+        "Tsunami",
+        "Violent wind",
+        "Volcano",
+        "Worm infestation"
+      ]
+    },
+    {
+      "name": "Socioeconomic and development",
+      "icons": [
+        "Debris management",
+        "Livelihood",
+        "Livestock",
+        "Population growth",
+        "Reconstruction",
+        "Rural",
+        "Rural exodus",
+        "Trade and market",
+        "Urban",
+        "Urban rural"
+      ]
+    },
+    {
+      "name": "People",
+      "icons": [
+        "Affected population",
+        "Child combatant",
+        "Children",
+        "Dead",
+        "Drowned",
+        "Elderly",
+        "Gender",
+        "Indigenous people",
+        "Infant",
+        "Injured",
+        "Missing",
+        "National army",
+        "Peacekeeping force",
+        "People affected",
+        "People covered",
+        "People in need",
+        "People in need 2",
+        "People reached",
+        "People targeted",
+        "People targeted 2",
+        "People with physical impairments",
+        "Person 1",
+        "Person 2",
+        "Pregnant",
+        "Rebel",
+        "Resettlement",
+        "Sex"
+      ]
+    },
+    {
+      "name": "Activities strategy",
+      "icons": [
+        "Advocacy",
+        "Agile",
+        "Analysis",
+        "Assessment",
+        "Cash transfer",
+        "Civil military coordination",
+        "Community engagement",
+        "Coordinated assessment",
+        "Deployment",
+        "Financing",
+        "Fund",
+        "Gap analysis",
+        "Humanitarian programme cycle",
+        "Information management",
+        "Information technology",
+        "Innovation",
+        "Leadership",
+        "Learning",
+        "Meeting",
+        "Monitoring",
+        "Needs assessment",
+        "Partnership",
+        "Policy",
+        "Preparedness",
+        "Public information",
+        "Reporting",
+        "Response",
+        "Scale down operation",
+        "Scale up operation",
+        "Search and rescue",
+        "Services and tools",
+        "Sexual and reproductive health",
+        "Staff management",
+        "Top ranking",
+        "Training"
+      ]
+    },
+    {
+      "name": "Product type",
+      "icons": [
+        "API",
+        "Calendar",
+        "Chart",
+        "Data",
+        "Document",
+        "Film",
+        "Live geoservices",
+        "Location",
+        "Map",
+        "P-code",
+        "Photo",
+        "Report",
+        "Table",
+        "Video"
+      ]
+    },
+    {
+      "name": "Food and non-food items",
+      "icons": [
+        "Blanket",
+        "Bottled water",
+        "Bucket",
+        "Clothing",
+        "Detergent",
+        "Flour",
+        "Food",
+        "Kitchen set",
+        "Mattress",
+        "Medical supply",
+        "Medicine",
+        "Mosquito net",
+        "Non food items",
+        "Non food items 2",
+        "Oil",
+        "Plastic sheeting",
+        "Relief goods",
+        "Rice",
+        "Salt",
+        "Soap",
+        "Stove",
+        "Sugar",
+        "Tarpaulin",
+        "Tent",
+        "Vaccine"
+      ]
+    },
+    {
+      "name": "Water sanitation and hygiene",
+      "icons": [
+        "Borehole",
+        "Communal latrine",
+        "Latrine cabin",
+        "Potable water",
+        "Potable water source",
+        "Sanitation",
+        "Shower",
+        "Solid waste",
+        "Spring water",
+        "Submersible pump",
+        "Toilet",
+        "Water source",
+        "Water trucking"
+      ]
+    },
+    {
+      "name": "Camp",
+      "icons": [
+        "IDP refugee camp",
+        "Permanent camp",
+        "Registration",
+        "Spontaneous site",
+        "Temporary camp",
+        "Transition site"
+      ]
+    },
+    {
+      "name": "Security and incident",
+      "icons": [
+        "Abduction kidnapping",
+        "Arrest detention",
+        "Assault",
+        "Attack",
+        "Carjacking",
+        "Confined",
+        "Dangerous area",
+        "Forced entry",
+        "Forced recruitment",
+        "Gender based violence",
+        "Harassment intimidation",
+        "House burned",
+        "Mine",
+        "Murder",
+        "Robbery",
+        "Sexual violence"
+      ]
+    },
+    {
+      "name": "Physical barriers",
+      "icons": [
+        "Border crossing",
+        "Checkpoint",
+        "Earthmound",
+        "Military gate",
+        "Observation tower",
+        "Physical closure",
+        "Road barrier",
+        "Roadblock"
+      ]
+    },
+    {
+      "name": "Damage",
+      "icons": [
+        "Airport affected",
+        "Airport destroyed",
+        "Airport not affected",
+        "Bridge affected",
+        "Bridge destroyed",
+        "Bridge not affected",
+        "Building facility affected",
+        "Building facility destroyed",
+        "Building facility not affected",
+        "Damaged affected",
+        "Destroyed",
+        "Health facility affected",
+        "Health facility destroyed",
+        "Health facility not affected",
+        "House affected",
+        "House destroyed",
+        "House not affected",
+        "Not affected",
+        "Port affected",
+        "Port destroyed",
+        "Port not affected",
+        "Power electricity affected",
+        "Power electricity not affected",
+        "Power outage",
+        "Road affected",
+        "Road destroyed",
+        "Road not affected",
+        "School affected",
+        "School destroyed",
+        "School not affected"
+      ]
+    },
+    {
+      "name": "General infrastructure",
+      "icons": [
+        "Assembly point",
+        "Buddhist temple",
+        "Building",
+        "Church",
+        "Clinic",
+        "Community building",
+        "Country",
+        "Diplomatic mission",
+        "Distribution site",
+        "Food warehouse",
+        "Government office",
+        "Health facility",
+        "Health post",
+        "Hindu temple",
+        "Hospital",
+        "Hotel",
+        "House",
+        "Infrastructure",
+        "Mobile clinic",
+        "Mosque",
+        "NGO office",
+        "Oil facility",
+        "Police station",
+        "Power electricity",
+        "School",
+        "UN compound office",
+        "University"
+      ]
+    },
+    {
+      "name": "Logistics",
+      "icons": [
+        "Airport",
+        "Airport military",
+        "Boat",
+        "Bridge",
+        "Bus",
+        "Car",
+        "Ferry",
+        "Gas station",
+        "Helicopter",
+        "Helipad",
+        "Port",
+        "Road",
+        "Ship",
+        "Train",
+        "Truck",
+        "Tunnel",
+        "UN vehicle"
+      ]
+    },
+    {
+      "name": "Telecommunications and technology",
+      "icons": [
+        "Cell tower",
+        "Computer",
+        "E-mail",
+        "Fax",
+        "Internet",
+        "Laptop",
+        "Mobile phone",
+        "Monitor",
+        "Radio",
+        "Remote support",
+        "Satellite dish",
+        "Smartphone",
+        "Walkie talkie",
+        "Work from home"
+      ]
+    },
+    {
+      "name": "UX UI",
+      "icons": [
+        "About",
+        "Add",
+        "Add document",
+        "AI chat",
+        "Alert",
+        "Apps",
+        "Blog",
+        "Bookmark",
+        "Chat",
+        "Checked mail",
+        "Copy",
+        "CSV file",
+        "Delete account",
+        "DOCX file",
+        "Down",
+        "Download",
+        "Edit",
+        "Exit cancel",
+        "Expand down",
+        "Expand left",
+        "Expand right",
+        "Expand up",
+        "Favourite",
+        "Filter",
+        "Folder",
+        "Go",
+        "Group",
+        "Help",
+        "Hidden",
+        "Link",
+        "Menu",
+        "More options",
+        "Next item",
+        "Not secured",
+        "Notification",
+        "Out of platform",
+        "Password",
+        "Pause",
+        "PDF file",
+        "Previous item",
+        "Print",
+        "Remove",
+        "Remove document",
+        "Return",
+        "Save",
+        "Search",
+        "Secured",
+        "Security",
+        "See",
+        "Selected",
+        "Settings",
+        "Share",
+        "Stop",
+        "Time",
+        "Trending",
+        "Up",
+        "Upload",
+        "User",
+        "Users",
+        "Validate account",
+        "Warning error",
+        "XLSX file",
+        "ZIP compressed"
+      ]
+    },
+    {
+      "name": "Health",
+      "icons": [
+        "Bacteria",
+        "Case management",
+        "COVID-19",
+        "Doctor",
+        "Handwashing",
+        "Health worker",
+        "Hospital bed",
+        "Infected",
+        "Infection control",
+        "Laboratory",
+        "Life saving",
+        "Market",
+        "Mask",
+        "Not infected",
+        "Physical distancing",
+        "Respiratory",
+        "Sanitizer",
+        "Testing",
+        "Ventilator",
+        "Virus"
+      ]
+    },
+    {
+      "name": "Lockdown",
+      "icons": [
+        "Airport closed",
+        "Border closed",
+        "Bridge closed",
+        "Building closed",
+        "House lockdown",
+        "Location lockdown",
+        "Market closed",
+        "Port closed",
+        "Road closed",
+        "School closed"
+      ]
+    }
+  ],
+  "icons": [
+    {
+      "name": "Camp coordination and camp management",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Camp-coordination-and-camp-management.svg",
+      "verticalAdjustment": -2,
+      "category": "Clusters"
+    },
+    {
+      "name": "Early recovery",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Early-recovery.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Education",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Education.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Emergency telecommunications",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Emergency-telecommunications.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Food security",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Food-security.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Health",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Health.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Logistics",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Logistics.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Nutrition",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Nutrition.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Protection",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Protection.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Shelter",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Shelter.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Water sanitation and hygiene",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Water-sanitation-and-hygiene.svg",
+      "verticalAdjustment": 0,
+      "category": "Clusters"
+    },
+    {
+      "name": "Anticipatory action",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Anticipatory-action.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Cold wave",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Cold-wave.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Conflict",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Conflict.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Cyclone",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Cyclone.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Drought",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Drought.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Earthquake",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Earthquake.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Epidemic",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Epidemic.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Famine",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Famine.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Fire",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Fire.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Flash flood",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Flash-flood.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Flood",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Flood.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Heatwave",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Heatwave.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Heavy rain",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Heavy-rain.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Humanitarian access",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Humanitarian-access.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Insect infestation",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Insect-infestation.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Internally displaced",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Internally-displaced.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Landslide mudslide",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Landslide-mudslide.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Locust infestation",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Locust-infestation.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Population return",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Population-return.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Poverty",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Poverty.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Refugee",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Refugee.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Resilience",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Resilience.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Snow avalanche",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Snow-avalanche.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Snowfall",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Snowfall.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Storm",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Storm.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Storm surge",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Storm-surge.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Technological disaster",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Technological-disaster.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Tornado",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Tornado.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Tsunami",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Tsunami.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Violent wind",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Violent-wind.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Volcano",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Volcano.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    },
+    {
+      "name": "Worm infestation",
+      "url": "https://cdn.jsdelivr.net/gh/UN-OCHA/humanitarian-icons-2026@main/svg/Worm-infestation.svg",
+      "verticalAdjustment": 0,
+      "category": "Disasters, hazards and crises"
+    }
+  ]
+}
