@@ -332,6 +332,121 @@
         border-color: var(--cd-grey--mid);
       }
 
+      .btn-request {
+        background: #e56a54;
+        color: var(--cd-white);
+        border-color: #e56a54;
+      }
+
+      .btn-request:hover:not(:disabled) {
+        background: #c9533e;
+        border-color: #c9533e;
+      }
+
+      .btn-check {
+        background: var(--cd-white);
+        color: var(--cd-ocha-blue);
+        border-color: var(--cd-ocha-blue);
+      }
+
+      .btn-check:hover:not(:disabled) {
+        background: var(--cd-blue-grey);
+      }
+
+      /* Approval workflow sections */
+      .approval-section {
+        margin-top: 2rem;
+        padding: 1.5rem 2rem;
+        background: var(--cd-grey--light);
+        border: 1px solid var(--cd-grey--light);
+      }
+
+      .approval-section h3 {
+        color: var(--cd-blue--dark);
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .approval-row {
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-end;
+        flex-wrap: wrap;
+      }
+
+      .approval-field {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-width: 200px;
+      }
+
+      .approval-field label {
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .approval-field input {
+        padding: 0.6rem 0.75rem;
+        border: 1px solid var(--cd-grey--light);
+        font-size: 0.9rem;
+        font-family: var(--cd-font--roboto);
+        background: var(--cd-white);
+      }
+
+      .approval-field input:focus {
+        outline: none;
+        border-color: var(--cd-ocha-blue);
+      }
+
+      .approval-message {
+        margin-top: 1rem;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+        border-left: 3px solid;
+      }
+
+      .approval-message.success {
+        background: #e8f5e9;
+        border-color: #4caf50;
+        color: #2e7d32;
+      }
+
+      .approval-message.error {
+        background: #fce4ec;
+        border-color: #e53935;
+        color: #c62828;
+      }
+
+      .approval-message.info {
+        background: #e3f2fd;
+        border-color: var(--cd-ocha-blue);
+        color: var(--cd-blue--dark);
+      }
+
+      .approval-message.pending {
+        background: #fff8e1;
+        border-color: #ffa000;
+        color: #e65100;
+      }
+
+      .watermark-note {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-size: 0.75rem;
+        color: var(--cd-grey--mid);
+        font-style: italic;
+      }
+
+      .step-divider {
+        margin: 2rem 0 0;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--cd-grey--light);
+      }
+
       .loading {
         text-align: center;
         padding: 2rem;
@@ -417,8 +532,48 @@
       </div>
 
       <div class="buttons">
-        <button class="btn-svg" id="downloadSVG" disabled>Download SVG</button>
-        <button class="btn-png" id="downloadPNG" disabled>Download PNG</button>
+        <button class="btn-png" id="downloadPreviewPNG" disabled>Download Preview PNG</button>
+      </div>
+      <p class="watermark-note" id="watermarkNote" style="display: none;">Preview files include a DRAFT watermark. Request approval below to download the final version.</p>
+
+      <!-- Step 3: Request Approval -->
+      <div class="approval-section" id="requestSection">
+        <h3>3. Request Approval</h3>
+        <p style="font-size: 0.85rem; color: var(--cd-grey--mid); margin-bottom: 1rem;">
+          Wordmarks must be approved by the OCHA Visual team before use.
+          Submit your request and you will receive a Request ID by email.
+        </p>
+        <div class="approval-row">
+          <div class="approval-field">
+            <label for="requestEmail">Your email</label>
+            <input type="text" id="requestEmail" placeholder="your.name@un.org" />
+          </div>
+          <button class="btn-request" id="submitRequest" disabled>Request Approval</button>
+        </div>
+        <div id="requestMessage"></div>
+      </div>
+
+      <!-- Step 4: Download Approved Wordmark -->
+      <div class="approval-section step-divider" id="downloadSection">
+        <h3>4. Download Approved Wordmark</h3>
+        <p style="font-size: 0.85rem; color: var(--cd-grey--mid); margin-bottom: 1rem;">
+          Already have an approved Request ID? Enter it below to download the final wordmark.
+        </p>
+        <div class="approval-row">
+          <div class="approval-field">
+            <label for="downloadEmail">Your email</label>
+            <input type="text" id="downloadEmail" placeholder="your.name@un.org" />
+          </div>
+          <div class="approval-field">
+            <label for="downloadCode">Request ID</label>
+            <input type="text" id="downloadCode" placeholder="e.g., WM-A3K7P2" style="text-transform: uppercase;" />
+          </div>
+          <button class="btn-check" id="checkStatus">Check Status</button>
+        </div>
+        <div id="downloadMessage"></div>
+        <div class="buttons" id="approvedButtons" style="display: none;">
+          <button class="btn-svg" id="downloadPackage">Download Wordmark (SVG + PNG)</button>
+        </div>
       </div>
     </div>
 
@@ -427,6 +582,10 @@
       let selectedIcon = null;
       let lineCount = 1;
       const UN_BLUE = "#009edb";
+
+      // ── Approval API ──────────────────────────────────
+      // Replace this URL with your deployed Google Apps Script Web App URL
+      const APPROVAL_API_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
 
       function normalizeIconName(value) {
         return (value || "")
@@ -745,14 +904,16 @@
 
       async function updatePreview() {
         const preview = document.getElementById("preview");
-        const downloadSVG = document.getElementById("downloadSVG");
-        const downloadPNG = document.getElementById("downloadPNG");
+        const downloadPreviewPNG = document.getElementById("downloadPreviewPNG");
+        const submitRequest = document.getElementById("submitRequest");
+        const watermarkNote = document.getElementById("watermarkNote");
 
         if (!selectedIcon || !hasText()) {
           preview.innerHTML =
             '<p style="color: #999;">Select an icon and enter text to see preview</p>';
-          downloadSVG.disabled = true;
-          downloadPNG.disabled = true;
+          downloadPreviewPNG.disabled = true;
+          submitRequest.disabled = true;
+          watermarkNote.style.display = "none";
           return;
         }
 
@@ -760,8 +921,9 @@
         preview.innerHTML = "";
         preview.appendChild(svg);
 
-        downloadSVG.disabled = false;
-        downloadPNG.disabled = false;
+        downloadPreviewPNG.disabled = false;
+        submitRequest.disabled = false;
+        watermarkNote.style.display = "block";
       }
 
       async function generateWordmark() {
@@ -940,23 +1102,40 @@
         return sanitizeFilename(lines.join("-"));
       }
 
-      function downloadSVG() {
-        generateWordmark().then((svg) => {
-          const svgData = new XMLSerializer().serializeToString(svg);
-          const blob = new Blob([svgData], { type: "image/svg+xml" });
-          const url = URL.createObjectURL(blob);
+      // Add repeating DRAFT watermark pattern to an SVG element
+      function addWatermark(svg) {
+        const viewBox = svg.getAttribute("viewBox").split(" ").map(Number);
+        const w = viewBox[2];
+        const h = viewBox[3];
+        const fontSize = Math.max(h * 0.22, 12);
+        const stepX = fontSize * 4;
+        const stepY = fontSize * 2;
 
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = `${getDownloadFilename()}-wordmark.svg`;
-          a.click();
+        const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        g.setAttribute("transform", `rotate(-20 ${w / 2} ${h / 2})`);
 
-          URL.revokeObjectURL(url);
-        });
+        // Cover area generously (rotation expands needed area)
+        for (let y = -h; y < h * 2; y += stepY) {
+          for (let x = -w; x < w * 2; x += stepX) {
+            const t = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            t.setAttribute("x", x);
+            t.setAttribute("y", y);
+            t.setAttribute("font-family", "Roboto, Arial, sans-serif");
+            t.setAttribute("font-weight", "900");
+            t.setAttribute("font-size", fontSize);
+            t.setAttribute("fill", "rgba(200, 0, 0, 0.10)");
+            t.textContent = "DRAFT";
+            g.appendChild(t);
+          }
+        }
+
+        svg.appendChild(g);
       }
 
-      function downloadPNG() {
+      // Download preview PNG (with watermark)
+      function downloadPreviewPNG() {
         generateWordmark().then((svg) => {
+          addWatermark(svg);
           const svgData = new XMLSerializer().serializeToString(svg);
           const canvas = document.createElement("canvas");
           const ctx = canvas.getContext("2d");
@@ -966,7 +1145,6 @@
           const url = URL.createObjectURL(blob);
 
           img.onload = function () {
-            // Set canvas size to 2x for better quality
             canvas.width = img.width * 2;
             canvas.height = img.height * 2;
             ctx.scale(2, 2);
@@ -976,16 +1154,149 @@
               const pngUrl = URL.createObjectURL(pngBlob);
               const a = document.createElement("a");
               a.href = pngUrl;
-              a.download = `${getDownloadFilename()}-wordmark.png`;
+              a.download = `${getDownloadFilename()}-DRAFT-wordmark.png`;
               a.click();
-
               URL.revokeObjectURL(url);
               URL.revokeObjectURL(pngUrl);
             });
           };
-
           img.src = url;
         });
+      }
+
+      // Download final package (SVG + PNG in a zip)
+      async function downloadFinalPackage() {
+        const svg = await generateWordmark();
+        const svgData = new XMLSerializer().serializeToString(svg);
+        const baseName = getDownloadFilename() + "-wordmark";
+
+        // Generate PNG from SVG
+        const pngBlob = await new Promise((resolve) => {
+          const canvas = document.createElement("canvas");
+          const ctx = canvas.getContext("2d");
+          const img = new Image();
+          const blob = new Blob([svgData], { type: "image/svg+xml" });
+          const url = URL.createObjectURL(blob);
+
+          img.onload = function () {
+            canvas.width = img.width * 2;
+            canvas.height = img.height * 2;
+            ctx.scale(2, 2);
+            ctx.drawImage(img, 0, 0);
+            canvas.toBlob(function (pngBlob) {
+              URL.revokeObjectURL(url);
+              resolve(pngBlob);
+            });
+          };
+          img.src = url;
+        });
+
+        // Build zip using minimal inline zip creator (no library needed)
+        const svgBytes = new TextEncoder().encode(svgData);
+        const pngBytes = new Uint8Array(await pngBlob.arrayBuffer());
+        const zipBlob = createZip([
+          { name: baseName + ".svg", data: svgBytes },
+          { name: baseName + ".png", data: pngBytes },
+        ]);
+
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(zipBlob);
+        a.download = baseName + ".zip";
+        a.click();
+        URL.revokeObjectURL(a.href);
+      }
+
+      // Minimal ZIP file creator (store-only, no compression — keeps it simple)
+      function createZip(files) {
+        const localHeaders = [];
+        const centralHeaders = [];
+        let offset = 0;
+
+        for (const file of files) {
+          const nameBytes = new TextEncoder().encode(file.name);
+          const crc = crc32(file.data);
+          const size = file.data.length;
+
+          // Local file header (30 bytes + name + data)
+          const local = new Uint8Array(30 + nameBytes.length + size);
+          const lv = new DataView(local.buffer);
+          lv.setUint32(0, 0x04034b50, true);   // signature
+          lv.setUint16(4, 20, true);            // version needed
+          lv.setUint16(6, 0, true);             // flags
+          lv.setUint16(8, 0, true);             // compression: store
+          lv.setUint16(10, 0, true);            // mod time
+          lv.setUint16(12, 0, true);            // mod date
+          lv.setUint32(14, crc, true);          // crc32
+          lv.setUint32(18, size, true);         // compressed size
+          lv.setUint32(22, size, true);         // uncompressed size
+          lv.setUint16(26, nameBytes.length, true); // name length
+          lv.setUint16(28, 0, true);            // extra length
+          local.set(nameBytes, 30);
+          local.set(file.data, 30 + nameBytes.length);
+          localHeaders.push(local);
+
+          // Central directory header (46 bytes + name)
+          const central = new Uint8Array(46 + nameBytes.length);
+          const cv = new DataView(central.buffer);
+          cv.setUint32(0, 0x02014b50, true);   // signature
+          cv.setUint16(4, 20, true);            // version made by
+          cv.setUint16(6, 20, true);            // version needed
+          cv.setUint16(8, 0, true);             // flags
+          cv.setUint16(10, 0, true);            // compression
+          cv.setUint16(12, 0, true);            // mod time
+          cv.setUint16(14, 0, true);            // mod date
+          cv.setUint32(16, crc, true);          // crc32
+          cv.setUint32(20, size, true);         // compressed size
+          cv.setUint32(24, size, true);         // uncompressed size
+          cv.setUint16(28, nameBytes.length, true);
+          cv.setUint16(30, 0, true);            // extra length
+          cv.setUint16(32, 0, true);            // comment length
+          cv.setUint16(34, 0, true);            // disk start
+          cv.setUint16(36, 0, true);            // internal attrs
+          cv.setUint32(38, 0, true);            // external attrs
+          cv.setUint32(42, offset, true);       // local header offset
+          central.set(nameBytes, 46);
+          centralHeaders.push(central);
+
+          offset += local.length;
+        }
+
+        const centralOffset = offset;
+        let centralSize = 0;
+        centralHeaders.forEach(c => centralSize += c.length);
+
+        // End of central directory (22 bytes)
+        const eocd = new Uint8Array(22);
+        const ev = new DataView(eocd.buffer);
+        ev.setUint32(0, 0x06054b50, true);
+        ev.setUint16(4, 0, true);
+        ev.setUint16(6, 0, true);
+        ev.setUint16(8, files.length, true);
+        ev.setUint16(10, files.length, true);
+        ev.setUint32(12, centralSize, true);
+        ev.setUint32(16, centralOffset, true);
+        ev.setUint16(20, 0, true);
+
+        return new Blob([...localHeaders, ...centralHeaders, eocd], { type: "application/zip" });
+      }
+
+      // CRC-32 calculation
+      function crc32(data) {
+        let crc = 0xFFFFFFFF;
+        if (!crc32.table) {
+          crc32.table = new Uint32Array(256);
+          for (let i = 0; i < 256; i++) {
+            let c = i;
+            for (let j = 0; j < 8; j++) {
+              c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1);
+            }
+            crc32.table[i] = c;
+          }
+        }
+        for (let i = 0; i < data.length; i++) {
+          crc = crc32.table[(crc ^ data[i]) & 0xFF] ^ (crc >>> 8);
+        }
+        return (crc ^ 0xFFFFFFFF) >>> 0;
       }
 
       function sanitizeFilename(text) {
@@ -995,6 +1306,168 @@
           .replace(/-+/g, "-")
           .replace(/^-|-$/g, "")
           .substring(0, 50);
+      }
+
+      // ── Approval workflow ─────────────────────────────
+      function showMessage(containerId, text, type) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = `<div class="approval-message ${type}">${text}</div>`;
+      }
+
+      async function callApprovalAPI(params) {
+        const response = await fetch(APPROVAL_API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain" },
+          body: JSON.stringify(params),
+        });
+        return response.json();
+      }
+
+      async function submitApprovalRequest() {
+        const email = document.getElementById("requestEmail").value.trim();
+        if (!email) {
+          showMessage("requestMessage", "Please enter your email address.", "error");
+          return;
+        }
+
+        if (!selectedIcon || !hasText()) {
+          showMessage("requestMessage", "Please select an icon and enter text first.", "error");
+          return;
+        }
+
+        const lines = getTextLines();
+        const btn = document.getElementById("submitRequest");
+        btn.disabled = true;
+        btn.textContent = "SUBMITTING...";
+
+        try {
+          const result = await callApprovalAPI({
+            action: "submit",
+            email: email,
+            icon: selectedIcon.name,
+            line1: lines[0] || "",
+            line2: lines[1] || "",
+            line3: lines[2] || "",
+            layout: String(lineCount),
+          });
+
+          if (result.success) {
+            showMessage(
+              "requestMessage",
+              `Request submitted! Your Request ID is <strong>${result.requestId}</strong>. ` +
+              `You will receive a notification at <strong>${email}</strong> when it is approved. ` +
+              `Use the Request ID in step 4 below to download the final wordmark.`,
+              "success"
+            );
+          } else {
+            showMessage("requestMessage", result.error || "Request failed. Please try again.", "error");
+          }
+        } catch (err) {
+          showMessage("requestMessage", "Could not reach the approval service. Please try again later.", "error");
+          console.error("Submit error:", err);
+        }
+
+        btn.disabled = false;
+        btn.textContent = "REQUEST APPROVAL";
+      }
+
+      async function checkApprovalStatus() {
+        const email = document.getElementById("downloadEmail").value.trim();
+        const code = document.getElementById("downloadCode").value.trim().toUpperCase();
+
+        if (!email || !code) {
+          showMessage("downloadMessage", "Please enter both your email and Request ID.", "error");
+          return;
+        }
+
+        const btn = document.getElementById("checkStatus");
+        btn.disabled = true;
+        btn.textContent = "CHECKING...";
+
+        try {
+          const result = await callApprovalAPI({
+            action: "check",
+            email: email,
+            requestId: code,
+          });
+
+          if (result.success) {
+            if (result.canDownload) {
+              showMessage(
+                "downloadMessage",
+                "Your request is <strong>approved</strong>! Click a download button below. Note: each request allows one download.",
+                "success"
+              );
+              document.getElementById("approvedButtons").style.display = "flex";
+            } else if (result.status === "Pending") {
+              showMessage(
+                "downloadMessage",
+                "Your request is still <strong>pending review</strong>. Please check back later.",
+                "pending"
+              );
+              document.getElementById("approvedButtons").style.display = "none";
+            } else if (result.status === "Downloaded") {
+              showMessage(
+                "downloadMessage",
+                "This wordmark has already been downloaded. Contact <strong>ochavisual@un.org</strong> if you need another copy.",
+                "info"
+              );
+              document.getElementById("approvedButtons").style.display = "none";
+            } else {
+              showMessage(
+                "downloadMessage",
+                `Request status: <strong>${result.status}</strong>.`,
+                "info"
+              );
+              document.getElementById("approvedButtons").style.display = "none";
+            }
+          } else {
+            showMessage("downloadMessage", result.error || "Could not verify request.", "error");
+            document.getElementById("approvedButtons").style.display = "none";
+          }
+        } catch (err) {
+          showMessage("downloadMessage", "Could not reach the approval service. Please try again later.", "error");
+          console.error("Check error:", err);
+        }
+
+        btn.disabled = false;
+        btn.textContent = "CHECK STATUS";
+      }
+
+      // Mark as downloaded and trigger final package download
+      async function approvedDownload() {
+        const email = document.getElementById("downloadEmail").value.trim();
+        const code = document.getElementById("downloadCode").value.trim().toUpperCase();
+        const btn = document.getElementById("downloadPackage");
+        btn.disabled = true;
+        btn.textContent = "PREPARING...";
+
+        try {
+          const result = await callApprovalAPI({
+            action: "download",
+            email: email,
+            requestId: code,
+          });
+
+          if (result.success && result.canDownload) {
+            await downloadFinalPackage();
+            document.getElementById("approvedButtons").style.display = "none";
+            showMessage(
+              "downloadMessage",
+              "Download complete! Your package includes both SVG and PNG. This request has been marked as used.",
+              "info"
+            );
+          } else {
+            showMessage("downloadMessage", result.error || "Download not authorized.", "error");
+            document.getElementById("approvedButtons").style.display = "none";
+          }
+        } catch (err) {
+          showMessage("downloadMessage", "Could not reach the approval service.", "error");
+          console.error("Download error:", err);
+        }
+
+        btn.disabled = false;
+        btn.textContent = "DOWNLOAD WORDMARK (SVG + PNG)";
       }
 
       // --- Line layout management ---
@@ -1064,12 +1537,15 @@
 
       document.getElementById("line1").addEventListener("input", updatePreview);
 
-      document
-        .getElementById("downloadSVG")
-        .addEventListener("click", downloadSVG);
-      document
-        .getElementById("downloadPNG")
-        .addEventListener("click", downloadPNG);
+      // Preview download (PNG with watermark only — no SVG to prevent editing)
+      document.getElementById("downloadPreviewPNG").addEventListener("click", downloadPreviewPNG);
+
+      // Approval workflow
+      document.getElementById("submitRequest").addEventListener("click", submitApprovalRequest);
+      document.getElementById("checkStatus").addEventListener("click", checkApprovalStatus);
+
+      // Final download (approved package: SVG + PNG zip)
+      document.getElementById("downloadPackage").addEventListener("click", approvedDownload);
 
       // Search functionality
       document.getElementById("iconSearch").addEventListener("input", (e) => {
