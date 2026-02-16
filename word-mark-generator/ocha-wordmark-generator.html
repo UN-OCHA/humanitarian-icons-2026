@@ -657,7 +657,17 @@
         );
       }
 
+      function isLocalDev() {
+        const h = location.hostname;
+        return h === 'localhost' || h === '127.0.0.1' || location.protocol === 'file:';
+      }
+
       function repoPathToCdnUrl(path) {
+        if (isLocalDev()) {
+          // On local dev, load SVGs from relative path (word-mark-generator/ -> svg/)
+          const filename = path.split("/").pop();
+          return "../svg/" + filename;
+        }
         const encodedPath = path
           .split("/")
           .map((part) => encodeURIComponent(part))
@@ -753,6 +763,15 @@
                 icons = data.icons;
               } else {
                 throw new Error("Invalid curated-icons.json format");
+              }
+              // On local dev, rewrite CDN URLs to local paths
+              if (isLocalDev()) {
+                icons.forEach(icon => {
+                  if (icon.url && icon.url.includes('cdn.jsdelivr.net')) {
+                    const filename = icon.url.split("/").pop();
+                    icon.url = "../svg/" + decodeURIComponent(filename);
+                  }
+                });
               }
               console.log("Final icons array length:", icons.length);
               renderIcons(icons);
