@@ -1,114 +1,125 @@
-# Wordmark Approval System — Setup Guide
+# Wordmark Approval System
 
 ## Overview
 
-The wordmark generator uses a Google Sheet + Google Apps Script backend to enforce an approval workflow:
+The OCHA wordmark generator uses a Google Sheet + Google Apps Script backend to enforce an approval workflow. Users cannot download a clean wordmark without approval from the OCHA Brand and Design Unit.
 
-1. **User** creates a wordmark preview (can download a DRAFT-watermarked version)
-2. **User** submits a request with their email → request lands in a Google Sheet
-3. **You** review the sheet and change status from "Pending" to "Approved"
-4. **User** enters their Request ID + email → downloads the clean final wordmark (one-time)
+### Workflow
+
+1. **User** creates a wordmark preview on the generator page (can download a DRAFT-watermarked PNG)
+2. **User** submits a request with their email
+3. **BDU** receives an email notification at ochavisual@un.org with a preview image attached
+4. **BDU** opens the Google Sheet and changes the status from "Pending" to "Approved" (or "Rejected")
+5. **BDU** manually emails the user to inform them of the decision
+6. **User** enters their Request ID + email on the generator page and downloads the clean SVG/PNG (one-time download)
 
 ---
 
-## Step 1: Create the Google Sheet
+## Current Setup
 
-1. Go to [Google Sheets](https://sheets.google.com) and create a new spreadsheet
-2. Rename it to **"Wordmark Approval Requests"**
-3. Rename the first tab to **"Requests"**
-4. In row 1, add these column headers:
+### Google Sheet
+
+- **Name:** OCHA word mark generator approval request
+- **Account:** unochavisual@gmail.com
+- **URL:** https://docs.google.com/spreadsheets/d/1eEb70cPxF8dYkomCcBR6TZXy0Q7jTnDM-LxWPbAspxE/edit
+- **Tab:** Requests
+
+#### Column headers (row 1)
 
 | A | B | C | D | E | F | G | H | I | J |
 |---|---|---|---|---|---|---|---|---|---|
 | Timestamp | Email | Icon | Line 1 | Line 2 | Line 3 | Layout | Request ID | Status | Downloaded At |
 
-5. **Bold** the header row and freeze it (View → Freeze → 1 row)
-6. Optional: Add conditional formatting on column I (Status):
-   - "Pending" → yellow background
-   - "Approved" → green background
-   - "Downloaded" → blue background
-   - "Rejected" → red background
+#### Status dropdown (column I)
+
+Column I has a data validation dropdown with color-coded options:
+
+| Status | Color | Meaning |
+|---|---|---|
+| Pending | Orange | Request submitted, awaiting review |
+| Approved | Blue | Approved by BDU, user can download |
+| Rejected | Red | Rejected by BDU |
+| Downloaded | Grey | User has downloaded the final file |
+
+### Apps Script
+
+- **Account:** unochavisual@gmail.com
+- **Project:** Untitled project (bound to the Google Sheet)
+- **Deployment:** Wordmark approval API (Version 4)
+- **Execute as:** unochavisual@gmail.com
+- **Who has access:** Anyone
+- **Notification email:** ochavisual@un.org (set via `NOTIFY_EMAIL` constant)
+
+The notification email includes a PNG preview of the requested wordmark as an attachment.
+
+### Generator HTML
+
+The approval API URL is set in `ocha-wordmark-generator.html`:
+```js
+const APPROVAL_API_URL = "https://script.google.com/macros/s/AKfycbzpfHd0kMPT1UF-rifWzxFA8Te8E3QFPpDStuln2EXZp3xzJ1sFejZRqwYEedCqia9Vhw/exec";
+```
 
 ---
 
-## Step 2: Add the Apps Script
+## Day-to-Day Operations
 
-1. In the Google Sheet, go to **Extensions → Apps Script**
-2. Delete any existing code in the editor
-3. Copy the entire contents of `google-apps-script.js` from this folder and paste it
-4. If your notification email is different from `ochavisual@un.org`, update the `NOTIFY_EMAIL` constant at the top
-5. Click **Save** (Ctrl+S)
+### When a user submits a request
 
----
+- A new row appears in the Google Sheet with status **Pending** (orange)
+- You receive an email at ochavisual@un.org with the request details and a preview PNG attached
+- The email is sent from unochavisual@gmail.com
+- The user sees their **Request ID** on screen (e.g., WM-A3K7P2)
 
-## Step 3: Deploy as Web App
+### To approve a request
 
-1. In the Apps Script editor, click **Deploy → New deployment**
-2. Click the gear icon next to "Select type" and choose **Web app**
-3. Settings:
-   - **Description:** Wordmark approval API
-   - **Execute as:** Me (your account)
-   - **Who has access:** Anyone
-4. Click **Deploy**
-5. **Authorize** the script when prompted (it needs access to Sheets and Mail)
-6. **Copy the Web App URL** — it looks like:
-   ```
-   https://script.google.com/macros/s/AKfycb.../exec
-   ```
+1. Open the Google Sheet
+2. Find the row
+3. Use the Status dropdown in column I to change from **Pending** to **Approved**
+4. Email the user (column B) to let them know their wordmark is ready to download
 
----
+### To reject a request
 
-## Step 4: Connect the Word Mark Generator
+1. Use the Status dropdown to change from **Pending** to **Rejected**
+2. Email the user to explain why
 
-1. Open `ocha-wordmark-generator.html`
-2. Find the line near the top of the `<script>` section:
-   ```js
-   const APPROVAL_API_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
-   ```
-3. Replace `YOUR_GOOGLE_APPS_SCRIPT_URL_HERE` with the Web App URL you copied
+### When the user downloads
 
----
-
-## How It Works (Day-to-Day)
-
-### When a user submits a request:
-- A new row appears in the Google Sheet with status **"Pending"**
-- You receive an email at ochavisual@un.org with the request details
-- The user sees their **Request ID** (e.g., WM-A3K7P2)
-
-### To approve a request:
-- Open the Google Sheet
-- Find the row
-- Change column I (Status) from **"Pending"** to **"Approved"**
-- That's it! No need to generate any files.
-
-### When the user downloads:
-- They enter their email + Request ID in step 4 of the generator
-- The system verifies the code is approved and linked to their email
+- They enter their email + Request ID in the "Download" section of the generator
+- The system verifies the request is approved and matches their email
 - They download the clean SVG or PNG (no watermark)
-- Status automatically changes to **"Downloaded"**
+- Status automatically changes to **Downloaded** (grey) and the timestamp is recorded in column J
 - A second download attempt will be blocked
-
-### To reject a request:
-- Change the status to **"Rejected"**
-- The user will see "Request status: Rejected" when they check
 
 ---
 
 ## Troubleshooting
 
 **"Could not reach the approval service"**
-- Check the Web App URL is correct in the HTML file
-- Make sure the Apps Script deployment has "Who has access: Anyone"
-- Check the Apps Script execution log for errors
+- Verify the Web App URL in the HTML file matches the deployed URL
+- Confirm the Apps Script deployment has "Who has access: Anyone"
+- Check the Apps Script execution log (in the script editor) for errors
 
 **User says they didn't get a Request ID**
 - Check the Google Sheet — the row should still be there
-- The Request ID is shown on screen immediately, the email notification is a bonus
+- The Request ID is shown on screen immediately after submission
 
 **Need to allow a second download**
-- Change the status back from "Downloaded" to "Approved"
+- Change the status back from "Downloaded" to "Approved" using the dropdown
 
-**Updating the script**
-- After editing the Apps Script, you must create a **new deployment** or update the existing one
-- Go to Deploy → Manage deployments → Edit → Version: New version → Deploy
+**Updating the Apps Script**
+- After editing code in the Apps Script editor, you must deploy a new version
+- Go to Deploy > Manage deployments > Edit (pencil icon) > Version: New version > Deploy
+
+---
+
+## Rebuilding from Scratch
+
+If the system ever needs to be rebuilt (new account, new sheet, etc.):
+
+1. Create a new Google Sheet with the column headers listed above
+2. Add data validation on column I (Status) with the 4 dropdown options
+3. Go to Extensions > Apps Script and paste the contents of `google-apps-script.js`
+4. Update `NOTIFY_EMAIL` if needed
+5. Deploy as a Web App (Execute as: Me, Who has access: Anyone)
+6. Authorize the script when prompted (it needs access to Sheets and Mail)
+7. Copy the Web App URL and update `APPROVAL_API_URL` in `ocha-wordmark-generator.html`
