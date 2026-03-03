@@ -102,24 +102,32 @@ function submitRequest(params) {
   // Append row
   sheet.appendRow([timestamp, email, icon, line1, line2, line3, layout, requestId, 'Pending', '']);
 
-  // Send notification email
+  // Send notification email (with optional preview attachment)
   try {
-    const subject = `Wordmark request ${requestId} from ${email}`;
-    const body = [
-      `New wordmark request:`,
-      ``,
-      `Request ID: ${requestId}`,
-      `Email: ${email}`,
-      `Icon: ${icon}`,
-      `Layout: ${layout} line(s)`,
-      `Line 1: ${line1}`,
-      line2 ? `Line 2: ${line2}` : '',
-      line3 ? `Line 3: ${line3}` : '',
-      ``,
-      `To approve, open the Google Sheet and change the Status column from "Pending" to "Approved".`,
+    var subject = 'Wordmark request ' + requestId + ' from ' + email;
+    var body = [
+      'New wordmark request:',
+      '',
+      'Request ID: ' + requestId,
+      'Email: ' + email,
+      'Icon: ' + icon,
+      'Layout: ' + layout + ' line(s)',
+      'Line 1: ' + line1,
+      line2 ? 'Line 2: ' + line2 : '',
+      line3 ? 'Line 3: ' + line3 : '',
+      '',
+      'To approve, open the Google Sheet and change the Status column from "Pending" to "Approved".',
     ].filter(Boolean).join('\n');
 
-    MailApp.sendEmail(NOTIFY_EMAIL, subject, body);
+    var emailOptions = {};
+    var previewImage = (params.previewImage || '').trim();
+    if (previewImage) {
+      var imageBytes = Utilities.base64Decode(previewImage);
+      var blob = Utilities.newBlob(imageBytes, 'image/png', 'wordmark-preview-' + requestId + '.png');
+      emailOptions.attachments = [blob];
+    }
+
+    MailApp.sendEmail(NOTIFY_EMAIL, subject, body, emailOptions);
   } catch (mailErr) {
     // Don't fail the request if email fails
     Logger.log('Email notification failed: ' + mailErr.message);

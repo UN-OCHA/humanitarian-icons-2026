@@ -184,54 +184,47 @@
         font-weight: 500;
       }
 
-      /* Line layout selector */
-      .line-layout-selector {
-        display: flex;
-        gap: 0;
-        margin-bottom: 0.75rem;
-      }
-
-      .line-layout-btn {
-        flex: 1;
-        padding: 0.5rem 0.75rem;
-        font-size: 0.8rem;
-        font-weight: 700;
-        font-family: var(--cd-font--roboto);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        border: 1px solid var(--cd-grey--light);
-        background: var(--cd-white);
-        color: var(--cd-grey--mid);
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-
-      .line-layout-btn:first-child {
-        border-right: none;
-      }
-
-      .line-layout-btn:last-child {
-        border-left: none;
-      }
-
-      .line-layout-btn.active {
-        background: var(--cd-ocha-blue);
-        border-color: var(--cd-ocha-blue);
-        color: var(--cd-white);
-      }
-
-      .line-layout-btn:hover:not(.active) {
-        background: var(--cd-blue-grey);
-        border-color: var(--cd-blue--bright);
-      }
-
+      /* Text input rows */
       .text-inputs-container {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 0.75rem;
       }
 
-      .text-inputs-container input {
+      .line-row {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .line-row-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      .line-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--cd-blue--dark);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .char-count {
+        font-size: 0.7rem;
+        font-weight: 400;
+        color: var(--cd-grey--mid);
+        text-transform: none;
+        letter-spacing: 0;
+      }
+
+      .char-count.at-limit {
+        color: #e53935;
+        font-weight: 700;
+      }
+
+      .line-row input[type="text"] {
         padding: 0.75rem 1rem;
         border: 1px solid var(--cd-grey--light);
         border-radius: 0;
@@ -241,19 +234,51 @@
         background: var(--cd-white);
       }
 
-      .text-inputs-container input:focus {
+      .line-row input[type="text"]:focus {
         outline: none;
         border-color: var(--cd-ocha-blue);
         box-shadow: none;
       }
 
-      .line-hint {
+      .line-row input.at-limit {
+        border-color: #e53935;
+      }
+
+      .add-line-btn {
+        align-self: flex-start;
+        padding: 0.4rem 0.75rem;
         font-size: 0.75rem;
+        font-weight: 700;
+        font-family: var(--cd-font--roboto);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border: 1px dashed var(--cd-grey--mid);
+        background: var(--cd-white);
         color: var(--cd-grey--mid);
-        font-weight: 400;
-        text-transform: none;
-        letter-spacing: 0;
-        margin-top: -0.25rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .add-line-btn:hover {
+        border-color: var(--cd-ocha-blue);
+        color: var(--cd-ocha-blue);
+      }
+
+      .remove-line-btn {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        font-family: var(--cd-font--roboto);
+        border: none;
+        background: none;
+        color: var(--cd-grey--mid);
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+      }
+
+      .remove-line-btn:hover {
+        color: #e53935;
       }
 
       .preview-section {
@@ -505,20 +530,9 @@
 
         <div class="control-group">
           <label>2. Enter Text</label>
-          <div class="line-layout-selector">
-            <button type="button" class="line-layout-btn active" data-lines="1">1 Line</button>
-            <button type="button" class="line-layout-btn" data-lines="2">2 Lines</button>
-            <button type="button" class="line-layout-btn" data-lines="3">3 Lines</button>
-          </div>
           <div class="text-inputs-container" id="textInputs">
-            <input
-              type="text"
-              id="line1"
-              placeholder="e.g., Humanitarian Country Team"
-              value=""
-            />
+            <!-- Lines are built dynamically by setLineCount() -->
           </div>
-          <p class="line-hint" id="lineHint"></p>
         </div>
       </div>
 
@@ -585,7 +599,7 @@
 
       // ── Approval API ──────────────────────────────────
       // Replace this URL with your deployed Google Apps Script Web App URL
-      const APPROVAL_API_URL = "YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+      const APPROVAL_API_URL = "https://script.google.com/macros/s/AKfycbzpfHd0kMPT1UF-rifWzxFA8Te8E3QFPpDStuln2EXZp3xzJ1sFejZRqwYEedCqia9Vhw/exec";
 
       function normalizeIconName(value) {
         return (value || "")
@@ -937,6 +951,12 @@
         }
 
         const svg = await generateWordmark();
+        // Scale preview so multi-line wordmarks don't look tiny
+        const lines = getTextLines().filter(l => l.length > 0);
+        const numLines = lines.length;
+        const scale = numLines === 1 ? 1 : numLines === 2 ? 1.6 : 2;
+        svg.style.width = `${parseFloat(svg.getAttribute("width")) * scale}px`;
+        svg.style.height = "auto";
         preview.innerHTML = "";
         preview.appendChild(svg);
 
@@ -949,12 +969,11 @@
         const lines = getTextLines().filter(l => l.length > 0);
         const numLines = lines.length;
 
-        // Font sizes: 1-line = 36px, 2-line and 3-line = 24px
-        const fontSize = numLines === 1 ? 36 : 24;
-        const lineHeight = fontSize * 1.25; // 125% line height
-        const spacing = 12; // Fixed spacing from icon box to text
-        const iconBoxWidth = 48; // Fixed 48px width for icon box
-        const iconBoxHeight = 48; // Fixed 48px height for icon box (square)
+        // Font sizes: 1-line = 30px, 2-line = 18px, 3-line = 14px
+        const fontSize = numLines === 1 ? 30 : numLines === 2 ? 18 : 14;
+        const lineHeight = fontSize * 1.3;
+        const spacing = 12;
+        const iconBoxSize = 48; // Icon is always 48×48, never cropped
 
         // Fetch the icon SVG
         const response = await fetch(selectedIcon.url);
@@ -1001,72 +1020,74 @@
         const lineWidths = lines.map(line => ctx.measureText(line).width);
         const maxTextWidth = Math.max(...lineWidths);
 
-        // Cap height (uppercase letter height) is approximately 0.7 of font size
+        // Cap height (uppercase letter height) ≈ 0.7 of font size
         const capHeight = fontSize * 0.7;
 
-        // Calculate total text block height
-        // For multi-line: line spacing from first baseline to last baseline + capHeight
+        // Text block height: from top of first line to baseline of last line
         const textBlockHeight = numLines === 1
           ? capHeight
           : (numLines - 1) * lineHeight + capHeight;
 
-        // Scale icon to fit within the icon box (with some padding)
-        const iconMaxWidth = iconBoxWidth * 0.9;
-        const iconMaxHeight = iconBoxHeight * 0.9;
+        // Scale icon to fit the 48×48 box with padding
+        const iconMaxDim = iconBoxSize * 0.9;
         const iconScale = Math.min(
-          iconMaxWidth / bbox.width,
-          iconMaxHeight / bbox.height,
+          iconMaxDim / bbox.width,
+          iconMaxDim / bbox.height,
         );
         const scaledIconWidth = bbox.width * iconScale;
         const scaledIconHeight = bbox.height * iconScale;
 
-        // Get vertical adjustment from curated data (if available)
+        // Vertical adjustment from curated data
         const boxAdjustment = selectedIcon.verticalAdjustment || 0;
 
-        // Calculate total height — for multi-line, text block may exceed icon box
-        const totalHeight = Math.max(iconBoxHeight, textBlockHeight + 8);
+        // Total height: icon box is always fully visible, text block may be taller
+        const totalHeight = Math.max(iconBoxSize, textBlockHeight + 8);
 
-        // Determine icon vertical centering:
-        // 1-line: icon centered with text (same as before)
-        // 2-line: icon centered between lines 1 and 2
-        // 3-line: icon centered between lines 1 and 2
+        // Position text block centered vertically in totalHeight
+        // textStartY = baseline of line 1
+        const textStartY = (totalHeight - textBlockHeight) / 2 + capHeight;
+
+        // Icon vertical center:
+        // 1-line: centered with text
+        // 2-line: midpoint between line 1 top and line 2 baseline
+        // 3-line: centered across all 3 lines
         let iconCenterY;
-        let textStartY; // Y position of first line baseline
 
         if (numLines === 1) {
-          // Single line: everything centered at totalHeight/2
-          iconCenterY = totalHeight / 2;
-          textStartY = (totalHeight + capHeight) / 2;
+          iconCenterY = textStartY - capHeight / 2;
+        } else if (numLines === 2) {
+          const line1Top = textStartY - capHeight;
+          const line2Bottom = textStartY + lineHeight;
+          iconCenterY = (line1Top + line2Bottom) / 2 - 3;
         } else {
-          // Multi-line: center the text block vertically in the total height
-          // Text block starts from first baseline, ends at last baseline + capHeight ascent
-          textStartY = (totalHeight - textBlockHeight) / 2 + capHeight;
-
-          if (numLines === 2) {
-            // Icon centered between line 1 and line 2 baselines
-            const line1Baseline = textStartY;
-            const line2Baseline = textStartY + lineHeight;
-            iconCenterY = (line1Baseline + line2Baseline - capHeight) / 2 + capHeight / 2;
-          } else {
-            // 3 lines: icon centered between line 1 and line 2 baselines
-            const line1Baseline = textStartY;
-            const line2Baseline = textStartY + lineHeight;
-            iconCenterY = (line1Baseline + line2Baseline - capHeight) / 2 + capHeight / 2;
-          }
+          // 3-line: center between lines 1 and 2 (icon sits higher)
+          const line1Top = textStartY - capHeight;
+          const line2Bottom = textStartY + lineHeight;
+          iconCenterY = (line1Top + line2Bottom) / 2 + 2;
         }
 
-        // Position text X
-        const textX = iconBoxWidth + spacing;
+        // Text X position
+        const textX = iconBoxSize + spacing;
 
-        // Calculate total width
+        // Total width
         const totalWidth = textX + maxTextWidth;
 
-        // Right-align icon within the icon box, vertically centered at iconCenterY
-        const iconX = iconBoxWidth - scaledIconWidth - bbox.x * iconScale;
-        const iconY =
+        // Position icon: right-aligned in icon box, vertically at iconCenterY
+        const iconX = iconBoxSize - scaledIconWidth - bbox.x * iconScale;
+        let iconY =
           iconCenterY - scaledIconHeight / 2 -
           bbox.y * iconScale -
           boxAdjustment;
+
+        // Ensure icon is never cropped: if iconY is negative, add top padding
+        let topPadding = 0;
+        if (iconY < 0) {
+          topPadding = -iconY;
+          iconY = 0;
+        }
+        // Also check bottom: icon must not exceed totalHeight
+        const iconBottom = iconY + scaledIconHeight + (bbox.y * iconScale);
+        const finalHeight = Math.max(totalHeight, iconBottom) + topPadding;
 
         // Create the combined SVG
         const svg = document.createElementNS(
@@ -1074,9 +1095,9 @@
           "svg",
         );
         svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-        svg.setAttribute("viewBox", `0 0 ${totalWidth} ${totalHeight}`);
+        svg.setAttribute("viewBox", `0 0 ${totalWidth} ${finalHeight}`);
         svg.setAttribute("width", totalWidth);
-        svg.setAttribute("height", totalHeight);
+        svg.setAttribute("height", finalHeight);
 
         // Add icon group with scaling and positioning
         const iconGroup = document.createElementNS(
@@ -1104,7 +1125,7 @@
             "text",
           );
           textElement.setAttribute("x", textX);
-          textElement.setAttribute("y", textStartY + index * lineHeight);
+          textElement.setAttribute("y", textStartY + topPadding + index * lineHeight);
           textElement.setAttribute("font-family", "Roboto");
           textElement.setAttribute("font-weight", "700");
           textElement.setAttribute("font-size", fontSize);
@@ -1167,6 +1188,8 @@
             canvas.width = img.width * 2;
             canvas.height = img.height * 2;
             ctx.scale(2, 2);
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(0, 0, img.width, img.height);
             ctx.drawImage(img, 0, 0);
 
             canvas.toBlob(function (pngBlob) {
@@ -1360,6 +1383,29 @@
         btn.textContent = "SUBMITTING...";
 
         try {
+          // Generate watermarked preview PNG as base64
+          const svg = await generateWordmark();
+          addWatermark(svg);
+          const svgData = new XMLSerializer().serializeToString(svg);
+          const previewBase64 = await new Promise((resolve) => {
+            const canvas = document.createElement("canvas");
+            const ctx = canvas.getContext("2d");
+            const img = new Image();
+            const blob = new Blob([svgData], { type: "image/svg+xml" });
+            const url = URL.createObjectURL(blob);
+            img.onload = function () {
+              canvas.width = img.width * 2;
+              canvas.height = img.height * 2;
+              ctx.scale(2, 2);
+              ctx.fillStyle = "#ffffff";
+              ctx.fillRect(0, 0, img.width, img.height);
+              ctx.drawImage(img, 0, 0);
+              URL.revokeObjectURL(url);
+              resolve(canvas.toDataURL("image/png").split(",")[1]);
+            };
+            img.src = url;
+          });
+
           const result = await callApprovalAPI({
             action: "submit",
             email: email,
@@ -1368,6 +1414,7 @@
             line2: lines[1] || "",
             line3: lines[2] || "",
             layout: String(lineCount),
+            previewImage: previewBase64,
           });
 
           if (result.success) {
@@ -1490,17 +1537,12 @@
       }
 
       // --- Line layout management ---
+      const MAX_CHARS = 16;
+
       function setLineCount(count) {
         lineCount = count;
 
-        // Update active button
-        document.querySelectorAll(".line-layout-btn").forEach(btn => {
-          btn.classList.toggle("active", parseInt(btn.dataset.lines) === count);
-        });
-
-        // Rebuild text inputs
         const container = document.getElementById("textInputs");
-        const hint = document.getElementById("lineHint");
 
         // Save existing values
         const existingValues = [];
@@ -1509,52 +1551,72 @@
           if (input) existingValues.push(input.value);
         }
 
-        // Build new inputs
         const placeholders = [
-          ["e.g., Humanitarian Country Team Mozambique"],
-          ["e.g., Humanitarian Country Team", "e.g., Mozambique"],
-          ["e.g., Humanitarian", "e.g., Country Team", "e.g., Mozambique"],
-        ];
-
-        const labels = [
-          [],
-          ["Line 1", "Line 2"],
-          ["Line 1", "Line 2", "Line 3"],
+          "e.g., Country Team",
+          "e.g., Mozambique",
+          "e.g., 2026",
         ];
 
         let html = "";
         for (let i = 0; i < count; i++) {
           const value = existingValues[i] || "";
-          const placeholder = placeholders[count - 1][i] || "";
-          html += `<input type="text" id="line${i + 1}" placeholder="${placeholder}" value="${value}" />`;
+          const charLen = value.length;
+          const atLimit = charLen >= MAX_CHARS;
+          html += `<div class="line-row">
+            <div class="line-row-header">
+              <span class="line-label">Line ${i + 1}</span>
+              <span class="char-count ${atLimit ? 'at-limit' : ''}" id="count${i + 1}">${charLen}/${MAX_CHARS}</span>
+            </div>
+            <input type="text" id="line${i + 1}" maxlength="${MAX_CHARS}" placeholder="${placeholders[i]}" value="${value}" class="${atLimit ? 'at-limit' : ''}" />
+          </div>`;
         }
+
+        // Add line button (if under 3)
+        if (count < 3) {
+          html += `<button type="button" class="add-line-btn" id="addLineBtn">+ Add line ${count + 1}</button>`;
+        }
+
         container.innerHTML = html;
 
-        // Hints
-        if (count === 1) {
-          hint.textContent = "";
-        } else if (count === 2) {
-          hint.textContent = "Smaller text. Icon centered between both lines.";
-        } else {
-          hint.textContent = "Same size as 2 lines. Icon centered between lines 1 and 2.";
+        // Bind input events with char counting
+        for (let i = 1; i <= count; i++) {
+          const input = document.getElementById(`line${i}`);
+          const counter = document.getElementById(`count${i}`);
+          input.addEventListener("input", () => {
+            const len = input.value.length;
+            counter.textContent = `${len}/${MAX_CHARS}`;
+            const atLimit = len >= MAX_CHARS;
+            counter.classList.toggle("at-limit", atLimit);
+            input.classList.toggle("at-limit", atLimit);
+            updatePreview();
+          });
         }
 
-        // Bind input events
-        for (let i = 1; i <= count; i++) {
-          document.getElementById(`line${i}`).addEventListener("input", updatePreview);
+        // Add line button
+        const addBtn = document.getElementById("addLineBtn");
+        if (addBtn) {
+          addBtn.addEventListener("click", () => setLineCount(count + 1));
+        }
+
+        // Remove line buttons — add to line 2 and 3 headers
+        if (count >= 2) {
+          for (let i = count; i >= 2; i--) {
+            const header = document.getElementById(`line${i}`).parentElement.querySelector('.line-row-header');
+            const removeBtn = document.createElement("button");
+            removeBtn.type = "button";
+            removeBtn.className = "remove-line-btn";
+            removeBtn.textContent = "Remove";
+            removeBtn.addEventListener("click", () => setLineCount(i - 1));
+            header.appendChild(removeBtn);
+            break; // Only add remove to the last line
+          }
         }
 
         updatePreview();
       }
 
-      // Event listeners
-      document.querySelectorAll(".line-layout-btn").forEach(btn => {
-        btn.addEventListener("click", () => {
-          setLineCount(parseInt(btn.dataset.lines));
-        });
-      });
-
-      document.getElementById("line1").addEventListener("input", updatePreview);
+      // Initialize line inputs
+      setLineCount(1);
 
       // Preview download (PNG with watermark only — no SVG to prevent editing)
       document.getElementById("downloadPreviewPNG").addEventListener("click", downloadPreviewPNG);
